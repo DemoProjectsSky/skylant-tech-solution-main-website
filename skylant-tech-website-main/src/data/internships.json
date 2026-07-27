@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Software Development Intern",
+    "domain": "Software Development",
+    "duration": "3-6 Months",
+    "type": "Paid/Unpaid",
+    "spots": 10,
+    "description": "Work on real-world software projects with our senior engineering team. Gain hands-on experience with modern tech stacks.",
+    "skills": ["React", "Node.js", "TypeScript", "Git", "Agile"],
+    "icon": "Code2",
+    "color": "#2563EB"
+  },
+  {
+    "id": 2,
+    "title": "AI/ML Engineering Intern",
+    "domain": "Artificial Intelligence",
+    "duration": "3-6 Months",
+    "type": "Paid",
+    "spots": 6,
+    "description": "Contribute to AI model development, data pipelines, and LLM integrations in a real production environment.",
+    "skills": ["Python", "TensorFlow", "Data Analysis", "LLMs", "SQL"],
+    "icon": "Brain",
+    "color": "#06B6D4"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Intern",
+    "domain": "Product Design",
+    "duration": "2-4 Months",
+    "type": "Paid",
+    "spots": 5,
+    "description": "Design user interfaces and experiences for real client projects. Work directly with product managers and engineers.",
+    "skills": ["Figma", "Prototyping", "UX Research", "Design Systems"],
+    "icon": "Palette",
+    "color": "#EC4899"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Intern",
+    "domain": "Digital Marketing",
+    "duration": "2-3 Months",
+    "type": "Paid",
+    "spots": 8,
+    "description": "Run SEO campaigns, manage paid ads, and create content for real business clients. Gain measurable results.",
+    "skills": ["SEO", "Google Ads", "Meta Ads", "Analytics", "Content Creation"],
+    "icon": "TrendingUp",
+    "color": "#EF4444"
+  },
+  {
+    "id": 5,
+    "title": "Cloud & DevOps Intern",
+    "domain": "Cloud Engineering",
+    "duration": "3-4 Months",
+    "type": "Paid",
+    "spots": 4,
+    "description": "Assist in cloud infrastructure setup, monitoring, CI/CD pipelines, and containerization for real projects.",
+    "skills": ["AWS", "Docker", "Linux", "CI/CD", "Monitoring"],
+    "icon": "Cloud",
+    "color": "#10B981"
+  },
+  {
+    "id": 6,
+    "title": "Mobile Development Intern",
+    "domain": "Mobile Development",
+    "duration": "3-5 Months",
+    "type": "Paid",
+    "spots": 5,
+    "description": "Build cross-platform mobile features for production apps. Learn best practices from senior mobile engineers.",
+    "skills": ["React Native", "Flutter", "Firebase", "APIs"],
+    "icon": "Smartphone",
+    "color": "#8B5CF6"
+  }
+]

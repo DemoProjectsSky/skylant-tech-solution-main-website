@@ -1,0 +1,8 @@
+[
+  { "id": 1, "value": 250, "suffix": "+", "label": "Projects Delivered", "icon": "Briefcase" },
+  { "id": 2, "value": 100, "suffix": "+", "label": "Happy Clients", "icon": "Users" },
+  { "id": 3, "value": 8, "suffix": "+", "label": "Years Experience", "icon": "Award" },
+  { "id": 4, "value": 99, "suffix": "%", "label": "Client Satisfaction", "icon": "Star" },
+  { "id": 5, "value": 50, "suffix": "+", "label": "Expert Engineers", "icon": "Code2" },
+  { "id": 6, "value": 15, "suffix": "+", "label": "Countries Served", "icon": "Globe" }
+]

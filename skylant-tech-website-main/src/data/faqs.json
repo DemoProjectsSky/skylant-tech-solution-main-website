@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "question": "What types of businesses do you work with?",
+    "answer": "We work with startups, SMEs, and large enterprises across diverse industries including healthcare, fintech, retail, logistics, education, and more. Our solutions are designed to scale with your business regardless of size.",
+    "category": "General"
+  },
+  {
+    "id": 2,
+    "question": "How long does a typical software project take?",
+    "answer": "Project timelines depend on scope and complexity. A simple web application typically takes 4-8 weeks, while a complex enterprise platform can take 6-12 months. We provide detailed project timelines during discovery and maintain transparency throughout development.",
+    "category": "Process"
+  },
+  {
+    "id": 3,
+    "question": "Do you offer post-launch support and maintenance?",
+    "answer": "Yes, we offer comprehensive post-launch support packages including bug fixes, security updates, performance monitoring, and feature enhancements. Our support team is available 24/7 for critical issues.",
+    "category": "Support"
+  },
+  {
+    "id": 4,
+    "question": "What is your development methodology?",
+    "answer": "We follow Agile/Scrum methodology with bi-weekly sprints, regular client demos, and continuous integration/deployment. This ensures transparency, flexibility, and consistent delivery of value throughout the project.",
+    "category": "Process"
+  },
+  {
+    "id": 5,
+    "question": "How do you ensure the security of our application?",
+    "answer": "Security is built into every layer of our development process. We follow OWASP guidelines, conduct regular security audits, implement proper authentication and authorization, encrypt sensitive data, and perform penetration testing before launch.",
+    "category": "Security"
+  },
+  {
+    "id": 6,
+    "question": "Can you work with our existing technology stack?",
+    "answer": "Absolutely. We have experience working with diverse technology stacks and can integrate with your existing systems, whether it's legacy software, modern cloud services, or third-party APIs. We'll assess your current infrastructure and recommend the best approach.",
+    "category": "Technical"
+  },
+  {
+    "id": 7,
+    "question": "Do you sign NDAs and protect our intellectual property?",
+    "answer": "Yes, we sign NDAs before any project discussions and have strict IP protection policies. All code, designs, and intellectual property created for your project belong exclusively to you upon project completion and payment.",
+    "category": "Legal"
+  },
+  {
+    "id": 8,
+    "question": "How do I get started with Skylant?",
+    "answer": "Getting started is simple. Book a free consultation call, and our team will assess your requirements, provide a detailed proposal with timeline and investment estimate, and guide you through our onboarding process. We'll have your project kicked off within days.",
+    "category": "General"
+  }
+]

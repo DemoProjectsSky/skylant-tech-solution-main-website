@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "role": "CTO",
+    "company": "NexaFlow Inc.",
+    "avatar": "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    "rating": 5,
+    "text": "Skylant Tech delivered our enterprise SaaS platform on time and exceeded every expectation. Their team's technical depth and communication were outstanding. We've since engaged them for three more projects.",
+    "project": "Enterprise SaaS Platform"
+  },
+  {
+    "id": 2,
+    "name": "David Chen",
+    "role": "Founder & CEO",
+    "company": "UrbanRetail Co.",
+    "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    "rating": 5,
+    "text": "The e-commerce platform they built for us handles over 10,000 daily transactions flawlessly. The performance optimization work alone saved us $40k annually in infrastructure costs.",
+    "project": "E-Commerce Platform"
+  },
+  {
+    "id": 3,
+    "name": "Priya Sharma",
+    "role": "VP of Operations",
+    "company": "LogiCore Solutions",
+    "avatar": "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    "rating": 5,
+    "text": "Their AI automation solution reduced our manual data processing time by 80%. The team was professional, responsive, and delivered exactly what they promised. Highly recommended.",
+    "project": "AI Process Automation"
+  },
+  {
+    "id": 4,
+    "name": "James O'Brien",
+    "role": "Head of Digital",
+    "company": "BrightEdge Media",
+    "avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    "rating": 5,
+    "text": "Skylant's digital marketing team tripled our organic traffic in six months. Their SEO strategy and content execution is second to none. We're now the top result for our primary keywords.",
+    "project": "Digital Marketing & SEO"
+  },
+  {
+    "id": 5,
+    "name": "Aisha Patel",
+    "role": "Director of Product",
+    "company": "HealthSync Technologies",
+    "avatar": "https://images.pexels.com/photos/3770254/pexels-photo-3770254.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    "rating": 5,
+    "text": "The mobile app they built for our healthcare platform has a 4.9 rating on both stores. Their UI/UX work is exceptional and user feedback has been overwhelmingly positive.",
+    "project": "Healthcare Mobile App"
+  },
+  {
+    "id": 6,
+    "name": "Michael Torres",
+    "role": "Managing Director",
+    "company": "Apex Ventures",
+    "avatar": "https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    "rating": 5,
+    "text": "We've worked with many agencies, but Skylant stands out in technical expertise and client care. Their cloud migration project was seamless with zero downtime. Absolutely world-class team.",
+    "project": "Cloud Infrastructure Migration"
+  }
+]

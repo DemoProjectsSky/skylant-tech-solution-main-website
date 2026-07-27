@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "HealthSync: AI-Powered Patient Management Platform",
+    "client": "HealthSync Technologies",
+    "industry": "Healthcare",
+    "service": "AI Solutions & Software Development",
+    "result": "60% reduction in patient wait times",
+    "description": "Built a comprehensive AI-driven healthcare platform that revolutionized patient scheduling, medical records management, and diagnostic assistance for a network of 150+ clinics.",
+    "metrics": [
+      { "label": "Reduction in Wait Times", "value": "60%" },
+      { "label": "Clinics Onboarded", "value": "150+" },
+      { "label": "Patient Satisfaction", "value": "4.9/5" },
+      { "label": "Time to Market", "value": "8 Months" }
+    ],
+    "technologies": ["React", "Python", "TensorFlow", "AWS", "PostgreSQL"],
+    "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=2",
+    "color": "#2563EB"
+  },
+  {
+    "id": 2,
+    "title": "UrbanRetail: Enterprise E-Commerce Ecosystem",
+    "client": "UrbanRetail Co.",
+    "industry": "Retail & E-Commerce",
+    "service": "Website Development & Cloud",
+    "result": "300% increase in online revenue",
+    "description": "Designed and built a high-performance multi-vendor e-commerce platform with real-time inventory management, AI-powered recommendations, and seamless payment processing.",
+    "metrics": [
+      { "label": "Revenue Growth", "value": "300%" },
+      { "label": "Daily Transactions", "value": "10K+" },
+      { "label": "Page Load Speed", "value": "0.8s" },
+      { "label": "Cart Conversion", "value": "+45%" }
+    ],
+    "technologies": ["Next.js", "Node.js", "MongoDB", "Redis", "Stripe", "AWS"],
+    "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=2",
+    "color": "#10B981"
+  },
+  {
+    "id": 3,
+    "title": "LogiCore: Intelligent Logistics Automation",
+    "client": "LogiCore Solutions",
+    "industry": "Logistics & Supply Chain",
+    "service": "Automation & AI Solutions",
+    "result": "80% reduction in manual processing",
+    "description": "Implemented an end-to-end logistics automation system that intelligently routes shipments, predicts delivery times, and automates documentation for a 500+ vehicle fleet.",
+    "metrics": [
+      { "label": "Manual Work Reduced", "value": "80%" },
+      { "label": "Delivery Accuracy", "value": "98.7%" },
+      { "label": "Cost Savings/Year", "value": "$2.4M" },
+      { "label": "Fleet Coverage", "value": "500+ Vehicles" }
+    ],
+    "technologies": ["Python", "React", "Kafka", "PostgreSQL", "Docker", "GCP"],
+    "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=2",
+    "color": "#F59E0B"
+  }
+]

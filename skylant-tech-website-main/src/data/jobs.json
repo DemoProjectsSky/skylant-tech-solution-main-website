@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Full Stack Engineer",
+    "department": "Engineering",
+    "type": "Full-time",
+    "location": "Hybrid",
+    "experience": "4-7 Years",
+    "description": "Lead development of complex web applications. Drive technical architecture decisions and mentor junior engineers.",
+    "skills": ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"],
+    "icon": "Code2"
+  },
+  {
+    "id": 2,
+    "title": "AI/ML Engineer",
+    "department": "AI Research",
+    "type": "Full-time",
+    "location": "Remote",
+    "experience": "3-6 Years",
+    "description": "Build and deploy production ML models. Work with LLMs, NLP pipelines, and computer vision systems.",
+    "skills": ["Python", "TensorFlow", "PyTorch", "LLMs", "MLOps"],
+    "icon": "Brain"
+  },
+  {
+    "id": 3,
+    "title": "Senior UI/UX Designer",
+    "department": "Design",
+    "type": "Full-time",
+    "location": "Hybrid",
+    "experience": "3-5 Years",
+    "description": "Design exceptional user experiences for enterprise software and consumer applications. Own end-to-end design process.",
+    "skills": ["Figma", "Design Systems", "Prototyping", "User Research"],
+    "icon": "Palette"
+  },
+  {
+    "id": 4,
+    "title": "Cloud Solutions Architect",
+    "department": "Infrastructure",
+    "type": "Full-time",
+    "location": "Remote",
+    "experience": "5-8 Years",
+    "description": "Architect scalable cloud solutions for enterprise clients. Lead cloud migration and modernization projects.",
+    "skills": ["AWS", "Azure", "Kubernetes", "Terraform", "Security"],
+    "icon": "Cloud"
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Developer",
+    "department": "Engineering",
+    "type": "Full-time",
+    "location": "Hybrid",
+    "experience": "2-5 Years",
+    "description": "Build high-quality cross-platform mobile apps with React Native and Flutter for enterprise clients.",
+    "skills": ["React Native", "Flutter", "TypeScript", "Firebase"],
+    "icon": "Smartphone"
+  },
+  {
+    "id": 6,
+    "title": "Digital Marketing Manager",
+    "department": "Marketing",
+    "type": "Full-time",
+    "location": "On-site",
+    "experience": "3-5 Years",
+    "description": "Lead digital marketing strategy for Skylant and client accounts. Drive growth through SEO, paid media, and content.",
+    "skills": ["SEO/SEM", "Google Ads", "Meta Ads", "Analytics", "Strategy"],
+    "icon": "TrendingUp"
+  }
+]
