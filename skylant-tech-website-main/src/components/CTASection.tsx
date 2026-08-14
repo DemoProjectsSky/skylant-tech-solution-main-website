@@ -22,7 +22,7 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section className="relative section-padding overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black-950 via-slate-950 to-slate-950" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <motion.div
@@ -32,7 +32,7 @@ export default function CTASection({
         transition={{ duration: 0.6 }}
         className="relative max-w-5xl mx-auto"
       >
-        <div className="relative glass-card-strong rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+        <div className="relative  rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse-glow" />
           <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-sky-500/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
 
@@ -41,21 +41,28 @@ export default function CTASection({
               <Sparkles className="w-4 h-4" />
               Let's Build Together
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-5 text-balance">
               {title}
             </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-black max-w-2xl mx-auto mb-8">
               {description}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link to={primaryPath} className="btn-primary">
-                {primaryLabel}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link to={secondaryPath} className="btn-secondary">
-                {secondaryLabel}
-              </Link>
-            </div>
+  <Link
+    to={primaryPath}
+    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/30 hover:scale-105"
+  >
+    {primaryLabel}
+    <ArrowRight className="w-4 h-4" />
+  </Link>
+
+  <Link
+    to={secondaryPath}
+    className="inline-flex items-center px-6 py-3 rounded-xl border border-blue-500 text-black-400 hover:bg-blue-500 hover:text-white font-semibold transition-all duration-300 hover:scale-105"
+  >
+    {secondaryLabel}
+  </Link>
+</div>
           </div>
         </div>
       </motion.div>

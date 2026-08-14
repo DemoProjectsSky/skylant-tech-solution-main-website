@@ -1,187 +1,265 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, User, MessageSquare, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, User, MessageSquare, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 import faqs from '../data/faqs.json';
 import FAQAccordion from '../components/FAQAccordion';
+import ContactIllustration from '../components/ContactIllustration';
+import { sendEmailForm } from '../lib/emailjs';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email Us', value: 'hello@skylanttech.com', sub: 'We reply within 24 hours' },
-  { icon: Phone, label: 'Call Us', value: '+1 (555) 123-4567', sub: 'Mon-Fri, 9am-6pm' },
-  { icon: MapPin, label: 'Visit Us', value: '123 Innovation Drive, Tech Park, Suite 400', sub: 'San Francisco, CA 94105' },
+   { icon: Mail, label: 'Email Us', value: 'hr.skylant@gmail.com', sub: 'We reply within 24 hours' },
+  { icon: Phone, label: 'Call Us', value: '+91- 75585 31369',  sub: 'Mon-Fri, 9am-6pm' },
+  { icon: MapPin, label: 'Visit Us', value: 'First Floor, 101, Sivalik Apartment, Lumbini Nagar,near Vasudeo nagar metro station,Higana Road, Nagpur-440036', sub: 'Nagpur, Maharashtra' },
   { icon: Clock, label: 'Working Hours', value: 'Monday - Friday', sub: '9:00 AM - 6:00 PM PST' },
 ];
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: 'Custom Software Development',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSending(true);
+    setErrorMessage('');
+
+    try {
+      // Keys here must match the EmailJS "Contact Us" template placeholders
+      // exactly: {{user_name}}, {{user_email}}, {{company}}, {{user_phone}},
+      // {{service}}, {{message}}. The template's "Reply To" field is bound to
+      // {{user_email}} — if that key isn't sent, EmailJS can't build a valid
+      // reply address and rejects the send.
+      await sendEmailForm('contact', {
+        user_name: formData.name,
+        user_email: formData.email,
+        company: formData.company,
+        user_phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+      });
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: 'Custom Software Development',
+        message: '',
+      });
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'Unable to send your message. Please try again.');
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <>
       <PageBanner
-        title="Let's build something great together"
-        description="Tell us about your project and our team will get back to you within 24 hours with a personalized proposal and next steps."
-        breadcrumb={[{ name: 'Home', path: '/' }, { name: 'Contact' }]}
-        image="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=900&h=1000&dpr=2"
-        floatingCards={[
-          { icon: <Mail className="w-4 h-4" />, title: '24hr Response' },
-          { icon: <CheckCircle2 className="w-4 h-4" />, title: 'Free Consultation' },
-          { icon: <Phone className="w-4 h-4" />, title: 'Expert Team' },
-        ]}
-        stats={[{ value: '24hr', label: 'Response' }, { value: '100+', label: 'Clients' }, { value: '250+', label: 'Projects' }]}
-        primaryCta={{ label: 'Book Consultation', path: '/contact' }}
-        secondaryCta={{ label: 'View Services', path: '/services' }}
-      />
+  title={
+    <>
+      Let's build something <span style={{ color: '#2F6EFF' }}>great together</span>
+    </>
+  }
+  description="Tell us about your project and our team will get back to you within 24 hours with a personalized proposal and next steps."
+  breadcrumb={[{ name: 'Home', path: '/' }, { name: 'Contact' }]}
+  illustration={<ContactIllustration />}
+  primaryCta={{ label: 'Book Consultation', path: '/contact' }}
+  secondaryCta={{ label: 'View Services', path: '/services' }}
+/>
 
       {/* CONTACT FORM + INFO */}
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 bg-slate-950" />
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
-
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
+      <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
           {/* Info */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-sky-400 text-sm font-medium mb-5"><MessageSquare className="w-4 h-4" /> Get in Touch</div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5 text-balance">Ready to start your project?</h2>
-            <p className="text-slate-400 leading-relaxed mb-8">Whether you have a clear vision or just an idea, we're here to help. Reach out through any channel below and let's discuss how we can bring your project to life.</p>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E4DBFF] bg-white/80 backdrop-blur-sm text-[#6D5BD0] text-sm font-medium mb-5">
+              <MessageSquare className="w-4 h-4" /> Get in Touch
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-5 text-balance">Ready to start your project?</h2>
+            <p className="text-[#5B5580] leading-relaxed mb-8">Whether you have a clear vision or just an idea, we're here to help. Reach out through any channel below and let's discuss how we can bring your project to life.</p>
             <div className="grid sm:grid-cols-2 gap-4">
               {contactInfo.map((c, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} className="glass-card rounded-2xl p-5 hover:border-sky-400/30 transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 mb-3"><c.icon className="w-5 h-5" /></div>
-                  <div className="text-slate-500 text-xs uppercase tracking-wider mb-1">{c.label}</div>
-                  <div className="text-white font-semibold text-sm mb-0.5">{c.value}</div>
-                  <div className="text-slate-500 text-xs">{c.sub}</div>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className="rounded-2xl border border-[#E4DBFF] bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md p-5 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-[#F3F0FF] border border-[#E4DBFF] flex items-center justify-center text-[#6D5BD0] mb-3">
+                    <c.icon className="w-5 h-5" />
+                  </div>
+                  <div className="text-[#8783A6] text-xs uppercase tracking-wider mb-1">{c.label}</div>
+                  <div className="text-[#2C2A4A] font-semibold text-sm mb-0.5">{c.value}</div>
+                  <div className="text-[#8783A6] text-xs">{c.sub}</div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
           {/* Form */}
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="glass-card-strong rounded-3xl p-6 lg:p-8">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl border border-[#E4DBFF] bg-white/90 backdrop-blur-sm shadow-sm p-6 lg:p-8"
+          >
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-10">
-                <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 mb-5"><CheckCircle2 className="w-8 h-8" /></div>
-                <h3 className="text-2xl font-bold text-white mb-3">Message sent!</h3>
-                <p className="text-slate-400 mb-6">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
-                <button onClick={() => setSubmitted(false)} className="btn-secondary">Send another message</button>
+                <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-500 mb-5">
+                  <CheckCircle2 className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#2C2A4A] mb-3">Message sent!</h3>
+                <p className="text-[#5B5580] mb-6">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="rounded-xl border border-[#E4DBFF] bg-white/70 px-6 py-3 font-medium text-[#2C2A4A] backdrop-blur-sm transition-colors hover:bg-white"
+                >
+                  Send another message
+                </button>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm text-slate-300 mb-2">Full Name</label>
-                    <div className="relative"><User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" /><input required className="w-full pl-10 pr-4 py-3 rounded-xl glass-card text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400/40" placeholder="John Doe" /></div>
+                    <label className="block text-sm text-[#2C2A4A] mb-2">Full Name</label>
+                    <div className="relative">
+                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8783A6]" />
+                      <input required name="name" value={formData.name} onChange={handleChange} className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50" placeholder="John Doe" />
+                    </div>
                   </div>
                   <div>
-                    <label className="block text-sm text-slate-300 mb-2">Email</label>
-                    <div className="relative"><Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" /><input required type="email" className="w-full pl-10 pr-4 py-3 rounded-xl glass-card text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400/40" placeholder="john@company.com" /></div>
+                    <label className="block text-sm text-[#2C2A4A] mb-2">Email</label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8783A6]" />
+                      <input required type="email" name="email" value={formData.email} onChange={handleChange} className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50" placeholder="john@company.com" />
+                    </div>
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm text-slate-300 mb-2">Company</label>
-                    <input className="w-full px-4 py-3 rounded-xl glass-card text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400/40" placeholder="Company name" />
+                    <label className="block text-sm text-[#2C2A4A] mb-2">Company</label>
+                    <input name="company" value={formData.company} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50" placeholder="Company name" />
                   </div>
                   <div>
-                    <label className="block text-sm text-slate-300 mb-2">Phone</label>
-                    <div className="relative"><Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" /><input className="w-full pl-10 pr-4 py-3 rounded-xl glass-card text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400/40" placeholder="+1 (555) 000-0000" /></div>
+                    <label className="block text-sm text-[#2C2A4A] mb-2">Phone</label>
+                    <div className="relative">
+                      <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8783A6]" />
+                      <input name="phone" value={formData.phone} onChange={handleChange} className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50" placeholder="+1 (555) 000-0000" />
+                    </div>
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm text-slate-300 mb-2">Service of Interest</label>
-                  <select className="w-full px-4 py-3 rounded-xl glass-card text-white text-sm focus:outline-none focus:border-sky-400/40">
-                    <option className="bg-slate-900">Custom Software Development</option>
-                    <option className="bg-slate-900">Website Development</option>
-                    <option className="bg-slate-900">Mobile App Development</option>
-                    <option className="bg-slate-900">AI Solutions</option>
-                    <option className="bg-slate-900">Cloud Solutions</option>
-                    <option className="bg-slate-900">Automation Services</option>
-                    <option className="bg-slate-900">UI/UX Design</option>
-                    <option className="bg-slate-900">Digital Marketing</option>
-                    <option className="bg-slate-900">Other</option>
+                  <label className="block text-sm text-[#2C2A4A] mb-2">Service of Interest</label>
+                  <select name="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm focus:outline-none focus:border-[#6D5BD0]/50">
+                    <option>Custom Software Development</option>
+                    <option>Website Development</option>
+                    <option>ERP & CRM Solutions</option>
+                    <option>Mobile App Development</option>
+                    <option>AI Solutions</option>
+                    <option>Cloud Solutions</option>
+                    <option>Automation Services</option>
+                    <option>UI/UX Design</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm text-slate-300 mb-2">Project Details</label>
-                  <div className="relative"><MessageSquare className="absolute left-3 top-3 w-4 h-4 text-slate-500" /><textarea required rows={4} className="w-full pl-10 pr-4 py-3 rounded-xl glass-card text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-sky-400/40 resize-none" placeholder="Tell us about your project, goals, and timeline..." /></div>
+                  <label className="block text-sm text-[#2C2A4A] mb-2">Project Details</label>
+                  <div className="relative">
+                    <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-[#8783A6]" />
+                    <textarea required name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50 resize-none" placeholder="Tell us about your project, goals, and timeline..." />
+                  </div>
                 </div>
-                <button type="submit" className="btn-primary w-full">Send Message <Send className="w-4 h-4" /></button>
+                {errorMessage ? (
+                  <div className="flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                    <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{errorMessage}</span>
+                  </div>
+                ) : null}
+                <button disabled={isSending} type="submit" className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#6D5BD0] px-6 py-3 font-medium text-white transition-colors hover:bg-[#5b4bb8] disabled:cursor-not-allowed disabled:opacity-70">
+                  {isSending ? 'Sending...' : 'Send Message'} <Send className="w-4 h-4" />
+                </button>
               </form>
             )}
           </motion.div>
         </div>
       </section>
 
-      {/* MAP PLACEHOLDER */}
-      {/* <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-blue-950/30" />
-        <div className="relative max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="glass-card rounded-3xl overflow-hidden">
-            <div className="relative aspect-[16/7] bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 flex items-center justify-center">
-              <div className="absolute inset-0 grid-pattern opacity-40" />
-              <div className="relative text-center">
-                <div className="w-16 h-16 rounded-2xl bg-sky-500/20 border border-sky-400/40 flex items-center justify-center text-sky-400 mx-auto mb-4 animate-pulse-glow"><MapPin className="w-8 h-8" /></div>
-                <h3 className="text-white font-bold text-xl mb-2">Skylant Tech Solutions HQ</h3>
-                <p className="text-slate-400 text-sm">123 Innovation Drive, Tech Park, Suite 400, San Francisco, CA</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
-
       {/* MAP SECTION */}
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-blue-950/30" />
-
-        <div className="relative max-w-7xl mx-auto">
+      <section className="relative py-20 sm:py-24 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-card rounded-3xl overflow-hidden"
+            className="rounded-3xl border border-[#E4DBFF] bg-white/80 backdrop-blur-sm shadow-sm overflow-hidden"
           >
             <div className="relative h-[500px] w-full">
-
-              {/* Google Map */}
-              <iframe
-                title="Skylant Tech Solutions Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4413.157666797166!2d79.04415552569428!3d21.17536044817894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1df5709dabd%3A0x298cde53dd17a5c5!2sMicronet%20Solutions!5e1!3m2!1sen!2sin!4v1784374563597!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 w-full h-full"
-              />
-
-
+             <iframe
+  src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d914.1105231903676!2d79.01729320309553!3d21.117871925281804!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDA3JzAyLjgiTiA3OcKwMDEnMDIuOCJF!5e0!3m2!1sen!2sin!4v1785580785728!5m2!1sen!2sin"
+  className="w-full h-[450px] rounded-3xl border-0 shadow-xl"
+  loading="lazy"
+  allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  title="Skylant Tech Solutions Location"
+/>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 bg-slate-950" />
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="relative max-w-3xl mx-auto">
+      <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-balance">Quick answers</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">Quick answers</h2>
           </motion.div>
           <FAQAccordion items={faqs.slice(0, 6)} />
         </div>
       </section>
 
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-blue-950/30" />
-        <div className="relative max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="glass-card-strong rounded-3xl p-8 lg:p-12 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-balance">Prefer to talk directly?</h2>
-            <p className="text-slate-300 mb-8 max-w-xl mx-auto">Schedule a free 30-minute consultation with our experts. No commitments, just a conversation about how we can help.</p>
+      {/* FINAL CTA */}
+      <section className="relative py-20 sm:py-24 overflow-hidden">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl border border-[#E4DBFF] bg-white/90 backdrop-blur-sm shadow-sm p-8 lg:p-12 text-center"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">Prefer to talk directly?</h2>
+            <p className="text-[#5B5580] mb-8 max-w-xl mx-auto">Schedule a free 30-minute consultation with our experts. No commitments, just a conversation about how we can help.</p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <a href="tel:+15551234567" className="btn-primary"><Phone className="w-4 h-4" /> Schedule a Call</a>
-              <a href="mailto:hello@skylanttech.com" className="btn-secondary"><Mail className="w-4 h-4" /> Email Us</a>
+              <a href="tel:+917558531369" className="inline-flex items-center gap-2 rounded-xl bg-[#6D5BD0] px-6 py-3 font-medium text-white transition-colors hover:bg-[#5b4bb8]">
+                <Phone className="w-4 h-4" /> Schedule a Call
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hr.skylant@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#E4DBFF] bg-white/70 px-6 py-3 font-medium text-[#2C2A4A] backdrop-blur-sm transition-colors hover:bg-white"
+              >
+                <Mail className="w-4 h-4" /> Email Us
+              </a>
             </div>
           </motion.div>
         </div>

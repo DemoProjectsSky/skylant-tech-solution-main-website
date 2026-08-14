@@ -14,7 +14,7 @@
       { "label": "Time to Market", "value": "8 Months" }
     ],
     "technologies": ["React", "Python", "TensorFlow", "AWS", "PostgreSQL"],
-    "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=2",
+    "image": "https://assets.floot.app/showcase/Ha-aLQqDkj9GrAqLKmJyW.png",
     "color": "#2563EB"
   },
   {
@@ -32,7 +32,7 @@
       { "label": "Cart Conversion", "value": "+45%" }
     ],
     "technologies": ["Next.js", "Node.js", "MongoDB", "Redis", "Stripe", "AWS"],
-    "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=2",
+    "image": "https://thumbs.dreamstime.com/b/isometric-illustration-depicts-modern-e-commerce-ecosystem-across-various-digital-devices-including-laptops-smartphones-432415290.jpg",
     "color": "#10B981"
   },
   {
@@ -50,7 +50,7 @@
       { "label": "Fleet Coverage", "value": "500+ Vehicles" }
     ],
     "technologies": ["Python", "React", "Kafka", "PostgreSQL", "Docker", "GCP"],
-    "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=2",
+    "image": "https://image.slidesdocs.com/responsive-images/slides/0-intelligent-logistics-powerpoint-background_e32143e69b__960_540.jpg",
     "color": "#F59E0B"
   }
 ]
