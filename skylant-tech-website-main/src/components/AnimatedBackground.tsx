@@ -39,9 +39,7 @@ export default function AnimatedBackground() {
       />
       <motion.div
         className="absolute right-[-160px] top-[18%] h-[480px] w-[480px] rounded-full blur-[100px]"
-        style={{
-            background: 'radial-gradient(circle, #0955f8 0%, transparent 70%)',
-        }}
+        
         animate={{ x: [0, -50, 30, 0], y: [0, 60, -30, 0], scale: [1, 0.9, 1.1, 1] }}
         transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       />
