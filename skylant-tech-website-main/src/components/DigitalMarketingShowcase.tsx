@@ -68,16 +68,16 @@ const LI_URL = 'https://in.linkedin.com/company/skylant-tech-solutions';
 const ropeOne: CardData[] = [
   { id: 'ig-post', platform: 'Instagram', label: 'Instagram Post', icon: Instagram, accent: '#EC4899', drop: 44, tilt: -4, image: DEMO_IMAGE, url: IG_URL },
   // Real Facebook post — "What is ChatGPT?" carousel
-  { id: 'fb-post', platform: 'Facebook', label: 'Facebook Post', icon: Facebook, accent: '#2563EB', drop: 72, tilt: 3, image: 'public/images/skylant facebook post.jpeg', url: FB_URL },
+  { id: 'fb-post', platform: 'Facebook', label: 'Facebook Post', icon: Facebook, accent: '#2563EB', drop: 72, tilt: 3, image: '/images/skylant facebook post.jpeg', url: FB_URL },
   { id: 'g-ads', platform: 'Google Ads', label: 'Ad Creative', icon: ImageIcon, accent: '#10B981', drop: 52, tilt: -3, image: 'https://cdn.takeflyte.com/uploads/2020/10/29165128/Google-Ads-flyte-new-media.jpeg', url: 'https://ads.google.com/' },
 ];
 
 const ropeTwo: CardData[] = [
   // Real Instagram Reel — "Corporate employee on Sunday"
-  { id: 'ig-reel', platform: 'Instagram', label: 'Instagram Reel', icon: Film, accent: '#F59E0B', drop: 60, tilt: 4, image: 'public/images/skylant insta reels.jpeg', url: IG_URL },
-  { id: 'li-post', platform: 'LinkedIn', label: 'LinkedIn Post', icon: Linkedin, accent: '#0EA5E9', drop: 40, tilt: -4, image: 'public/images/skylant linkdin post.jpg', url: LI_URL },
+  { id: 'ig-reel', platform: 'Instagram', label: 'Instagram Reel', icon: Film, accent: '#F59E0B', drop: 60, tilt: 4, image: '/images/skylant insta reels.jpeg', url: IG_URL },
+  { id: 'li-post', platform: 'LinkedIn', label: 'LinkedIn Post', icon: Linkedin, accent: '#0EA5E9', drop: 40, tilt: -4, image: '/images/skylant linkdin post.jpg', url: LI_URL },
   // Real short video — "Team meeting ke time HR ka call aa gaya"
-  { id: 'story', platform: 'Instagram', label: 'Short Video', icon: Play, accent: '#9B8AFB', drop: 68, tilt: 3, image: 'public/images/skylant insta short.jpeg', url: IG_URL },
+  { id: 'story', platform: 'Instagram', label: 'Short Video', icon: Play, accent: '#9B8AFB', drop: 68, tilt: 3, image: '/images/skylant insta short.jpeg', url: IG_URL },
 ];
 
 function SectionEyebrow({ label }: { label: string }) {
