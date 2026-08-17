@@ -22,18 +22,28 @@ import { Instagram, Facebook, Linkedin, Image as ImageIcon, Film, Play, ArrowRig
    - `video` -> if present, an actual <video> plays (muted, looped,
      autoplaying) using `image` as its poster. Point this at your real
      reel file (e.g. "/reels/my-reel-1.mp4") once you have it uploaded —
-     until then it just shows the poster with a play badge.
+     until then it just shows the image thumbnail.
 
-   TO ADD YOUR OWN REELS:
-   1. Drop your .mp4 file(s) into your project's `public/reels/` folder
-      (create it if it doesn't exist), e.g. public/reels/reel-1.mp4
-   2. Below, set the `video` field on the card to that path, e.g.
+   REAL CONTENT WIRED IN:
+   - ig-reel   -> /images/skylant_insta_reels.jpeg  ("Corporate employee on Sunday" reel)
+   - story     -> /images/skylant_insta_short.jpeg  ("Team meeting ke time HR ka call aa gaya" short)
+   - fb-post   -> /images/skylant_facebook_post.jpeg ("What is ChatGPT?" carousel post)
+
+   TO USE THESE: place the 3 files in your project's `public/images/`
+   folder with these exact names:
+     public/images/skylant_insta_reels.jpeg
+     public/images/skylant_insta_short.jpeg
+     public/images/skylant_facebook_post.jpeg
+
+   TO ADD YOUR OWN REELS LATER (actual playable video):
+   1. Drop your .mp4 file(s) into `public/reels/` (create if needed),
+      e.g. public/reels/reel-1.mp4
+   2. Set the `video` field on the card to that path, e.g.
       video: '/reels/reel-1.mp4'
-   3. Optionally swap `image` on that card to a real poster/thumbnail
-      of your reel instead of the demo image.
+   3. Keep `image` pointing at the matching screenshot as the poster.
 --------------------------------------------------------------------- */
 
-// Demo placeholder — swap for your own exported posts/reels later.
+// Demo placeholder — used only for cards without real content yet.
 const DEMO_IMAGE =
   'https://img.freepik.com/premium-vector/digital-marketing-social-media-post-design-template-free-vector_440247-132.jpg?w=2000';
 
@@ -57,16 +67,17 @@ const LI_URL = 'https://in.linkedin.com/company/skylant-tech-solutions';
 
 const ropeOne: CardData[] = [
   { id: 'ig-post', platform: 'Instagram', label: 'Instagram Post', icon: Instagram, accent: '#EC4899', drop: 44, tilt: -4, image: DEMO_IMAGE, url: IG_URL },
-  { id: 'fb-post', platform: 'Facebook', label: 'Facebook Post', icon: Facebook, accent: '#2563EB', drop: 72, tilt: 3, url: FB_URL },
-  { id: 'g-ads', platform: 'Google Ads', label: 'Ad Creative', icon: ImageIcon, accent: '#10B981', drop: 52, tilt: -3,image: 'https://cdn.takeflyte.com/uploads/2020/10/29165128/Google-Ads-flyte-new-media.jpeg', url: 'https://ads.google.com/' },
+  // Real Facebook post — "What is ChatGPT?" carousel
+  { id: 'fb-post', platform: 'Facebook', label: 'Facebook Post', icon: Facebook, accent: '#2563EB', drop: 72, tilt: 3, image: 'public/images/skylant facebook post.jpeg', url: FB_URL },
+  { id: 'g-ads', platform: 'Google Ads', label: 'Ad Creative', icon: ImageIcon, accent: '#10B981', drop: 52, tilt: -3, image: 'https://cdn.takeflyte.com/uploads/2020/10/29165128/Google-Ads-flyte-new-media.jpeg', url: 'https://ads.google.com/' },
 ];
 
 const ropeTwo: CardData[] = [
-  // Reel video wired to your uploaded file — place it at public/reels/reel-1.mp4
-  { id: 'ig-reel', platform: 'Instagram', label: 'Instagram Reel', icon: Film, accent: '#F59E0B', drop: 60, tilt: 4, image: DEMO_IMAGE, video: '/reels/reel-1.mp4', url: IG_URL },
-  { id: 'li-post', platform: 'LinkedIn', label: 'LinkedIn Post', icon: Linkedin, accent: '#0EA5E9', drop: 40, tilt: -4, url: LI_URL },
-  // Same reel reused here — swap for a second file when you have one, e.g. video: '/reels/reel-2.mp4'
-  { id: 'story', platform: 'Story', label: 'Short Video', icon: Play, accent: '#9B8AFB', drop: 68, tilt: 3, image: DEMO_IMAGE, video: '/image/hero-video(1).mp4', url: IG_URL },
+  // Real Instagram Reel — "Corporate employee on Sunday"
+  { id: 'ig-reel', platform: 'Instagram', label: 'Instagram Reel', icon: Film, accent: '#F59E0B', drop: 60, tilt: 4, image: 'public/images/skylant insta reels.jpeg', url: IG_URL },
+  { id: 'li-post', platform: 'LinkedIn', label: 'LinkedIn Post', icon: Linkedin, accent: '#0EA5E9', drop: 40, tilt: -4, image: 'public/images/skylant linkdin post.jpg', url: LI_URL },
+  // Real short video — "Team meeting ke time HR ka call aa gaya"
+  { id: 'story', platform: 'Instagram', label: 'Short Video', icon: Play, accent: '#9B8AFB', drop: 68, tilt: 3, image: 'public/images/skylant insta short.jpeg', url: IG_URL },
 ];
 
 function SectionEyebrow({ label }: { label: string }) {

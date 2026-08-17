@@ -114,7 +114,7 @@ function Eyebrow({ icon: Icon, label, color = '#6D5BD0' }: { icon: any; label: s
 
 /* ------------------------------ Page data ------------------------------ */
 
-const featureChips = ['AI Solutions', 'ERP Development', 'Web Applications', 'Mobile Apps', 'Cloud Solutions', 'Digital Marketing'];
+const featureChips = ['AI Solutions', 'ERP Development', 'Web Applications', 'Mobile Apps', 'Digital Marketing'];
 
 const statistics = [
   { id: 1, value: 20, suffix: '+', label: 'Websites Delivered' },

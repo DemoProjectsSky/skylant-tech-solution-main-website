@@ -40,21 +40,20 @@ export default function AnimatedBackground() {
       <motion.div
         className="absolute right-[-160px] top-[18%] h-[480px] w-[480px] rounded-full blur-[100px]"
         style={{
-          background:
-            'radial-gradient(circle at 30% 30%, #6366F1 0%, #8B5CF6 45%, transparent 75%)',
+            background: 'radial-gradient(circle, #0955f8 0%, transparent 70%)',
         }}
         animate={{ x: [0, -50, 30, 0], y: [0, 60, -30, 0], scale: [1, 0.9, 1.1, 1] }}
         transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       />
       <motion.div
         className="absolute bottom-[-200px] left-[8%] h-[520px] w-[520px] rounded-full blur-[110px]"
-        style={{ background: 'radial-gradient(circle, #E4DBFF 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #aca4c4 0%, transparent 70%)' }}
         animate={{ x: [0, 40, -60, 0], y: [0, -50, 20, 0], scale: [1, 1.1, 1, 1] }}
         transition={{ duration: 34, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
       />
       <motion.div
         className="absolute bottom-[6%] right-[6%] h-[380px] w-[380px] rounded-full blur-[90px]"
-        style={{ background: 'radial-gradient(circle, #6D5BD0 0%, transparent 70%)', opacity: 0.5 }}
+        style={{ background: 'radial-gradient(circle, #8b7ed2 0%, transparent 70%)', opacity: 0.5 }}
         animate={{ x: [0, -30, 20, 0], y: [0, 30, -20, 0] }}
         transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
       />

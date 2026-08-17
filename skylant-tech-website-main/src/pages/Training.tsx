@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Users, Star, GraduationCap, Database, LineChart, Cpu } from 'lucide-react';
+import { ArrowRight, Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Star, GraduationCap, Database, LineChart, Cpu } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import TrainingIllustration from '../components/TrainingIllustration';
 import courses from '../data/courses.json';
-import testimonials from '../data/testimonials.json';
+
 
 const iconMap: Record<string, any> = {
   Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Database, LineChart, Cpu,
@@ -167,41 +167,6 @@ export default function Training() {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">What our students say</h2>
-          </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.slice(0, 3).map((t, i) => (
-              <motion.div
-                key={t.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ y: -4 }}
-                className="rounded-2xl border border-[#E4DBFF] bg-white/80 backdrop-blur-sm p-6 shadow-sm hover:shadow-md transition-all"
-              >
-                <p className="text-[#5B5580] leading-relaxed mb-5 text-sm">{t.text}</p>
-                <div className="flex items-center gap-1 mb-4">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-amber-400 fill-current" />
-                  ))}
-                </div>
-                <div className="flex items-center gap-3 pt-4 border-t border-[#E4DBFF]">
-                  <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover" />
-                  <div>
-                    <div className="text-[#2C2A4A] font-semibold text-sm">{t.name}</div>
-                    <div className="text-[#8783A6] text-xs">{t.role}, {t.company}</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTASection title="Ready to advance your career?" description="Join 5,000+ professionals who have transformed their careers with our training programs. Get in touch to find the right course for you." primaryLabel="Enroll Now" secondaryLabel="View Internships" secondaryPath="/internship" />
     </>

@@ -15,6 +15,7 @@ import {
   CheckCircle2,
   User,
   Mail,
+  Phone,
   FileText,
   AlertCircle,
   Upload,
@@ -133,6 +134,7 @@ export default function Careers() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     role: jobs[0]?.title || '',
     message: '',
   });
@@ -259,6 +261,7 @@ export default function Careers() {
       setFormData({
         name: '',
         email: '',
+        phone: '',
         role: jobs[0]?.title || '',
         message: '',
       });
@@ -761,6 +764,27 @@ export default function Careers() {
                     placeholder="john@example.com"
                   />
                 </div>
+              </div>
+            </div>
+
+            {/* PHONE */}
+            <div>
+              <label className="block text-sm text-[#2C2A4A] mb-2">
+                Phone Number
+              </label>
+
+              <div className="relative">
+                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8783A6]" />
+
+               <input
+  required
+  type="tel"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50"
+  placeholder="+91 98765 43210"
+/>
               </div>
             </div>
 

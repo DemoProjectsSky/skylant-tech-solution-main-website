@@ -232,10 +232,10 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`px-4 py-3 rounded-xl text-base font-medium transition-all ${
+                    className={`px-4 py-3 rounded-xl text-base font-medium text-black transition-all ${
                       location.pathname === link.path
-                        ? 'bg-sky-500/20 text-sky-400'
-                        : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                        ? 'bg-sky-500/20 text-black'
+                        : 'text-black hover:bg-white/5 hover:text-black'
                     }`}
                   >
                     {link.name}
@@ -245,7 +245,7 @@ export default function Navbar() {
                   <Link
                     key={s.id}
                     to={`/services/${s.slug}`}
-                    className="px-4 py-2.5 rounded-xl text-sm text-slate-400 hover:text-white hover:bg-white/5 transition-all pl-8"
+                    className="px-4 py-2.5 rounded-xl text-sm text-black hover:text-black hover:bg-white/5 transition-all pl-8"
                   >
                     {s.title}
                   </Link>
