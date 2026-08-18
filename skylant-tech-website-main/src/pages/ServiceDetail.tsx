@@ -1,14 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, Navigate } from 'react-router-dom';
 import {
   Code2, Globe, Smartphone, Brain, Cloud, Zap, Palette, TrendingUp,
   Target, Clock, ShieldCheck, MessageSquare, Lock,
-  Layers, Award, Sparkles, Cpu, GitBranch, Image as ImageIcon,
+  Layers, Award, Sparkles, Cpu, GitBranch, Image as ImageIcon, ArrowUpRight,
 } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import ServiceIllustration from '../components/ServiceIllustration';
 import TechLogo from '../components/techlogo';
+import OfferingDetailModal from '../components/Offeringdetailmodal';
 import services from '../data/services.json';
 import faqs from '../data/faqs.json';
 import FAQAccordion from '../components/FAQAccordion';
@@ -42,13 +44,30 @@ const TECH_COLORS: Record<string, string> = {
   'Mailchimp': '#FFE01B', 'Meta Ads': '#0866FF', 'Google Ads': '#4285F4',
 };
 
+// Shape of the optional "What We Help With" block a service can define in services.json.
+// Currently only digital-marketing sets this; the section below only renders when present.
+interface WhatWeHelpWithItem {
+  number: string;
+  title: string;
+  description: string;
+}
+
+interface WhatWeHelpWith {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: WhatWeHelpWithItem[];
+}
+
 export default function ServiceDetail() {
   const { slug } = useParams();
   const service = services.find((s) => s.slug === slug);
+  const [activeOffering, setActiveOffering] = useState<(typeof service extends undefined ? never : NonNullable<typeof service>['offerings'][number]) | null>(null);
 
   if (!service) return <Navigate to="/services" replace />;
 
   const Icon = iconMap[service.icon] || Code2;
+  const whatWeHelpWith = (service as any).whatWeHelpWith as WhatWeHelpWith | undefined;
 
   return (
     <>
@@ -130,45 +149,153 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* OFFERINGS — sub-services grid, image on left is a placeholder until real icons are added */}
+      {/* OFFERINGS — sub-services grid. Cards with a `details` payload open a modal on click. */}
       <section className="relative py-20 sm:py-24 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">
               {service.offeringsTitle ?? `Which Types Of ${service.shortTitle} We Provide?`}
             </h2>
           </motion.div>
+          {service.offerings?.some((o: any) => o.details) && (
+            <p className="text-center text-[#9691B5] text-sm mb-10">Tap a card to see what's included and the typical timeline.</p>
+          )}
           <div className="grid md:grid-cols-2 gap-6">
-            {(service.offerings ?? []).map((o, i) => (
-              <motion.div
-                key={o.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                whileHover={{ y: -3 }}
-                className="flex items-start gap-5 rounded-2xl border backdrop-blur-sm p-6 hover:shadow-md transition-all"
-                style={{ background: `${service.color}0A`, borderColor: `${service.color}30` }}
-              >
-                <div
-                  className="w-20 h-20 rounded-xl flex items-center justify-center shrink-0 overflow-hidden"
-                  style={{ background: `${service.color}12`, border: `1px solid ${service.color}30` }}
+            {(service.offerings ?? []).map((o: any, i) => {
+              const hasDetails = Boolean(o.details);
+              return (
+                <motion.div
+                  key={o.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.06 }}
+                  whileHover={{ y: -3 }}
+                  role={hasDetails ? 'button' : undefined}
+                  tabIndex={hasDetails ? 0 : undefined}
+                  onClick={() => hasDetails && setActiveOffering(o)}
+                  onKeyDown={(e) => hasDetails && (e.key === 'Enter' || e.key === ' ') && setActiveOffering(o)}
+                  className={`relative flex items-start gap-5 rounded-2xl border backdrop-blur-sm p-6 transition-all ${hasDetails ? 'cursor-pointer hover:shadow-lg' : 'hover:shadow-md'}`}
+                  style={{ background: `${service.color}0A`, borderColor: `${service.color}30` }}
                 >
-                  {o.image ? (
-                    <img src={o.image} alt={o.title} className="w-full h-full object-contain p-2" />
-                  ) : (
-                    <ImageIcon className="w-7 h-7" style={{ color: service.color }} />
-                  )}
-                </div>
-                <div>
-                  <h3 className="text-[#2C2A4A] font-bold text-lg mb-2">{o.title}</h3>
-                  <p className="text-[#5B5580] text-sm leading-relaxed">{o.description}</p>
-                </div>
-              </motion.div>
-            ))}
+                  <div
+                    className="w-20 h-20 rounded-xl flex items-center justify-center shrink-0 overflow-hidden"
+                    style={{ background: `${service.color}12`, border: `1px solid ${service.color}30` }}
+                  >
+                    {o.image ? (
+                      <img src={o.image} alt={o.title} className="w-full h-full object-contain p-2" />
+                    ) : (
+                      <ImageIcon className="w-7 h-7" style={{ color: service.color }} />
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-[#2C2A4A] font-bold text-lg mb-2">{o.title}</h3>
+                    <p className="text-[#5B5580] text-sm leading-relaxed">{o.description}</p>
+                    {hasDetails && (
+                      <span
+                        className="inline-flex items-center gap-1 text-xs font-semibold mt-3"
+                        style={{ color: service.color }}
+                      >
+                        View details & timeline <ArrowUpRight className="w-3.5 h-3.5" />
+                      </span>
+                    )}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
+
+      <OfferingDetailModal
+        offering={activeOffering}
+        accentColor={service.color}
+        onClose={() => setActiveOffering(null)}
+      />
+
+     {/* WHAT WE HELP WITH — only renders when a service defines it (currently digital-marketing) */}
+{(service as any).whatWeHelpWith && (
+  <section className="relative py-20 sm:py-24 overflow-hidden">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl"
+      >
+        <span className="inline-block text-[#F97316] text-xs font-bold tracking-wider uppercase mb-4">
+          {(service as any).whatWeHelpWith.eyebrow}
+        </span>
+
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E2A4A] mb-5 leading-[1.15] text-balance">
+          {(service as any).whatWeHelpWith.title}
+        </h2>
+
+        <p className="text-[#6B7280] text-base leading-relaxed">
+          {(service as any).whatWeHelpWith.description}
+        </p>
+      </motion.div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        {(service as any).whatWeHelpWith.items.map(
+          (item: any, i: number) => {
+            const cardStyles = [
+              {
+                card: "bg-[#FFF7ED] border-[#FED7AA]",
+                badge: "bg-[#FFEDD5] text-[#EA580C]",
+              },
+              {
+                card: "bg-[#EFF6FF] border-[#BFDBFE]",
+                badge: "bg-[#DBEAFE] text-[#2563EB]",
+              },
+              {
+                card: "bg-[#F0FDF4] border-[#BBF7D0]",
+                badge: "bg-[#DCFCE7] text-[#16A34A]",
+              },
+              {
+                card: "bg-[#FAF5FF] border-[#E9D5FF]",
+                badge: "bg-[#F3E8FF] text-[#9333EA]",
+              },
+            ];
+
+            const style = cardStyles[i % cardStyles.length];
+
+            return (
+              <motion.div
+                key={item.number}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.4,
+                  delay: i * 0.08,
+                }}
+                whileHover={{ y: -6 }}
+                className={`rounded-2xl border p-6 shadow-sm hover:shadow-lg transition-all duration-300 ${style.card}`}
+              >
+                <span
+                  className={`inline-flex items-center justify-center px-3 py-1.5 rounded-lg text-sm font-bold mb-5 ${style.badge}`}
+                >
+                  {item.number}
+                </span>
+
+                <h3 className="text-[#1E2A4A] font-bold text-lg mb-2.5 leading-snug">
+                  {item.title}
+                </h3>
+
+                <p className="text-[#6B7280] text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            );
+          }
+        )}
+      </div>
+    </div>
+  </section>
+)}
+  
 
       {/* TECHNOLOGIES — now with tool logos */}
       <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">

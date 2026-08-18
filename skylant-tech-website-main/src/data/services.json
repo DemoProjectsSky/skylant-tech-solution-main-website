@@ -23,14 +23,150 @@
     "image": "https://www.kindpng.com/picc/m/112-1127685_csg-custom-software-development-custom-software-development-hd.png",
     "offeringsTitle": "Which Types Of Softwares We Provide?",
     "offerings": [
-      { "title": "School Management Software", "description": "It also provides a dedicated portal for teachers making it easier for them to find all the information related to students and school activities.", "image": "https://www.amigoways.com/assets/images/education/school-management-software.png" },
-      { "title": "Library Management Software", "description": "Library management systems help libraries keep track of their documents inventory and loans, and member subscriptions and profiles, sometimes for multiple physical locations.", "image": "https://www.clipartmax.com/png/full/142-1429304_library-management-library-management-system-png.png" },
-      { "title": "Hotel Management Software", "description": "A hotel management software designed to simplify hotel operations management via its integrated management suite.", "image": "https://www.kindpng.com/picc/m/649-6499024_are-you-in-search-for-the-best-hotel.png" },
-      { "title": "Gym Management Software", "description": "Gym scheduling software is also sometimes referred to as fitness software, studio software, scheduling software.", "image": "https://13designstreet.com/img/gym-software.png" },
-      { "title": "Billing Software", "description": "A billing software can be any software designed to handle time and billing tracking as well as invoicing customers.", "image": "https://cdn-icons-png.flaticon.com/512/3919/3919595.png" },
-      { "title": "Inventory Management Software", "description": "Track stock levels, orders, and warehouse movement in real time across single or multiple locations.", "image": "https://png.pngtree.com/png-vector/20250205/ourmid/pngtree-inventory-management-software-featuring-3d-icon-isolated-on-a-transparent-background-png-image_15380977.png" },
-      { "title": "Pathology / Hospital Software", "description": "Manage patient records, lab reports, appointments, and billing in one connected system.", "image": "https://ehsghealth.com/wp-content/uploads/2025/06/pat1-1.png" },
-      { "title": "Restaurant Management & Billing Software", "description": "Handle table orders, kitchen tickets, billing, and inventory for restaurants and cafes.", "image": "https://cdn.pixabay.com/photo/2021/05/25/02/03/restaurant-6281067_1280.png" }
+      {
+        "title": "School Management Software",
+        "description": "It also provides a dedicated portal for teachers making it easier for them to find all the information related to students and school activities.",
+        "image": "https://www.amigoways.com/assets/images/education/school-management-software.png",
+        "details": {
+          "fullDescription": "A single system for admissions, attendance, exams, fees, and communication — where teachers, students, and parents each get the view they need instead of juggling registers, spreadsheets, and WhatsApp groups.",
+          "idealFor": "Schools and coaching institutes that want to move admissions, attendance, exams, and fee collection off paper and spreadsheets.",
+          "keyFeatures": ["Student admission & records", "Attendance tracking", "Exam & report card management", "Fee collection & receipts", "Teacher & parent portals", "Timetable & notice board"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "3-4 days", "description": "Map admissions, attendance, exam, and fee workflows." },
+            { "phase": "UI/UX Design", "duration": "5-6 days", "description": "Design student, teacher, and parent portal screens." },
+            { "phase": "Development", "duration": "15-20 days", "description": "Build core modules and role-based portals." },
+            { "phase": "Testing & Data Migration", "duration": "4-5 days", "description": "Test workflows and migrate existing student data." },
+            { "phase": "Launch & Training", "duration": "2-3 days", "description": "Go live and train staff and teachers." }
+          ],
+          "totalTimeline": "5-7 weeks"
+        }
+      },
+      {
+        "title": "Library Management Software",
+        "description": "Library management systems help libraries keep track of their documents inventory and loans, and member subscriptions and profiles, sometimes for multiple physical locations.",
+        "image": "https://www.clipartmax.com/png/full/142-1429304_library-management-library-management-system-png.png",
+        "details": {
+          "fullDescription": "Tracks every book, member, and loan in one place — check-in/check-out, overdue reminders, and multi-branch inventory, so staff spend less time on registers and more on members.",
+          "idealFor": "School, college, and public libraries managing book inventory, loans, and member records across one or more branches.",
+          "keyFeatures": ["Book catalog & barcode search", "Issue/return & due-date tracking", "Member profiles & history", "Overdue fine automation", "Multi-branch inventory", "Reports & analytics"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Map catalog structure and branch requirements." },
+            { "phase": "UI/UX Design", "duration": "4-5 days", "description": "Design catalog, issue/return, and member screens." },
+            { "phase": "Development", "duration": "10-12 days", "description": "Build catalog, loans, and fine automation." },
+            { "phase": "Testing & QA", "duration": "3-4 days", "description": "Test issue/return flows and reports." },
+            { "phase": "Launch & Training", "duration": "2 days", "description": "Go live and train library staff." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      },
+      {
+        "title": "Hotel Management Software",
+        "description": "A hotel management software designed to simplify hotel operations management via its integrated management suite.",
+        "image": "https://www.kindpng.com/picc/m/649-6499024_are-you-in-search-for-the-best-hotel.png",
+        "details": {
+          "fullDescription": "Runs front-desk to housekeeping in one system — bookings, room status, billing, and guest history — so staff aren't switching between a register, a spreadsheet, and a calendar.",
+          "idealFor": "Independent hotels and small chains that want to centralize bookings, room inventory, billing, and guest management.",
+          "keyFeatures": ["Room booking & availability", "Front-desk check-in/out", "Billing & invoicing", "Housekeeping status tracking", "Guest profiles & history", "Multi-channel booking sync"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "3-4 days", "description": "Map booking, front-desk, and housekeeping workflows." },
+            { "phase": "UI/UX Design", "duration": "5-6 days", "description": "Design front-desk, booking, and admin screens." },
+            { "phase": "Development", "duration": "18-22 days", "description": "Build booking engine, billing, and housekeeping modules." },
+            { "phase": "Testing & QA", "duration": "4-5 days", "description": "Test booking sync, billing, and edge cases." },
+            { "phase": "Launch & Training", "duration": "2-3 days", "description": "Go live and train front-desk and housekeeping staff." }
+          ],
+          "totalTimeline": "6-8 weeks"
+        }
+      },
+      {
+        "title": "Gym Management Software",
+        "description": "Gym scheduling software is also sometimes referred to as fitness software, studio software, scheduling software.",
+        "image": "https://13designstreet.com/img/gym-software.png",
+        "details": {
+          "fullDescription": "Handles memberships, class schedules, trainer assignments, and billing so front-desk staff can check someone in and see their plan status in one screen.",
+          "idealFor": "Gyms, fitness studios, and yoga centers managing memberships, class schedules, and recurring billing.",
+          "keyFeatures": ["Membership plans & renewals", "Class scheduling & bookings", "Trainer assignment", "Attendance / check-in", "Billing & payment reminders", "Member app / portal"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Map membership plans, classes, and billing cycles." },
+            { "phase": "UI/UX Design", "duration": "4-5 days", "description": "Design member portal and front-desk screens." },
+            { "phase": "Development", "duration": "12-14 days", "description": "Build memberships, scheduling, and billing." },
+            { "phase": "Testing & QA", "duration": "3 days", "description": "Test bookings, renewals, and payment reminders." },
+            { "phase": "Launch & Training", "duration": "2 days", "description": "Go live and train front-desk staff." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      },
+      {
+        "title": "Billing Software",
+        "description": "A billing software can be any software designed to handle time and billing tracking as well as invoicing customers.",
+        "image": "https://cdn-icons-png.flaticon.com/512/3919/3919595.png",
+        "details": {
+          "fullDescription": "Generates invoices, tracks payments, and keeps tax-ready records — built around how your business actually bills, whether that's one-time invoices or recurring subscriptions.",
+          "idealFor": "Businesses that need accurate, fast invoicing and payment tracking without a bulky full accounting suite.",
+          "keyFeatures": ["Invoice generation & templates", "GST/tax calculation", "Payment tracking & reminders", "Recurring billing", "Customer & product database", "Reports & export"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2 days", "description": "Map billing rules, tax requirements, and invoice formats." },
+            { "phase": "UI/UX Design", "duration": "3-4 days", "description": "Design invoice, dashboard, and customer screens." },
+            { "phase": "Development", "duration": "8-10 days", "description": "Build invoicing, tax calculation, and payment tracking." },
+            { "phase": "Testing & QA", "duration": "2-3 days", "description": "Test invoice accuracy and recurring billing." },
+            { "phase": "Launch & Training", "duration": "1-2 days", "description": "Go live and train accounts staff." }
+          ],
+          "totalTimeline": "3-4 weeks"
+        }
+      },
+      {
+        "title": "Inventory Management Software",
+        "description": "Track stock levels, orders, and warehouse movement in real time across single or multiple locations.",
+        "image": "https://png.pngtree.com/png-vector/20250205/ourmid/pngtree-inventory-management-software-featuring-3d-icon-isolated-on-a-transparent-background-png-image_15380977.png",
+        "details": {
+          "fullDescription": "Real-time stock visibility across single or multiple locations — so you know exactly what's on hand, what's low, and what's moving, without a manual stock-count.",
+          "idealFor": "Retailers, distributors, and warehouses that need real-time stock tracking across one or more locations.",
+          "keyFeatures": ["Real-time stock levels", "Purchase & sales order tracking", "Multi-location inventory", "Low-stock alerts", "Barcode/SKU support", "Reports & analytics"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Map warehouse locations and stock movement rules." },
+            { "phase": "UI/UX Design", "duration": "4 days", "description": "Design stock, order, and reporting screens." },
+            { "phase": "Development", "duration": "12-15 days", "description": "Build stock tracking, orders, and alerts." },
+            { "phase": "Testing & QA", "duration": "3-4 days", "description": "Test multi-location sync and stock accuracy." },
+            { "phase": "Launch & Training", "duration": "2 days", "description": "Go live and train warehouse staff." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      },
+      {
+        "title": "Pathology / Hospital Software",
+        "description": "Manage patient records, lab reports, appointments, and billing in one connected system.",
+        "image": "https://ehsghealth.com/wp-content/uploads/2025/06/pat1-1.png",
+        "details": {
+          "fullDescription": "Connects patient records, lab reports, appointments, and billing in one system, so a patient's history is one lookup away instead of scattered across files.",
+          "idealFor": "Diagnostic labs, clinics, and small hospitals managing patient records, lab reports, and billing.",
+          "keyFeatures": ["Patient records & history", "Lab report generation", "Appointment scheduling", "Billing & insurance handling", "Doctor/staff access controls", "Report sharing via portal"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "3-4 days", "description": "Map patient, lab, and billing workflows." },
+            { "phase": "UI/UX Design", "duration": "5-6 days", "description": "Design patient, doctor, and lab screens." },
+            { "phase": "Development", "duration": "18-22 days", "description": "Build records, lab reports, and billing modules." },
+            { "phase": "Testing & Compliance Review", "duration": "4-5 days", "description": "Test data accuracy and access controls." },
+            { "phase": "Launch & Training", "duration": "2-3 days", "description": "Go live and train clinical and front-desk staff." }
+          ],
+          "totalTimeline": "6-8 weeks"
+        }
+      },
+      {
+        "title": "Restaurant Management & Billing Software",
+        "description": "Handle table orders, kitchen tickets, billing, and inventory for restaurants and cafes.",
+        "image": "https://cdn.pixabay.com/photo/2021/05/25/02/03/restaurant-6281067_1280.png",
+        "details": {
+          "fullDescription": "Covers the full order flow — table orders, kitchen tickets, billing, and stock — so front-of-house and kitchen stay in sync without shouted orders or lost tickets.",
+          "idealFor": "Restaurants, cafes, and cloud kitchens that want to manage orders, billing, and inventory in one connected system.",
+          "keyFeatures": ["Table & order management", "Kitchen ticket printing", "Billing & split payments", "Menu & inventory sync", "Staff role management", "Sales & stock reports"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Map order flow, menu, and billing requirements." },
+            { "phase": "UI/UX Design", "duration": "4-5 days", "description": "Design order, kitchen ticket, and billing screens." },
+            { "phase": "Development", "duration": "12-15 days", "description": "Build order management, billing, and inventory sync." },
+            { "phase": "Testing & QA", "duration": "3-4 days", "description": "Test order flow and split billing scenarios." },
+            { "phase": "Launch & Training", "duration": "2 days", "description": "Go live and train front-of-house and kitchen staff." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      }
     ]
   },
   {
@@ -40,31 +176,198 @@
     "slug": "digital-marketing",
     "icon": "TrendingUp",
     "description": "Data-driven digital marketing strategies that increase visibility, generate leads, and drive revenue growth.",
-    "longDescription": "We develop and execute comprehensive digital marketing strategies that connect your brand with the right audience at the right time. From SEO to paid advertising, we maximize your digital ROI.",
+    "longDescription": "We develop and execute comprehensive digital marketing strategies that connect your brand with the right audience at the right time. From SEM to paid advertising, we maximize your digital ROI.",
     "domainInsight": "Marketing isn't about running more ads — it's about knowing which channel gives you the best return before you scale spend there. Every campaign we run is tracked back to revenue, not just clicks.",
     "features": [
-      "Search Engine Optimization",
-      "Google & Meta Ads",
-      "Content Marketing",
+      "Search Engine marketing",
+      "paid google Ads",
+      "Content creation markeing",
       "Social Media Management",
-      "Email Marketing",
+      "Email & whatsapp Marketing",
       "Analytics & Reporting",
       "Competitor Benchmarking",
-      "Monthly Performance Reviews"
+      "Monthly Performance Reviews",
+      "performance marketing & meta Ads ROI"
     ],
     "technologies": ["Google Analytics", "SEMrush", "HubSpot", "Mailchimp", "Meta Ads", "Google Ads"],
     "color": "#EF4444",
     "image": "https://img.pikbest.com/png-images/20241128/digital-marketing-concept-3d-illustration-isolated-on-transparent-background-_11142294.png!w700wp",
     "offeringsTitle": "Which Types Of Digital Marketing Services We Provide?",
+    "whatWeHelpWith": {
+  "eyebrow": "WHAT WE HELP WITH",
+  "title": "A simple growth plan for businesses that want real enquiries.",
+  "description": "We do not start with random posting or ads. We first understand your business, target customer, budget, and sales process, then build the right mix of campaigns.",
+  "items": [
+    {
+      "number": "01",
+      "title": "Lead Generation Campaigns",
+      "description": "Meta and Google campaigns planned around customer intent, follow-up speed, and conversion quality.",
+      "color": "bg-blue-50 border-blue-200"
+    },
+    {
+      "number": "02",
+      "title": "Website and Landing Pages",
+      "description": "Responsive pages designed to convert visitors into calls, WhatsApp messages, and form enquiries.",
+      "color": "bg-purple-50 border-purple-200"
+    },
+    {
+      "number": "03",
+      "title": "SEO and Local Visibility",
+      "description": "Search visibility improvements for businesses that want more organic discovery and long-term growth.",
+      "color": "bg-green-50 border-green-200"
+    },
+    {
+      "number": "04",
+      "title": "Social Media Management",
+      "description": "Content and page management that keeps your brand visible, consistent, and customer-friendly.",
+      "color": "bg-orange-50 border-orange-200"
+    }
+  ]
+},
     "offerings": [
-      { "title": "Search Engine Optimization", "description": "On-page, off-page, and technical SEO to help your website rank higher and bring in organic traffic.", "image": "https://static.vecteezy.com/system/resources/previews/020/716/221/large_2x/icon-doing-search-engine-optimization-free-png.png" },
-      { "title": "Pay-Per-Click Advertising", "description": "Google Ads and Meta Ads campaigns built to bring in leads while keeping cost-per-acquisition low.", "image": "https://cdn2.iconfinder.com/data/icons/marketing-and-sales-3/64/Pay_per_Click_Advertising-512.png" },
-      { "title": "Social Media Marketing", "description": "Content, scheduling, and paid promotion across Instagram, Facebook, and LinkedIn to grow your brand presence.", "image": "https://www.pngkey.com/png/full/109-1092417_creativity-clicks-on-social-media-social-media-marketing.png" },
-      { "title": "Content Marketing", "description": "Blogs, guides, and video content built around what your audience is actually searching for.", "image": "https://cdn.pixabay.com/photo/2018/09/15/16/36/content-3679757_1280.png" },
-      { "title": "Email Marketing", "description": "Automated sequences and newsletters that keep leads warm and turn them into repeat customers.", "image": "https://www.pinclipart.com/picdir/big/195-1957960_email-marketing-icons-email-marketing-icon-clipart.png" },
-      { "title": "Influencer Marketing", "description": "Partnering with the right creators to put your brand in front of an already-engaged audience.", "image": "https://png.pngtree.com/png-clipart/20250104/original/pngtree-influencer-marketing-concept-flat-design-png-image_5484564.png" },
-      { "title": "Conversion Rate Optimization", "description": "Testing and refining landing pages and funnels so more visitors turn into paying customers.", "image": "https://png.pngtree.com/png-clipart/20220722/original/pngtree-conversion-rate-optimization-abstract-concept-vector-illustration-png-image_8391138.png" },
-      { "title": "Online Reputation Management", "description": "Monitoring and managing reviews and brand mentions so your online presence stays trustworthy.", "image": "https://www.pngitem.com/pimgs/m/282-2829959_online-reputation-management-hd-png-download.png" }
+      {
+        "title": "Search Engine Marketing",
+        "description": "On-page, off-page, and technical SEM to help your website rank higher and bring in organic traffic.",
+        "image": "https://static.vecteezy.com/system/resources/previews/020/716/221/large_2x/icon-doing-search-engine-optimization-free-png.png",
+        "details": {
+          "fullDescription": "Technical fixes, on-page optimization, and content/link building aimed at durable organic rankings — not quick tricks that Google penalizes later.",
+          "idealFor": "Businesses that want consistent, compounding organic traffic instead of paying for every visitor.",
+          "keyFeatures": ["Technical SEM audit & fixes", "On-page optimization", "Keyword strategy", "Content & blog optimization", "Backlink building", "Monthly rank & traffic reporting"],
+          "timeline": [
+            { "phase": "Audit & Strategy", "duration": "1 week", "description": "Technical audit, keyword research, and roadmap." },
+            { "phase": "On-Page & Technical Fixes", "duration": "2-3 weeks", "description": "Fix technical issues and optimize key pages." },
+            { "phase": "Content & Link Building", "duration": "Ongoing, monthly", "description": "Publish optimized content and build authority." },
+            { "phase": "First Ranking Movement", "duration": "4-8 weeks", "description": "Early ranking and traffic gains become visible." },
+            { "phase": "Review & Reporting", "duration": "Monthly", "description": "Track rankings, traffic, and adjust strategy." }
+          ],
+          "totalTimeline": "Setup in 3-4 weeks, results build over 3-6 months"
+        }
+      },
+      {
+        "title": "Pay-Per-Click Advertising",
+        "description": "Google Ads and Meta Ads campaigns built to bring in leads while keeping cost-per-acquisition low.",
+        "image": "https://cdn2.iconfinder.com/data/icons/marketing-and-sales-3/64/Pay_per_Click_Advertising-512.png",
+        "details": {
+          "fullDescription": "Google and Meta Ads campaigns built around your actual cost-per-lead target, with continuous testing on creatives, audiences, and bids to bring cost down over time.",
+          "idealFor": "Businesses that want fast, measurable leads or sales while organic channels are still building up.",
+          "keyFeatures": ["Campaign strategy & targeting", "Ad creative & copywriting", "Landing page alignment", "Bid & budget management", "A/B testing", "Weekly performance reporting"],
+          "timeline": [
+            { "phase": "Strategy & Account Setup", "duration": "3-5 days", "description": "Define targeting, budget, and campaign structure." },
+            { "phase": "Campaign Build & Creative", "duration": "4-5 days", "description": "Build ads, copy, and landing page alignment." },
+            { "phase": "Launch", "duration": "1 day", "description": "Campaigns go live with tracking in place." },
+            { "phase": "Optimization", "duration": "Ongoing, weekly", "description": "Test creatives, audiences, and bids." },
+            { "phase": "Monthly Reporting", "duration": "Recurring", "description": "Review cost-per-lead and scale what works." }
+          ],
+          "totalTimeline": "Live within 1-2 weeks, ongoing optimization monthly"
+        }
+      },
+      {
+        "title": "Social Media Marketing",
+        "description": "Content, scheduling, and paid promotion across Instagram, Facebook, and LinkedIn to grow your brand presence.",
+        "image": "https://www.pngkey.com/png/full/109-1092417_creativity-clicks-on-social-media-social-media-marketing.png",
+        "details": {
+          "fullDescription": "Content, scheduling, and paid boosts across Instagram, Facebook, and LinkedIn — built around a consistent posting calendar and creatives that fit each platform, not just a resized ad.",
+          "idealFor": "Brands that want to build audience and engagement on social platforms consistently, not sporadically.",
+          "keyFeatures": ["Content calendar & planning", "Post design & copywriting", "Community management", "Paid promotion", "Influencer/collab support", "Monthly performance report"],
+          "timeline": [
+            { "phase": "Brand & Audience Audit", "duration": "3-5 days", "description": "Review current presence and define content pillars." },
+            { "phase": "Content Calendar Setup", "duration": "1 week", "description": "Plan first month of posts and creative direction." },
+            { "phase": "First Content Cycle", "duration": "2 weeks", "description": "Design, approve, and schedule first batch of content." },
+            { "phase": "Ongoing Posting & Engagement", "duration": "Monthly", "description": "Publish, engage, and run paid boosts." },
+            { "phase": "Monthly Review", "duration": "Recurring", "description": "Report on growth, engagement, and reach." }
+          ],
+          "totalTimeline": "Setup in 2 weeks, then monthly cadence"
+        }
+      },
+      {
+        "title": "Content Marketing",
+        "description": "Blogs, guides, and video content built around what your audience is actually searching for.",
+        "image": "https://cdn.pixabay.com/photo/2018/09/15/16/36/content-3679757_1280.png",
+        "details": {
+          "fullDescription": "Blogs, guides, and video built around what your audience is actually searching for — designed to earn traffic and trust over time, not just fill a content calendar.",
+          "idealFor": "Businesses that want to build authority and organic traffic through consistent, search-aligned content.",
+          "keyFeatures": ["Content strategy & keyword research", "Blog/article writing", "Video/visual content support", "SEM optimization", "Content distribution", "Performance tracking"],
+          "timeline": [
+            { "phase": "Research & Strategy", "duration": "1 week", "description": "Keyword research and content pillar strategy." },
+            { "phase": "Content Calendar", "duration": "3-5 days", "description": "Plan topics, formats, and publishing schedule." },
+            { "phase": "First Content Batch", "duration": "2 weeks", "description": "Write, design, and optimize first set of content." },
+            { "phase": "Publishing & Promotion", "duration": "Ongoing, monthly", "description": "Publish and distribute content across channels." },
+            { "phase": "Performance Review", "duration": "Monthly", "description": "Track traffic, engagement, and rankings." }
+          ],
+          "totalTimeline": "Setup in 2-3 weeks, then monthly output"
+        }
+      },
+      {
+        "title": "Email Marketing",
+        "description": "Automated sequences and newsletters that keep leads warm and turn them into repeat customers.",
+        "image": "https://www.pinclipart.com/picdir/big/195-1957960_email-marketing-icons-email-marketing-icon-clipart.png",
+        "details": {
+          "fullDescription": "Automated welcome, nurture, and re-engagement sequences plus regular newsletters, so leads stay warm without your team manually sending every email.",
+          "idealFor": "Businesses with an existing lead or customer list that want to nurture them into repeat buyers automatically.",
+          "keyFeatures": ["List segmentation", "Automated email sequences", "Newsletter design & sending", "A/B subject line testing", "Deliverability optimization", "Open/click reporting"],
+          "timeline": [
+            { "phase": "Strategy & List Audit", "duration": "3-4 days", "description": "Review list health and define segments." },
+            { "phase": "Sequence & Template Design", "duration": "1 week", "description": "Design welcome, nurture, and newsletter templates." },
+            { "phase": "Automation Setup", "duration": "3-4 days", "description": "Build automated sequences and triggers." },
+            { "phase": "Launch", "duration": "1 day", "description": "Sequences and first newsletter go live." },
+            { "phase": "Ongoing Optimization", "duration": "Monthly", "description": "A/B test and refine based on open/click data." }
+          ],
+          "totalTimeline": "Live in 2-3 weeks, then ongoing monthly"
+        }
+      },
+      {
+        "title": "Influencer Marketing",
+        "description": "Partnering with the right creators to put your brand in front of an already-engaged audience.",
+        "image": "https://png.pngtree.com/png-clipart/20250104/original/pngtree-influencer-marketing-concept-flat-design-png-image_5484564.png",
+        "details": {
+          "fullDescription": "Matches your brand with creators whose audience already fits your customer, and manages outreach, briefs, and content approval so campaigns stay on-brand.",
+          "idealFor": "Brands that want to reach an already-engaged, trust-built audience quickly through creators.",
+          "keyFeatures": ["Influencer research & shortlisting", "Outreach & negotiation", "Content briefing & approval", "Campaign coordination", "Performance tracking", "Post-campaign report"],
+          "timeline": [
+            { "phase": "Research & Shortlisting", "duration": "1 week", "description": "Identify creators aligned with your audience." },
+            { "phase": "Outreach & Negotiation", "duration": "1 week", "description": "Reach out, negotiate terms, and confirm creators." },
+            { "phase": "Content Creation", "duration": "1-2 weeks", "description": "Brief creators and review content drafts." },
+            { "phase": "Campaign Live", "duration": "1 week", "description": "Content goes live across creator channels." },
+            { "phase": "Reporting", "duration": "3-5 days", "description": "Measure reach, engagement, and conversions." }
+          ],
+          "totalTimeline": "4-6 weeks per campaign cycle"
+        }
+      },
+      {
+        "title": "Conversion Rate Optimization",
+        "description": "Testing and refining landing pages and funnels so more visitors turn into paying customers.",
+        "image": "https://png.pngtree.com/png-clipart/20220722/original/pngtree-conversion-rate-optimization-abstract-concept-vector-illustration-png-image_8391138.png",
+        "details": {
+          "fullDescription": "Finds where visitors drop off on your site or funnel and tests fixes systematically — copy, layout, forms — so the traffic you already have converts more often.",
+          "idealFor": "Businesses with decent traffic that want more of it to convert, before spending more on acquisition.",
+          "keyFeatures": ["Funnel & heatmap analysis", "UX & copy audit", "A/B test design", "Landing page optimization", "Form & checkout fixes", "Monthly conversion report","key performance"],
+          "timeline": [
+            { "phase": "Audit & Analysis", "duration": "1 week", "description": "Analyze funnel drop-off points and heatmaps." },
+            { "phase": "Hypothesis & Test Design", "duration": "3-5 days", "description": "Prioritize fixes and design first tests." },
+            { "phase": "First A/B Tests Live", "duration": "2-3 weeks", "description": "Run tests on key pages and forms." },
+            { "phase": "Results Review & Iteration", "duration": "Ongoing, monthly", "description": "Review results and roll out winning changes." }
+          ],
+          "totalTimeline": "Initial audit in 1-2 weeks, then ongoing test cycles"
+        }
+      },
+      {
+        "title": "Online Reputation Management",
+        "description": "Monitoring and managing reviews and brand mentions so your online presence stays trustworthy.",
+        "image": "https://www.pngitem.com/pimgs/m/282-2829959_online-reputation-management-hd-png-download.png",
+        "details": {
+          "fullDescription": "Monitors reviews and brand mentions across platforms and puts a response process in place, so a bad review gets handled within hours, not discovered weeks later.",
+          "idealFor": "Businesses where reviews and public perception directly affect trust and sales — local businesses, healthcare, hospitality.",
+          "keyFeatures": ["Review & mention monitoring", "Response strategy & templates", "Review generation campaigns", "Crisis response planning", "Competitor benchmarking", "Monthly sentiment report"],
+          "timeline": [
+            { "phase": "Audit & Monitoring Setup", "duration": "3-5 days", "description": "Set up monitoring across review and social platforms." },
+            { "phase": "Response Process Setup", "duration": "3-4 days", "description": "Build response templates and escalation process." },
+            { "phase": "Review Generation Launch", "duration": "1 week", "description": "Start prompting satisfied customers for reviews." },
+            { "phase": "Ongoing Monitoring & Response", "duration": "Daily/weekly", "description": "Respond to reviews and mentions as they come in." },
+            { "phase": "Monthly Report", "duration": "Recurring", "description": "Track sentiment trends and rating changes." }
+          ],
+          "totalTimeline": "Setup in 2 weeks, then continuous monitoring"
+        }
+      }
     ]
   },
   {
@@ -91,14 +394,147 @@
     "image": "https://img.freepik.com/free-vector/business-team-working-together-modern-erp-system_74855-5819.jpg?w=900&t=st=1700000000~exp=1700000600~hmac=placeholder",
     "offeringsTitle": "Which ERP & CRM Services We Provide?",
     "offerings": [
-      { "title": "Custom ERP Development", "description": "Tailored ERP systems for finance, inventory, procurement, and production workflows.", "image": "https://cdn.iplocation.net/assets/images/blog/2025/featured/custom-erp.png" },
-      { "title": "CRM Implementation", "description": "Deploy CRM systems that manage leads, customer interactions, and sales operations seamlessly.", "image": "https://www.dhruvsoft.com/wp-content/uploads/2019/12/image-30.png" },
-      { "title": "ERP Integration", "description": "Connect your ERP with payments, e-commerce, accounting, and logistics systems.", "image": "https://1.bp.blogspot.com/-N_iuuq_lsLo/WJQbdJvyZsI/AAAAAAAABfE/rgZ1dp1Sk1AipzRpitJDnKFzvElZMViHwCLcB/s1600/erp-solutions.png" },
-      { "title": "Sales & Service Automation", "description": "Automate sales pipelines, service tickets, and customer follow-up workflows.", "image": "https://static.vecteezy.com/system/resources/previews/046/858/338/original/3d-isometric-flat-conceptual-illustration-of-automation-png.png" },
-      { "title": "Analytics & Dashboards", "description": "Real-time reports and dashboards that help leadership make faster decisions.", "image": "https://cdn0.iconfinder.com/data/icons/reports-and-analytics-5/128/41-1024.png" },
-      { "title": "User Training & Change Management", "description": "Training, documentation, and support to ensure fast adoption and low disruption.", "image": "https://cdn-icons-png.flaticon.com/512/11861/11861499.png" },
-      { "title": "API & Third-Party Integrations", "description": "Connect ERP and CRM systems with payment gateways, e-commerce platforms, communication tools, accounting software, and other business applications.", "image": "https://assets.apyhub.com/blog/unlocking-the-power-of-third-party-apis/image8.png" },
-      { "title": "Data Migration & System Upgrade", "description": "Securely migrate existing business data and upgrade ERP/CRM systems while minimizing downtime and ensuring data accuracy.", "image": "https://www.a2bdata.com/wp-content/uploads/2018/08/Data-Migration.png" }
+      {
+        "title": "Custom ERP Development",
+        "description": "Tailored ERP systems for finance, inventory, procurement, and production workflows.",
+        "image": "https://cdn.iplocation.net/assets/images/blog/2025/featured/custom-erp.png",
+        "details": {
+          "fullDescription": "An ERP built around your actual finance, inventory, and production workflows instead of forcing your process into a generic template — so every module reflects how your team already works.",
+          "idealFor": "Mid-size and growing businesses whose operations have outgrown spreadsheets and disconnected tools.",
+          "keyFeatures": ["Finance & accounting module", "Inventory & procurement", "Production/workflow tracking", "Role-based access", "Custom reports & dashboards", "Multi-department integration"],
+          "timeline": [
+            { "phase": "Requirement Mapping", "duration": "1 week", "description": "Map finance, inventory, and production workflows." },
+            { "phase": "Design & Architecture", "duration": "1-2 weeks", "description": "Design system architecture and module layouts." },
+            { "phase": "Development", "duration": "5-7 weeks", "description": "Build modules and cross-department integration." },
+            { "phase": "Testing & UAT", "duration": "1-2 weeks", "description": "User acceptance testing with your team." },
+            { "phase": "Launch & Training", "duration": "1 week", "description": "Go live and train department leads." }
+          ],
+          "totalTimeline": "10-14 weeks"
+        }
+      },
+      {
+        "title": "CRM Implementation",
+        "description": "Deploy CRM systems that manage leads, customer interactions, and sales operations seamlessly.",
+        "image": "https://www.dhruvsoft.com/wp-content/uploads/2019/12/image-30.png",
+        "details": {
+          "fullDescription": "Sets up lead capture, pipeline stages, and follow-up automation matched to your actual sales process, so reps spend time selling instead of updating spreadsheets.",
+          "idealFor": "Sales teams that need a structured pipeline, and businesses currently tracking leads in spreadsheets or inboxes.",
+          "keyFeatures": ["Lead capture & pipeline setup", "Sales stage automation", "Contact & deal tracking", "Email/call integration", "Reporting dashboards", "Team training"],
+          "timeline": [
+            { "phase": "Process Mapping", "duration": "3-5 days", "description": "Map your current sales stages and pipeline." },
+            { "phase": "CRM Configuration", "duration": "1-2 weeks", "description": "Configure pipeline, fields, and automations." },
+            { "phase": "Integration & Data Import", "duration": "1 week", "description": "Import contacts and connect email/calling tools." },
+            { "phase": "Testing & UAT", "duration": "3-5 days", "description": "Test pipeline stages and automations with sales team." },
+            { "phase": "Launch & Training", "duration": "3-5 days", "description": "Go live and train the sales team." }
+          ],
+          "totalTimeline": "4-6 weeks"
+        }
+      },
+      {
+        "title": "ERP Integration",
+        "description": "Connect your ERP with payments, e-commerce, accounting, and logistics systems.",
+        "image": "https://1.bp.blogspot.com/-N_iuuq_lsLo/WJQbdJvyZsI/AAAAAAAABfE/rgZ1dp1Sk1AipzRpitJDnKFzvElZMViHwCLcB/s1600/erp-solutions.png",
+        "details": {
+          "fullDescription": "Connects your ERP to payments, e-commerce, accounting, or logistics platforms so data flows automatically instead of being re-entered by hand across systems.",
+          "idealFor": "Businesses running an ERP that needs to talk to other systems — payments, e-commerce, accounting, or logistics.",
+          "keyFeatures": ["Integration architecture planning", "API/middleware development", "Data mapping & sync", "Error handling & monitoring", "Testing across systems", "Documentation & handover"],
+          "timeline": [
+            { "phase": "Integration Audit & Planning", "duration": "1 week", "description": "Review systems and plan data mapping." },
+            { "phase": "Development", "duration": "2-4 weeks", "description": "Build API/middleware connections." },
+            { "phase": "Testing Across Systems", "duration": "1 week", "description": "Test data sync and error handling end-to-end." },
+            { "phase": "Deployment & Monitoring", "duration": "3-5 days", "description": "Deploy and set up ongoing monitoring." }
+          ],
+          "totalTimeline": "4-6 weeks"
+        }
+      },
+      {
+        "title": "Sales & Service Automation",
+        "description": "Automate sales pipelines, service tickets, and customer follow-up workflows.",
+        "image": "https://static.vecteezy.com/system/resources/previews/046/858/338/original/3d-isometric-flat-conceptual-illustration-of-automation-png.png",
+        "details": {
+          "fullDescription": "Automates the repetitive parts of sales and support — follow-ups, ticket routing, status updates — so nothing falls through the cracks between teams.",
+          "idealFor": "Sales and support teams handling volume that's outgrown manual follow-up and ticket tracking.",
+          "keyFeatures": ["Workflow automation rules", "Lead follow-up sequences", "Ticket routing & SLAs", "Approval workflows", "Notification triggers", "Automation reporting"],
+          "timeline": [
+            { "phase": "Process Mapping", "duration": "3-5 days", "description": "Map current follow-up and ticketing workflows." },
+            { "phase": "Automation Design", "duration": "1 week", "description": "Design rules, triggers, and SLAs." },
+            { "phase": "Build & Configuration", "duration": "1-2 weeks", "description": "Configure automation workflows." },
+            { "phase": "Testing & Refinement", "duration": "1 week", "description": "Test edge cases and refine rules." },
+            { "phase": "Launch & Training", "duration": "3-5 days", "description": "Go live and train sales/support teams." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      },
+      {
+        "title": "Analytics & Dashboards",
+        "description": "Real-time reports and dashboards that help leadership make faster decisions.",
+        "image": "https://cdn0.iconfinder.com/data/icons/reports-and-analytics-5/128/41-1024.png",
+        "details": {
+          "fullDescription": "Turns raw ERP/CRM data into live dashboards leadership can actually read at a glance — built around the decisions they need to make, not every metric available.",
+          "idealFor": "Leadership teams that need real-time visibility into sales, operations, or finance without waiting on manual reports.",
+          "keyFeatures": ["KPI definition workshop", "Dashboard design", "Data source integration", "Automated report scheduling", "Role-based dashboard views", "Training & handover"],
+          "timeline": [
+            { "phase": "KPI & Requirement Workshop", "duration": "3-5 days", "description": "Define the metrics leadership actually needs." },
+            { "phase": "Dashboard Design", "duration": "1 week", "description": "Design layouts for each dashboard view." },
+            { "phase": "Build & Data Integration", "duration": "1-2 weeks", "description": "Connect data sources and build dashboards." },
+            { "phase": "Testing & Refinement", "duration": "3-5 days", "description": "Verify data accuracy and refine views." },
+            { "phase": "Launch & Training", "duration": "2-3 days", "description": "Go live and train dashboard users." }
+          ],
+          "totalTimeline": "3-5 weeks"
+        }
+      },
+      {
+        "title": "User Training & Change Management",
+        "description": "Training, documentation, and support to ensure fast adoption and low disruption.",
+        "image": "https://cdn-icons-png.flaticon.com/512/11861/11861499.png",
+        "details": {
+          "fullDescription": "Structured training and documentation so your team actually adopts the new system, instead of quietly going back to their old spreadsheets after week one.",
+          "idealFor": "Businesses rolling out a new ERP/CRM (or one from us) that need their team to adopt it quickly.",
+          "keyFeatures": ["Role-based training sessions", "Documentation & SOPs", "Hands-on workshops", "Change management support", "Post-launch Q&A support", "Adoption tracking"],
+          "timeline": [
+            { "phase": "Training Needs Assessment", "duration": "2-3 days", "description": "Identify gaps by role and department." },
+            { "phase": "Material & SOP Preparation", "duration": "1 week", "description": "Prepare training decks, SOPs, and guides." },
+            { "phase": "Training Sessions", "duration": "1-2 weeks", "description": "Run role-based training workshops." },
+            { "phase": "Post-Launch Support", "duration": "2-4 weeks", "description": "Ongoing Q&A support as teams adopt the system." }
+          ],
+          "totalTimeline": "4-6 weeks"
+        }
+      },
+      {
+        "title": "API & Third-Party Integrations",
+        "description": "Connect ERP and CRM systems with payment gateways, e-commerce platforms, communication tools, accounting software, and other business applications.",
+        "image": "https://assets.apyhub.com/blog/unlocking-the-power-of-third-party-apis/image8.png",
+        "details": {
+          "fullDescription": "Connects your ERP/CRM to payment gateways, e-commerce platforms, communication tools, or accounting software through clean, monitored API integrations.",
+          "idealFor": "Businesses that need their core system talking reliably to external platforms and tools.",
+          "keyFeatures": ["Integration scoping", "API development", "Authentication & security setup", "Error handling & logging", "End-to-end testing", "Ongoing monitoring setup"],
+          "timeline": [
+            { "phase": "Scoping & API Review", "duration": "3-5 days", "description": "Review target APIs and define integration scope." },
+            { "phase": "Development", "duration": "1-3 weeks", "description": "Build integration and authentication flows." },
+            { "phase": "Testing", "duration": "1 week", "description": "Test data flow and error handling end-to-end." },
+            { "phase": "Deployment & Monitoring", "duration": "3-5 days", "description": "Deploy and set up alerts for failures." }
+          ],
+          "totalTimeline": "3-5 weeks"
+        }
+      },
+      {
+        "title": "Data Migration & System Upgrade",
+        "description": "Securely migrate existing business data and upgrade ERP/CRM systems while minimizing downtime and ensuring data accuracy.",
+        "image": "https://www.a2bdata.com/wp-content/uploads/2018/08/Data-Migration.png",
+        "details": {
+          "fullDescription": "Moves your existing business data into a new or upgraded system carefully — cleaned, mapped, and verified — so nothing is lost and downtime stays minimal.",
+          "idealFor": "Businesses upgrading systems or switching platforms who need their historical data intact and accurate.",
+          "keyFeatures": ["Data audit & cleanup", "Migration mapping", "Test migration & validation", "Downtime planning", "Full migration & verification", "Post-migration support"],
+          "timeline": [
+            { "phase": "Data Audit", "duration": "3-5 days", "description": "Review data quality and identify cleanup needs." },
+            { "phase": "Migration Planning & Mapping", "duration": "1 week", "description": "Map old fields to new system structure." },
+            { "phase": "Test Migration", "duration": "1 week", "description": "Run a test migration and validate results." },
+            { "phase": "Full Migration", "duration": "2-4 days", "description": "Execute full migration with planned downtime." },
+            { "phase": "Verification & Support", "duration": "1 week", "description": "Verify data accuracy and support the team post-switch." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      }
     ]
   },
   {
@@ -125,14 +561,144 @@
     "image": "https://cdni.iconscout.com/illustration/premium/thumb/design-consultant-6311252-5211324.png",
     "offeringsTitle": "Which Types Of IT Consulting Services We Provide?",
     "offerings": [
-      { "title": "Cloud Migration Consulting", "description": "Plan and execute a move from on-prem systems to the cloud with minimal disruption.", "image": "https://lvivity.com/wp-content/uploads/2024/10/aws-migration.png" },
-      { "title": "Cybersecurity Consulting", "description": "Identify vulnerabilities and put safeguards in place before they become incidents.", "image": "https://img.freepik.com/free-vector/cyber-security-shield-light-blue_78370-7843.jpg?semt=ais_hybrid&w=740&q=80" },
-      { "title": "IT Infrastructure Audit", "description": "A full review of your current systems, costs, and risks to find where money is being wasted.", "image": "https://www.pinclipart.com/picdir/big/380-3806590_it-infrastructure-audit-evarus-dynamic-reports-information.png" },
-      { "title": "Digital Transformation Strategy", "description": "A roadmap for modernizing operations and adopting the right technology at the right pace.", "image": "https://cdn-icons-png.flaticon.com/512/9661/9661920.png" },
-      { "title": "Technology Vendor Selection", "description": "Vendor-neutral comparisons so you pick the platform that actually fits your business.", "image": "https://cdn-icons-png.flaticon.com/512/12371/12371481.png" },
-      { "title": "Compliance & Regulatory Guidance", "description": "Guidance on meeting industry standards like SOC 2, HIPAA, or GDPR before an audit is due.", "image": "https://w7.pngwing.com/pngs/265/536/png-transparent-policies-standards-compliance-policy-thumbnail.png" },
-      { "title": "Disaster Recovery Planning", "description": "Backup and recovery plans so a system failure doesn't turn into a business shutdown.", "image": "https://static.vecteezy.com/system/resources/previews/026/391/943/large_2x/disaster-recovery-team-blue-gradient-concept-icon-cooperation-effective-disaster-recovery-plan-abstract-idea-thin-line-illustration-isolated-outline-drawing-vector.jpg" },
-      { "title": "Technology Roadmap Planning", "description": "A phased, budget-aware plan for what to upgrade next and in what order.", "image": "https://w7.pngwing.com/pngs/387/761/png-transparent-gray-and-multicolored-chart-technology-roadmap-template-microsoft-powerpoint-project-plan-road-map-angle-people-presentation.png" }
+      {
+        "title": "Cloud Migration Consulting",
+        "description": "Plan and execute a move from on-prem systems to the cloud with minimal disruption.",
+        "image": "https://lvivity.com/wp-content/uploads/2024/10/aws-migration.png",
+        "details": {
+          "fullDescription": "Plans and executes a move from on-prem systems to the cloud with a phased approach, so critical systems don't go down mid-migration.",
+          "idealFor": "Businesses running on-prem infrastructure that want cloud scalability, without a risky all-at-once switch.",
+          "keyFeatures": ["Infrastructure assessment", "Cloud provider selection", "Migration roadmap", "Phased migration execution", "Cost optimization", "Post-migration support"],
+          "timeline": [
+            { "phase": "Assessment & Planning", "duration": "1-2 weeks", "description": "Assess current infrastructure and migration readiness." },
+            { "phase": "Roadmap & Provider Selection", "duration": "1 week", "description": "Finalize cloud provider and migration sequence." },
+            { "phase": "Phased Migration", "duration": "3-6 weeks", "description": "Migrate systems in planned, low-risk phases." },
+            { "phase": "Testing & Optimization", "duration": "1-2 weeks", "description": "Test performance and optimize cloud costs." },
+            { "phase": "Handover & Support", "duration": "1 week", "description": "Documentation, training, and post-migration support." }
+          ],
+          "totalTimeline": "6-10 weeks depending on scale"
+        }
+      },
+      {
+        "title": "Cybersecurity Consulting",
+        "description": "Identify vulnerabilities and put safeguards in place before they become incidents.",
+        "image": "https://img.freepik.com/free-vector/cyber-security-shield-light-blue_78370-7843.jpg?semt=ais_hybrid&w=740&q=80",
+        "details": {
+          "fullDescription": "Identifies vulnerabilities across your systems and puts safeguards in place before they become incidents — rather than reacting after a breach.",
+          "idealFor": "Businesses that handle sensitive data or want to close security gaps before an incident or audit.",
+          "keyFeatures": ["Vulnerability assessment", "Penetration testing", "Security policy development", "Access control review", "Incident response planning", "Remediation support"],
+          "timeline": [
+            { "phase": "Security Assessment", "duration": "1 week", "description": "Assess systems, access controls, and current policies." },
+            { "phase": "Penetration Testing", "duration": "1-2 weeks", "description": "Simulate attacks to find real vulnerabilities." },
+            { "phase": "Findings & Roadmap", "duration": "3-5 days", "description": "Prioritized report of risks and fixes." },
+            { "phase": "Remediation Support", "duration": "2-4 weeks", "description": "Fix vulnerabilities and harden systems." },
+            { "phase": "Follow-up Review", "duration": "Ongoing", "description": "Periodic re-checks to confirm fixes hold." }
+          ],
+          "totalTimeline": "5-8 weeks"
+        }
+      },
+      {
+        "title": "IT Infrastructure Audit",
+        "description": "A full review of your current systems, costs, and risks to find where money is being wasted.",
+        "image": "https://www.pinclipart.com/picdir/big/380-3806590_it-infrastructure-audit-evarus-dynamic-reports-information.png",
+        "details": {
+          "fullDescription": "A full review of your current systems, costs, and risks — surfacing where money is being wasted and where infrastructure is quietly a liability.",
+          "idealFor": "Businesses that haven't reviewed their IT setup in a while and suspect it's costing more or riskier than it should be.",
+          "keyFeatures": ["Infrastructure inventory", "Cost analysis", "Risk & vulnerability review", "Performance benchmarking", "Recommendations report", "Prioritized action plan"],
+          "timeline": [
+            { "phase": "Discovery & Inventory", "duration": "1 week", "description": "Catalog current systems, licenses, and costs." },
+            { "phase": "Analysis & Benchmarking", "duration": "1 week", "description": "Analyze performance, cost, and risk against benchmarks." },
+            { "phase": "Report & Recommendations", "duration": "3-5 days", "description": "Deliver findings with a prioritized action plan." },
+            { "phase": "Findings Walkthrough", "duration": "1 day", "description": "Walk through results and next steps with your team." }
+          ],
+          "totalTimeline": "2-3 weeks"
+        }
+      },
+      {
+        "title": "Digital Transformation Strategy",
+        "description": "A roadmap for modernizing operations and adopting the right technology at the right pace.",
+        "image": "https://cdn-icons-png.flaticon.com/512/9661/9661920.png",
+        "details": {
+          "fullDescription": "A phased roadmap for modernizing operations and adopting the right technology at a pace your team and budget can actually absorb.",
+          "idealFor": "Businesses planning a broader shift to digital tools and processes but unsure where to start or in what order.",
+          "keyFeatures": ["Current-state assessment", "Transformation roadmap", "Technology recommendations", "Phased implementation plan", "Change management guidance", "Progress review checkpoints"],
+          "timeline": [
+            { "phase": "Discovery & Assessment", "duration": "1-2 weeks", "description": "Assess current processes and technology gaps." },
+            { "phase": "Roadmap Development", "duration": "1-2 weeks", "description": "Build a phased, budget-aware transformation plan." },
+            { "phase": "Stakeholder Review", "duration": "3-5 days", "description": "Review and finalize roadmap with leadership." },
+            { "phase": "Implementation Kickoff Support", "duration": "Ongoing", "description": "Support the first phase of rollout." }
+          ],
+          "totalTimeline": "3-5 weeks to a finalized roadmap"
+        }
+      },
+      {
+        "title": "Technology Vendor Selection",
+        "description": "Vendor-neutral comparisons so you pick the platform that actually fits your business.",
+        "image": "https://cdn-icons-png.flaticon.com/512/12371/12371481.png",
+        "details": {
+          "fullDescription": "Vendor-neutral comparisons based on your actual requirements and budget, so you pick the platform that fits your business instead of the one with the best sales pitch.",
+          "idealFor": "Businesses evaluating new software or platform vendors and want an unbiased comparison before committing.",
+          "keyFeatures": ["Requirement gathering", "Vendor shortlisting", "Comparison scorecards", "Demo coordination", "Contract & pricing review support", "Final recommendation report"],
+          "timeline": [
+            { "phase": "Requirement Gathering", "duration": "3-5 days", "description": "Define must-haves, budget, and constraints." },
+            { "phase": "Vendor Research & Shortlisting", "duration": "1 week", "description": "Research and shortlist vendors against requirements." },
+            { "phase": "Demos & Evaluation", "duration": "1-2 weeks", "description": "Coordinate demos and score vendors objectively." },
+            { "phase": "Final Recommendation", "duration": "3-5 days", "description": "Deliver a clear, vendor-neutral recommendation." }
+          ],
+          "totalTimeline": "3-4 weeks"
+        }
+      },
+      {
+        "title": "Compliance & Regulatory Guidance",
+        "description": "Guidance on meeting industry standards like SOC 2, HIPAA, or GDPR before an audit is due.",
+        "image": "https://w7.pngwing.com/pngs/265/536/png-transparent-policies-standards-compliance-policy-thumbnail.png",
+        "details": {
+          "fullDescription": "Guidance on meeting standards like SOC 2, HIPAA, or GDPR, with a clear gap analysis and remediation plan before an audit is due.",
+          "idealFor": "Businesses that need to meet a specific compliance standard and want to close gaps before an audit.",
+          "keyFeatures": ["Compliance gap analysis", "Policy & documentation support", "Control implementation guidance", "Staff awareness training", "Pre-audit readiness review", "Ongoing compliance support"],
+          "timeline": [
+            { "phase": "Gap Analysis", "duration": "1 week", "description": "Assess current state against the target standard." },
+            { "phase": "Remediation Planning", "duration": "3-5 days", "description": "Plan fixes and required documentation." },
+            { "phase": "Implementation Support", "duration": "2-4 weeks", "description": "Implement controls and update policies." },
+            { "phase": "Pre-Audit Review", "duration": "1 week", "description": "Final readiness check before your audit." }
+          ],
+          "totalTimeline": "4-6 weeks"
+        }
+      },
+      {
+        "title": "Disaster Recovery Planning",
+        "description": "Backup and recovery plans so a system failure doesn't turn into a business shutdown.",
+        "image": "https://static.vecteezy.com/system/resources/previews/026/391/943/large_2x/disaster-recovery-team-blue-gradient-concept-icon-cooperation-effective-disaster-recovery-plan-abstract-idea-thin-line-illustration-isolated-outline-drawing-vector.jpg",
+        "details": {
+          "fullDescription": "A backup and recovery plan built around your actual critical systems, so a failure turns into a few hours of downtime instead of a business shutdown.",
+          "idealFor": "Businesses without a tested recovery plan, or whose current backup process has never actually been tested.",
+          "keyFeatures": ["Business impact analysis", "Backup strategy design", "Recovery time/point objectives", "DR plan documentation", "Recovery testing", "Staff runbook training"],
+          "timeline": [
+            { "phase": "Business Impact Analysis", "duration": "1 week", "description": "Identify critical systems and acceptable downtime." },
+            { "phase": "DR Strategy & Plan Design", "duration": "1-2 weeks", "description": "Design backup strategy and recovery objectives." },
+            { "phase": "Documentation & Runbooks", "duration": "1 week", "description": "Write step-by-step recovery runbooks." },
+            { "phase": "Testing & Validation", "duration": "3-5 days", "description": "Run a real recovery drill and validate the plan." }
+          ],
+          "totalTimeline": "3-5 weeks"
+        }
+      },
+      {
+        "title": "Technology Roadmap Planning",
+        "description": "A phased, budget-aware plan for what to upgrade next and in what order.",
+        "image": "https://w7.pngwing.com/pngs/387/761/png-transparent-gray-and-multicolored-chart-technology-roadmap-template-microsoft-powerpoint-project-plan-road-map-angle-people-presentation.png",
+        "details": {
+          "fullDescription": "A phased, budget-aware plan for what to upgrade next and in what order, so technology spend follows a plan instead of reacting to whatever breaks first.",
+          "idealFor": "Businesses planning technology investment over the next 1-3 years and want a clear, prioritized sequence.",
+          "keyFeatures": ["Current infrastructure review", "Business goal alignment", "Prioritized upgrade roadmap", "Budget estimation", "Risk flagging", "Quarterly review checkpoints"],
+          "timeline": [
+            { "phase": "Discovery & Goal Alignment", "duration": "1 week", "description": "Align technology plans with business goals." },
+            { "phase": "Infrastructure Review", "duration": "1 week", "description": "Review current systems and upcoming needs." },
+            { "phase": "Roadmap & Budget Drafting", "duration": "1 week", "description": "Draft phased roadmap with budget estimates." },
+            { "phase": "Final Review & Handover", "duration": "3-5 days", "description": "Finalize roadmap with leadership sign-off." }
+          ],
+          "totalTimeline": "3-4 weeks"
+        }
+      }
     ]
   },
   {
@@ -159,14 +725,209 @@
     "image": "https://static.vecteezy.com/system/resources/previews/005/283/061/original/web-development-concept-in-3d-isometric-design-designer-works-with-code-interface-engineering-programming-settings-and-optimizes-pages-template-with-people-scene-illustration-for-webpage-vector.jpg",
     "offeringsTitle": "Which Types Of Websites We Build?",
     "offerings": [
-      { "title": "Corporate & Business Websites", "description": "A professional, brand-aligned website that builds trust and captures leads.", "image": "https://www.pngmart.com/files/8/Website-PNG-Picture.png" },
-      { "title": "E-Commerce Websites", "description": "Full online stores with product catalogs, cart, checkout, and payment integration.", "image": "https://static.vecteezy.com/system/resources/thumbnails/024/089/470/small_2x/laptop-with-ecommerce-tech-free-png.png" },
-      { "title": "Web Portals & Dashboards", "description": "Custom login-based portals for customers, employees, or partners to manage their data.", "image": "https://cdn-icons-png.flaticon.com/512/10397/10397171.png" },
-      { "title": "Progressive Web Apps", "description": "App-like websites that work offline and can be installed straight from the browser.", "image": "https://png.pngtree.com/png-vector/20230513/ourmid/pngtree-progressive-web-apps-blue-gradient-concept-icon-round-illustration-logo-vector-png-image_52044202.jpg" },
-      { "title": "Landing Pages", "description": "Focused, high-converting pages built for a single campaign or product launch.", "image": "https://png.pngtree.com/png-vector/20240611/ourlarge/pngtree-gradient-mesh-landing-page-design-png-image_12691840.png" },
-      { "title": "CMS-Based Websites", "description": "Easy-to-update websites built on WordPress or Webflow so your team can manage content.", "image": "https://treeswiftt.com/wp-content/uploads/2024/06/CMS.png" },
-      { "title": "Booking & Reservation Websites", "description": "Sites with built-in scheduling for appointments, rooms, or services.", "image": "https://static.vecteezy.com/system/resources/previews/006/094/776/original/hotel-booking-flat-conceptual-icon-editable-vector.jpg" },
-      { "title": "Membership & Subscription Websites", "description": "Gated content and recurring billing for courses, communities, or premium content.", "image": "https://cdn3d.iconscout.com/3d/premium/thumb/membership-card-9959437-8129708.png" }
+      {
+        "title": "Corporate & Business Websites",
+        "description": "A professional, brand-aligned website that builds trust and captures leads.",
+        "image": "https://www.pngmart.com/files/8/Website-PNG-Picture.png",
+        "details": {
+          "fullDescription": "A multi-page site built around how your business actually wins clients: clear service pages, a credible about/team section, and calls-to-action placed where visitors are actually deciding, not just at the top. Designed to be the page a prospect checks before they take you seriously.",
+          "idealFor": "Established businesses, agencies, consultancies, and professional service firms that need a credible online presence to build trust and generate leads.",
+          "keyFeatures": [
+            "Custom brand-aligned design",
+            "Service & solution pages",
+            "Team & about pages",
+            "Lead capture forms & CTAs",
+            "Blog / news section",
+            "Google Maps & contact integration",
+            "Mobile-first responsive layout",
+            "Basic on-page SEM setup"
+          ],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Understand your business, audience, and site structure (sitemap)." },
+            { "phase": "UI/UX Design", "duration": "4-5 days", "description": "Wireframes and visual design for key pages, reviewed with you." },
+            { "phase": "Development", "duration": "6-8 days", "description": "Build responsive pages, forms, and CMS/content wiring." },
+            { "phase": "Content & QA", "duration": "2-3 days", "description": "Final content placement, cross-browser and mobile testing." },
+            { "phase": "Launch & Handover", "duration": "1 day", "description": "Go live, domain/SSL setup, and walkthrough." }
+          ],
+          "totalTimeline": "2-3 weeks"
+        }
+      },
+      {
+        "title": "E-Commerce Websites",
+        "description": "Full online stores with product catalogs, cart, checkout, and payment integration.",
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/024/089/470/small_2x/laptop-with-ecommerce-tech-free-png.png",
+        "details": {
+          "fullDescription": "A complete online store: product browsing and filtering, cart, secure checkout, and order management, built to convert browsers into buyers and to stay fast as your catalog grows. Includes the operational side too — inventory, coupons, and order tracking — not just the storefront.",
+          "idealFor": "Retail and D2C brands, and any business that wants to sell products directly online with a full shopping experience.",
+          "keyFeatures": [
+            "Product catalog with filters & search",
+            "Cart & secure checkout",
+            "Payment gateway integration",
+            "Order & inventory management",
+            "Coupon / discount engine",
+            "Customer accounts & order history",
+            "Shipping & tax configuration",
+            "Abandoned cart recovery"
+          ],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "3-4 days", "description": "Catalog structure, payment/shipping requirements, sitemap." },
+            { "phase": "UI/UX Design", "duration": "5-7 days", "description": "Store, product, cart, and checkout page designs." },
+            { "phase": "Store Development", "duration": "10-14 days", "description": "Build catalog, cart, checkout, and account systems." },
+            { "phase": "Payment & Integration Testing", "duration": "3-4 days", "description": "Payment gateway, shipping, and tax testing end-to-end." },
+            { "phase": "Launch & Handover", "duration": "1-2 days", "description": "Go live, product upload training, and support handover." }
+          ],
+          "totalTimeline": "4-6 weeks"
+        }
+      },
+      {
+        "title": "Web Portals & Dashboards",
+        "description": "Custom login-based portals for customers, employees, or partners to manage their data.",
+        "image": "https://cdn-icons-png.flaticon.com/512/10397/10397171.png",
+        "details": {
+          "fullDescription": "A secure, login-gated space where different types of users see exactly what they need — customers track their own data, staff manage records, partners view shared reports — all from one system with proper role-based access.",
+          "idealFor": "Businesses that need a secure, login-based space for customers, employees, or partners to view and manage data.",
+          "keyFeatures": [
+            "Role-based access control",
+            "Custom dashboards & reports",
+            "Real-time data updates",
+            "Document upload / download",
+            "Notifications & alerts",
+            "API integrations with internal systems",
+            "Audit logs & activity history"
+          ],
+          "timeline": [
+            { "phase": "Requirement Mapping", "duration": "3-4 days", "description": "Map user roles, permissions, and data flows." },
+            { "phase": "UI/UX Design", "duration": "5-6 days", "description": "Dashboard layouts and role-specific views." },
+            { "phase": "Development", "duration": "12-16 days", "description": "Build auth, roles, dashboards, and integrations." },
+            { "phase": "Integration & QA", "duration": "3-4 days", "description": "Test permissions, data accuracy, and edge cases." },
+            { "phase": "Launch & Training", "duration": "2 days", "description": "Go live and train each user role on the portal." }
+          ],
+          "totalTimeline": "4-6 weeks"
+        }
+      },
+      {
+        "title": "Progressive Web Apps",
+        "description": "App-like websites that work offline and can be installed straight from the browser.",
+        "image": "https://png.pngtree.com/png-vector/20230513/ourmid/pngtree-progressive-web-apps-blue-gradient-concept-icon-round-illustration-logo-vector-png-image_52044202.jpg",
+        "details": {
+          "fullDescription": "A website that behaves like a native app — installable to the home screen, works with a patchy or no connection, and sends push notifications — without the cost or delay of publishing to app stores.",
+          "idealFor": "Businesses that want an app-like experience and repeat engagement without the cost of native iOS/Android app development.",
+          "keyFeatures": [
+            "Installable from the browser",
+            "Offline functionality",
+            "Push notifications",
+            "Fast, app-like navigation",
+            "Home screen icon & splash screen",
+            "Auto-updates, no app store needed"
+          ],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Define core flows and offline requirements." },
+            { "phase": "UI/UX Design", "duration": "4-5 days", "description": "App-like screen designs and navigation." },
+            { "phase": "PWA Development", "duration": "10-12 days", "description": "Build service workers, offline caching, and core features." },
+            { "phase": "Offline & Performance Testing", "duration": "2-3 days", "description": "Test install flow, offline mode, and load speed." },
+            { "phase": "Launch & Handover", "duration": "1-2 days", "description": "Go live and confirm install/notification setup." }
+          ],
+          "totalTimeline": "3-5 weeks"
+        }
+      },
+      {
+        "title": "Landing Pages",
+        "description": "Focused, high-converting pages built for a single campaign or product launch.",
+        "image": "https://png.pngtree.com/png-vector/20240611/ourlarge/pngtree-gradient-mesh-landing-page-design-png-image_12691840.png",
+        "details": {
+          "fullDescription": "A single, tightly-focused page built around one goal — a signup, a purchase, a demo request — with every element pointing at that one action instead of splitting attention across a full site.",
+          "idealFor": "Product launches, ad campaigns, or events that need a focused, high-converting single page fast.",
+          "keyFeatures": [
+            "Single-purpose conversion focus",
+            "A/B test-ready layout",
+            "Fast load speed",
+            "Lead capture form",
+            "Analytics & pixel integration"
+          ],
+          "timeline": [
+            { "phase": "Brief & Copy", "duration": "1 day", "description": "Align on the goal, offer, and page copy." },
+            { "phase": "Design", "duration": "1-2 days", "description": "Design the single-page layout and visuals." },
+            { "phase": "Development", "duration": "1-2 days", "description": "Build, wire up the form, and add tracking." },
+            { "phase": "QA & Launch", "duration": "1 day", "description": "Test across devices and go live." }
+          ],
+          "totalTimeline": "3-5 days"
+        }
+      },
+      {
+        "title": "CMS-Based Websites",
+        "description": "Easy-to-update websites built on WordPress or Webflow so your team can manage content.",
+        "image": "https://treeswiftt.com/wp-content/uploads/2024/06/CMS.png",
+        "details": {
+          "fullDescription": "A website built on WordPress or Webflow so your team can add pages, edit copy, and swap images without waiting on a developer for every small change, while still keeping a custom, brand-specific design underneath.",
+          "idealFor": "Teams that want to manage their own content — blogs, pages, images — without depending on a developer for updates.",
+          "keyFeatures": [
+            "WordPress / Webflow setup",
+            "Editable page builder",
+            "SEM-friendly structure",
+            "User roles for editors",
+            "Plugin / app integrations",
+            "Editor training included"
+          ],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2 days", "description": "Sitemap, content structure, and plugin needs." },
+            { "phase": "Design", "duration": "4-5 days", "description": "Custom theme/template design on the chosen CMS." },
+            { "phase": "CMS Setup & Development", "duration": "6-8 days", "description": "Build templates, page builder blocks, and roles." },
+            { "phase": "Content Migration & QA", "duration": "2-3 days", "description": "Migrate/enter content and test editing workflow." },
+            { "phase": "Launch & Training", "duration": "1 day", "description": "Go live and train your team on editing content." }
+          ],
+          "totalTimeline": "2-3 weeks"
+        }
+      },
+      {
+        "title": "Booking & Reservation Websites",
+        "description": "Sites with built-in scheduling for appointments, rooms, or services.",
+        "image": "https://static.vecteezy.com/system/resources/previews/006/094/776/original/hotel-booking-flat-conceptual-icon-editable-vector.jpg",
+        "details": {
+          "fullDescription": "A site where visitors can see real availability and book directly — an appointment, a room, a service slot — with automatic confirmations and reminders, and a simple dashboard for your team to manage the schedule.",
+          "idealFor": "Service businesses like clinics, salons, rentals, or venues that take appointments or bookings online.",
+          "keyFeatures": [
+            "Real-time availability calendar",
+            "Automated confirmations & reminders",
+            "Payment / deposit collection",
+            "Staff / resource scheduling",
+            "Admin booking dashboard",
+            "Cancellation & rescheduling flow"
+          ],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "2-3 days", "description": "Map booking rules, resources, and staff schedules." },
+            { "phase": "UI/UX Design", "duration": "4-5 days", "description": "Design booking flow and admin dashboard." },
+            { "phase": "Booking Engine Development", "duration": "10-12 days", "description": "Build calendar, availability logic, and notifications." },
+            { "phase": "Payment & Notification Testing", "duration": "2-3 days", "description": "Test deposits, reminders, and edge-case bookings." },
+            { "phase": "Launch & Handover", "duration": "1-2 days", "description": "Go live and train staff on the admin dashboard." }
+          ],
+          "totalTimeline": "3-4 weeks"
+        }
+      },
+      {
+        "title": "Membership & Subscription Websites",
+        "description": "Gated content and recurring billing for courses, communities, or premium content.",
+        "image": "https://cdn3d.iconscout.com/3d/premium/thumb/membership-card-9959437-8129708.png",
+        "details": {
+          "fullDescription": "A site that gates content or community access behind a login and a recurring plan — courses, premium articles, or a paid community — with billing, tiered access, and member management handled automatically.",
+          "idealFor": "Course creators, communities, and content businesses that want gated content with recurring billing.",
+          "keyFeatures": [
+            "Gated content & drip access",
+            "Recurring subscription billing",
+            "Member dashboard & profiles",
+            "Tiered membership plans",
+            "Community / discussion features",
+            "Cancellation & billing management"
+          ],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "3 days", "description": "Define membership tiers, content access rules, and billing." },
+            { "phase": "UI/UX Design", "duration": "5-6 days", "description": "Design member dashboard, plans, and content areas." },
+            { "phase": "Development", "duration": "12-15 days", "description": "Build auth, billing, drip content, and member area." },
+            { "phase": "Billing & Access Testing", "duration": "3 days", "description": "Test subscriptions, upgrades/downgrades, and access rules." },
+            { "phase": "Launch & Handover", "duration": "1-2 days", "description": "Go live and confirm billing/renewal flows." }
+          ],
+          "totalTimeline": "4-5 weeks"
+        }
+      }
     ]
   },
   {
@@ -193,14 +954,150 @@
     "image": "https://cdni.iconscout.com/illustration/premium/thumb/mobile-app-development-illustration-download-in-svg-png-gif-file-formats--application-programming-developer-applied-scientist-pack-design-illustrations-6529899.png",
     "offeringsTitle": "Which Types Of Mobile Apps We Build?",
     "offerings": [
-      { "title": "On-Demand Service Apps", "description": "Apps that connect customers with services in real time, from booking to live tracking.", "image": "https://miro.medium.com/v2/resize:fit:1000/1*VNkkK5bnrUiHUf0ILN039w.png" },
-      { "title": "E-Commerce Apps", "description": "Mobile shopping apps with catalogs, cart, and secure in-app payments.", "image": "https://png.pngtree.com/png-clipart/20240319/original/pngtree-online-shop-ecommerce-mobile-app-png-image_14623502.png" },
-      { "title": "Fitness & Health Apps", "description": "Workout plans, progress tracking, and wearable integration for health-focused apps.", "image": "https://w7.pngwing.com/pngs/710/71/png-transparent-fitness-app-ui.png" },
-      { "title": "Social Networking Apps", "description": "Apps built around profiles, feeds, chat, and real-time notifications.", "image": "https://pluspng.com/img-png/social-networking-png-hd-hd-social-media-wallpaper-1545.png" },
-      { "title": "Delivery & Logistics Apps", "description": "Route optimization and live order tracking for delivery and logistics businesses.", "image": "https://png.pngtree.com/png-vector/20240130/ourmid/pngtree-online-delivery-on-mobile-with-road-and-navigation-smart-logistics-png-image_11573769.png" },
-      { "title": "Booking Apps", "description": "Scheduling and reservation apps for services, rentals, or appointments.", "image": "https://tse4.mm.bing.net/th/id/OIP.XEycAeqBiRMbExrzSgUgPwHaHN?r=0&pid=Api&P=0&h=180" },
-      { "title": "Educational Apps", "description": "Course content, quizzes, and progress tracking for e-learning platforms.", "image": "https://cdn-icons-png.flaticon.com/512/8632/8632978.png" },
-      { "title": "Fintech Apps", "description": "Secure apps for payments, budgeting, or lending with bank-grade data protection.", "image": "https://png.pngtree.com/png-clipart/20241009/original/pngtree-trendy-fintech-concepts-png-image_16250566.png" }
+      {
+        "title": "On-Demand Service Apps",
+        "description": "Apps that connect customers with services in real time, from booking to live tracking.",
+        "image": "https://miro.medium.com/v2/resize:fit:1000/1*VNkkK5bnrUiHUf0ILN039w.png",
+        "details": {
+          "fullDescription": "Connects customers with service providers in real time — booking, live tracking, and in-app payment — built for both the customer and provider side.",
+          "idealFor": "Businesses offering real-time services like repairs, rides, or home services that need booking and live tracking.",
+          "keyFeatures": ["Real-time booking & matching", "Live GPS tracking", "In-app chat & calls", "Provider & customer apps", "Payment integration", "Ratings & reviews"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1 week", "description": "Map customer and provider flows." },
+            { "phase": "UI/UX Design", "duration": "2 weeks", "description": "Design both customer and provider apps." },
+            { "phase": "Development", "duration": "6-8 weeks", "description": "Build booking, tracking, and payment systems." },
+            { "phase": "Testing & QA", "duration": "2 weeks", "description": "Test real-time matching and edge cases." },
+            { "phase": "Launch & App Store Submission", "duration": "1-2 weeks", "description": "Submit to App Store and Play Store." }
+          ],
+          "totalTimeline": "12-15 weeks"
+        }
+      },
+      {
+        "title": "E-Commerce Apps",
+        "description": "Mobile shopping apps with catalogs, cart, and secure in-app payments.",
+        "image": "https://png.pngtree.com/png-clipart/20240319/original/pngtree-online-shop-ecommerce-mobile-app-png-image_14623502.png",
+        "details": {
+          "fullDescription": "A mobile shopping experience with catalog browsing, cart, and secure in-app payments, built for fast, native-feeling checkout.",
+          "idealFor": "Retail and D2C brands that want a dedicated mobile shopping app alongside or instead of a website.",
+          "keyFeatures": ["Product catalog & search", "Cart & secure checkout", "In-app payments", "Push notifications for offers", "Order tracking", "Wishlist & reviews"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1 week", "description": "Map catalog, checkout, and account flows." },
+            { "phase": "UI/UX Design", "duration": "2 weeks", "description": "Design shopping and checkout screens." },
+            { "phase": "Development", "duration": "7-9 weeks", "description": "Build catalog, cart, checkout, and orders." },
+            { "phase": "Testing & QA", "duration": "2 weeks", "description": "Test payments and order flows end-to-end." },
+            { "phase": "Launch & Submission", "duration": "1-2 weeks", "description": "Submit to app stores and go live." }
+          ],
+          "totalTimeline": "13-16 weeks"
+        }
+      },
+      {
+        "title": "Fitness & Health Apps",
+        "description": "Workout plans, progress tracking, and wearable integration for health-focused apps.",
+        "image": "https://w7.pngwing.com/pngs/710/71/png-transparent-fitness-app-ui.png",
+        "details": {
+          "fullDescription": "Workout plans, progress tracking, and wearable integration built for daily engagement — designed so users open it regularly, not just once.",
+          "idealFor": "Fitness studios, trainers, and health brands that want a companion app for workouts and progress tracking.",
+          "keyFeatures": ["Workout plans & tracking", "Progress & goal tracking", "Wearable device integration", "Push notification reminders", "Video/content library", "Subscription/membership support"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1 week", "description": "Map workout plans and tracking requirements." },
+            { "phase": "UI/UX Design", "duration": "2 weeks", "description": "Design workout, progress, and content screens." },
+            { "phase": "Development", "duration": "6-8 weeks", "description": "Build tracking, wearable sync, and content library." },
+            { "phase": "Testing & QA", "duration": "1-2 weeks", "description": "Test tracking accuracy and wearable integration." },
+            { "phase": "Launch & Submission", "duration": "1-2 weeks", "description": "Submit to app stores and go live." }
+          ],
+          "totalTimeline": "11-14 weeks"
+        }
+      },
+      {
+        "title": "Social Networking Apps",
+        "description": "Apps built around profiles, feeds, chat, and real-time notifications.",
+        "image": "https://pluspng.com/img-png/social-networking-png-hd-hd-social-media-wallpaper-1545.png",
+        "details": {
+          "fullDescription": "Profiles, feeds, chat, and real-time notifications built to handle scale from day one — the hardest part of a social app is what happens after it grows.",
+          "idealFor": "Startups building a community or niche social platform around profiles, feeds, and real-time interaction.",
+          "keyFeatures": ["User profiles & feeds", "Real-time chat", "Push notifications", "Content moderation tools", "Follow/friend system", "Media upload & sharing"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1-2 weeks", "description": "Define core social features and scale requirements." },
+            { "phase": "UI/UX Design", "duration": "2-3 weeks", "description": "Design profiles, feed, and chat experience." },
+            { "phase": "Development", "duration": "10-14 weeks", "description": "Build feeds, real-time chat, and moderation tools." },
+            { "phase": "Testing & QA", "duration": "2-3 weeks", "description": "Load-test real-time features and moderation." },
+            { "phase": "Launch & Submission", "duration": "1-2 weeks", "description": "Submit to app stores and go live." }
+          ],
+          "totalTimeline": "16-22 weeks"
+        }
+      },
+      {
+        "title": "Delivery & Logistics Apps",
+        "description": "Route optimization and live order tracking for delivery and logistics businesses.",
+        "image": "https://png.pngtree.com/png-vector/20240130/ourmid/pngtree-online-delivery-on-mobile-with-road-and-navigation-smart-logistics-png-image_11573769.png",
+        "details": {
+          "fullDescription": "Route optimization and live order tracking for delivery and logistics businesses, with separate flows for customers, drivers, and dispatch.",
+          "idealFor": "Delivery and logistics businesses that need customer, driver, and dispatch apps working together.",
+          "keyFeatures": ["Order placement & tracking", "Route optimization", "Driver app & assignment", "Live GPS tracking", "Delivery confirmation & POD", "Dispatch dashboard"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1-2 weeks", "description": "Map customer, driver, and dispatch workflows." },
+            { "phase": "UI/UX Design", "duration": "2 weeks", "description": "Design customer, driver, and dispatch screens." },
+            { "phase": "Development", "duration": "8-10 weeks", "description": "Build tracking, routing, and dispatch systems." },
+            { "phase": "Testing & QA", "duration": "2 weeks", "description": "Test routing accuracy and live tracking." },
+            { "phase": "Launch & Submission", "duration": "1-2 weeks", "description": "Submit to app stores and go live." }
+          ],
+          "totalTimeline": "14-17 weeks"
+        }
+      },
+      {
+        "title": "Booking Apps",
+        "description": "Scheduling and reservation apps for services, rentals, or appointments.",
+        "image": "https://tse4.mm.bing.net/th/id/OIP.XEycAeqBiRMbExrzSgUgPwHaHN?r=0&pid=Api&P=0&h=180",
+        "details": {
+          "fullDescription": "Scheduling and reservation flows for services, rentals, or appointments, with real-time availability so double-bookings don't happen.",
+          "idealFor": "Service businesses, rental providers, or venues that want mobile-first booking and scheduling.",
+          "keyFeatures": ["Real-time availability", "Booking & rescheduling flow", "Push notification reminders", "Payment/deposit collection", "Provider/resource management", "Booking history"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1 week", "description": "Map booking rules and resource availability." },
+            { "phase": "UI/UX Design", "duration": "1-2 weeks", "description": "Design booking flow and provider screens." },
+            { "phase": "Development", "duration": "6-8 weeks", "description": "Build booking engine and notifications." },
+            { "phase": "Testing & QA", "duration": "1-2 weeks", "description": "Test availability logic and edge cases." },
+            { "phase": "Launch & Submission", "duration": "1-2 weeks", "description": "Submit to app stores and go live." }
+          ],
+          "totalTimeline": "10-13 weeks"
+        }
+      },
+      {
+        "title": "Educational Apps",
+        "description": "Course content, quizzes, and progress tracking for e-learning platforms.",
+        "image": "https://cdn-icons-png.flaticon.com/512/8632/8632978.png",
+        "details": {
+          "fullDescription": "Course content, quizzes, and progress tracking built for an e-learning experience that keeps learners engaged and lets instructors see who's actually progressing.",
+          "idealFor": "Course creators and educational institutions that want a dedicated learning app for content and progress tracking.",
+          "keyFeatures": ["Course content delivery", "Quizzes & assessments", "Progress tracking", "Certificates on completion", "Offline content access", "Push notification reminders"],
+          "timeline": [
+            { "phase": "Discovery & Planning", "duration": "1 week", "description": "Map course structure and progress tracking needs." },
+            { "phase": "UI/UX Design", "duration": "2 weeks", "description": "Design course, quiz, and progress screens." },
+            { "phase": "Development", "duration": "7-9 weeks", "description": "Build content delivery, quizzes, and offline access." },
+            { "phase": "Testing & QA", "duration": "2 weeks", "description": "Test content sync and offline behavior." },
+            { "phase": "Launch & Submission", "duration": "1-2 weeks", "description": "Submit to app stores and go live." }
+          ],
+          "totalTimeline": "13-16 weeks"
+        }
+      },
+      {
+        "title": "Fintech Apps",
+        "description": "Secure apps for payments, budgeting, or lending with bank-grade data protection.",
+        "image": "https://png.pngtree.com/png-clipart/20241009/original/pngtree-trendy-fintech-concepts-png-image_16250566.png",
+        "details": {
+          "fullDescription": "Secure apps for payments, budgeting, or lending, built with bank-grade data protection and compliance considerations from day one, not bolted on later.",
+          "idealFor": "Businesses building payment, budgeting, or lending products that need strict security and compliance built in.",
+          "keyFeatures": ["Secure payment processing", "Bank-grade encryption", "KYC/identity verification", "Transaction history & statements", "Budgeting/lending tools", "Fraud detection & alerts"],
+          "timeline": [
+            { "phase": "Discovery & Compliance Planning", "duration": "2 weeks", "description": "Map compliance, security, and KYC requirements." },
+            { "phase": "UI/UX Design", "duration": "2-3 weeks", "description": "Design secure, trust-focused screens." },
+            { "phase": "Development", "duration": "10-14 weeks", "description": "Build payments, KYC, and fraud detection systems." },
+            { "phase": "Security Testing & QA", "duration": "2-3 weeks", "description": "Penetration testing and compliance validation." },
+            { "phase": "Launch & Submission", "duration": "2 weeks", "description": "Submit to app stores with compliance documentation." }
+          ],
+          "totalTimeline": "18-24 weeks"
+        }
+      }
     ]
   }
 ]

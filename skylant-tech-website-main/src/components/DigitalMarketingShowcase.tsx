@@ -77,7 +77,7 @@ const ropeTwo: CardData[] = [
   { id: 'ig-reel', platform: 'Instagram', label: 'Instagram Reel', icon: Film, accent: '#F59E0B', drop: 60, tilt: 4, image: '/images/skylant insta reels.jpeg', url: IG_URL },
   { id: 'li-post', platform: 'LinkedIn', label: 'LinkedIn Post', icon: Linkedin, accent: '#0EA5E9', drop: 40, tilt: -4, image: '/images/skylant linkdin post.jpg', url: LI_URL },
   // Real short video — "Team meeting ke time HR ka call aa gaya"
-  { id: 'story', platform: 'Instagram', label: 'Short Video', icon: Play, accent: '#9B8AFB', drop: 68, tilt: 3, image: '/images/skylant insta short.jpeg', url: IG_URL },
+  { id: 'story', platform: 'YOUTUBE', label: 'Short Video', icon: Play, accent: '#9B8AFB', drop: 68, tilt: 3, image: '/images/skylant insta short.jpeg', url: IG_URL },
 ];
 
 function SectionEyebrow({ label }: { label: string }) {
