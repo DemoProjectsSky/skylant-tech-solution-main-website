@@ -60,11 +60,7 @@ export default function About() {
         description="Skylant Tech Solutions is a premium software development company building scalable, secure, and innovative digital products for businesses worldwide."
         breadcrumb={[{ name: 'Home', path: '/' }, { name: 'About' }]}
         illustration={<AboutIllustration />}
-        stats={[
-          { value: '8+', label: 'Years' },
-          { value: '10+', label: 'Projects' },
-          { value: '10+', label: 'Clients' },
-        ]}
+       
         primaryCta={{ label: 'Work With Us', path: '/contact' }}
         secondaryCta={{ label: 'Our Services', path: '/services' }}
       />

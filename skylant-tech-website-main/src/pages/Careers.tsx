@@ -27,7 +27,9 @@ import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import CareersIllustration from '../components/CareersIllustration';
 import jobs from '../data/jobs.json';
-import { sendEmailForm } from '../lib/emailjs';
+
+// FIXED: actual file is emailjs.ts
+import { sendEmail } from '../lib/email';
 
 const iconMap: Record<string, any> = {
   Code2,
@@ -39,7 +41,6 @@ const iconMap: Record<string, any> = {
   Globe,
 };
 
-// Per-job accent colors
 const jobColors = [
   '#2563EB',
   '#EC4899',
@@ -115,7 +116,7 @@ const hiringProcess = [
     step: '04',
     title: 'Final & Offer',
     description:
-      'Meet the team and receive your offer if its a fit.',
+      "Meet the team and receive your offer if it's a fit.",
     color: '#10B981',
   },
 ];
@@ -164,13 +165,8 @@ export default function Careers() {
       return;
     }
 
-    // Check extension
     const allowedExtensions = ['pdf', 'doc', 'docx'];
-
-    const ext = file.name
-      .split('.')
-      .pop()
-      ?.toLowerCase();
+    const ext = file.name.split('.').pop()?.toLowerCase();
 
     if (!ext || !allowedExtensions.includes(ext)) {
       setResumeError(
@@ -179,22 +175,16 @@ export default function Careers() {
 
       e.target.value = '';
       setResumeFile(null);
-
       return;
     }
 
-    // Check size
-    if (
-      file.size >
-      MAX_RESUME_SIZE_MB * 1024 * 1024
-    ) {
+    if (file.size > MAX_RESUME_SIZE_MB * 1024 * 1024) {
       setResumeError(
         `File is too large. Max size is ${MAX_RESUME_SIZE_MB}MB.`
       );
 
       e.target.value = '';
       setResumeFile(null);
-
       return;
     }
 
@@ -223,41 +213,23 @@ export default function Careers() {
     setErrorMessage('');
 
     try {
-      // Make sure the form exists
       if (!formRef.current) {
         throw new Error(
           'Application form is not available.'
         );
       }
 
-      // Make sure a resume is selected
       if (!resumeFile) {
         setResumeError(
           'Please upload your resume before submitting.'
         );
-
         setIsSending(false);
         return;
       }
 
-      /*
-       * IMPORTANT:
-       *
-       * We are sending the actual HTML form to EmailJS
-       * using sendForm().
-       *
-       * The file input has:
-       *
-       * name="resume"
-       *
-       * EmailJS will use that field as the attachment.
-       */
-      await sendEmailForm(
-        'career',
-        formRef.current
-      );
+      // Send career application
+      await sendEmail('career', formRef.current);
 
-      // Reset text fields
       setFormData({
         name: '',
         email: '',
@@ -266,7 +238,6 @@ export default function Careers() {
         message: '',
       });
 
-      // Reset resume
       handleRemoveResume();
 
       setErrorMessage('');
@@ -321,18 +292,10 @@ export default function Careers() {
       <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-            }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-14"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E4DBFF] bg-white/80 backdrop-blur-sm text-[#6D5BD0] text-sm font-medium mb-5">
@@ -347,26 +310,16 @@ export default function Careers() {
 
           <div className="space-y-4">
             {jobs.map((job, i) => {
-              const Icon =
-                iconMap[job.icon] || Code2;
-
+              const Icon = iconMap[job.icon] || Code2;
               const color =
                 jobColors[i % jobColors.length];
 
               return (
                 <motion.div
                   key={job.id}
-                  initial={{
-                    opacity: 0,
-                    y: 20,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{
                     duration: 0.4,
                     delay: i * 0.05,
@@ -379,9 +332,7 @@ export default function Careers() {
                 >
                   <div
                     className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-35"
-                    style={{
-                      background: color,
-                    }}
+                    style={{ background: color }}
                   />
 
                   <div className="relative z-10 w-full flex flex-col gap-4 p-5 text-left sm:flex-row sm:items-center sm:justify-between">
@@ -416,9 +367,7 @@ export default function Careers() {
                           <span className="flex items-center gap-2">
                             <MapPin
                               className="w-3.5 h-3.5 shrink-0"
-                              style={{
-                                color,
-                              }}
+                              style={{ color }}
                             />
                             {job.location}
                           </span>
@@ -426,9 +375,7 @@ export default function Careers() {
                           <span className="flex items-center gap-2">
                             <Clock
                               className="w-3.5 h-3.5 shrink-0"
-                              style={{
-                                color,
-                              }}
+                              style={{ color }}
                             />
                             {job.type}
                           </span>
@@ -436,9 +383,7 @@ export default function Careers() {
                           <span className="flex items-center gap-2">
                             <User
                               className="w-3.5 h-3.5 shrink-0"
-                              style={{
-                                color,
-                              }}
+                              style={{ color }}
                             />
                             {job.experience}
                           </span>
@@ -488,9 +433,7 @@ export default function Careers() {
                     <a
                       href="#apply"
                       className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-                      style={{
-                        background: color,
-                      }}
+                      style={{ background: color }}
                     >
                       Apply for this role
                       <ArrowRight className="w-4 h-4" />
@@ -507,20 +450,10 @@ export default function Careers() {
       <section className="relative py-20 sm:py-24 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-14"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C2A4A] mb-4 text-balance">
@@ -532,24 +465,14 @@ export default function Careers() {
             {benefits.map((b, i) => (
               <motion.div
                 key={i}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
                   delay: i * 0.08,
                 }}
-                whileHover={{
-                  y: -6,
-                }}
+                whileHover={{ y: -6 }}
                 className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-sm transition-all hover:shadow-sm"
                 style={{
                   borderColor: `${b.color}40`,
@@ -558,9 +481,7 @@ export default function Careers() {
               >
                 <div
                   className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-25 blur-2xl transition-opacity duration-300 group-hover:opacity-40"
-                  style={{
-                    background: b.color,
-                  }}
+                  style={{ background: b.color }}
                 />
 
                 <div
@@ -591,20 +512,10 @@ export default function Careers() {
       <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-14"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C2A4A] mb-4 text-balance">
@@ -616,24 +527,14 @@ export default function Careers() {
             {hiringProcess.map((step, i) => (
               <motion.div
                 key={i}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
                   delay: i * 0.1,
                 }}
-                whileHover={{
-                  y: -6,
-                }}
+                whileHover={{ y: -6 }}
                 className="group relative overflow-hidden rounded-2xl border shadow-sm p-6 backdrop-blur-sm transition-all hover:shadow-md"
                 style={{
                   borderColor: `${step.color}40`,
@@ -642,9 +543,7 @@ export default function Careers() {
               >
                 <div
                   className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-35"
-                  style={{
-                    background: step.color,
-                  }}
+                  style={{ background: step.color }}
                 />
 
                 <div className="relative z-10 flex items-center justify-between mb-5">
@@ -678,20 +577,10 @@ export default function Careers() {
       >
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-10"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">
@@ -699,24 +588,15 @@ export default function Careers() {
             </h2>
 
             <p className="text-[#5B5580]">
-              Fill out the form below and we'll get back to you within 48
-              hours.
+              Fill out the form below and we'll get back to you within 48 hours.
             </p>
           </motion.div>
 
           <motion.form
             ref={formRef}
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.6,
               delay: 0.1,
@@ -776,15 +656,15 @@ export default function Careers() {
               <div className="relative">
                 <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8783A6]" />
 
-               <input
-  required
-  type="tel"
-  name="phone"
-  value={formData.phone}
-  onChange={handleChange}
-  className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50"
-  placeholder="+91 98765 43210"
-/>
+                <input
+                  required
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8783A6] focus:outline-none focus:border-[#6D5BD0]/50"
+                  placeholder="+91 98765 43210"
+                />
               </div>
             </div>
 
@@ -834,6 +714,25 @@ export default function Careers() {
                 Upload Resume
               </label>
 
+              {/*
+                IMPORTANT FIX:
+                The <input type="file"> below is now ALWAYS mounted,
+                outside the `resumeFile ? ... : ...` branch. Previously it
+                lived only inside the "no file selected" branch, so as soon
+                as a file was picked the input (and its FileList) got
+                unmounted by React — meaning `new FormData(formRef.current)`
+                inside sendEmail() no longer contained the file, and the
+                backend received req.file === undefined.
+              */}
+              <input
+                id="resume-upload"
+                name="resume"
+                type="file"
+                accept={ACCEPTED_RESUME_TYPES}
+                onChange={handleResumeChange}
+                className="hidden"
+              />
+
               {!resumeFile ? (
                 <label
                   htmlFor="resume-upload"
@@ -848,15 +747,6 @@ export default function Careers() {
                   <span className="text-xs text-[#8783A6]">
                     PDF, DOC, or DOCX — max {MAX_RESUME_SIZE_MB}MB
                   </span>
-
-                  <input
-                    id="resume-upload"
-                    name="resume"
-                    type="file"
-                    accept={ACCEPTED_RESUME_TYPES}
-                    onChange={handleResumeChange}
-                    className="hidden"
-                  />
                 </label>
               ) : (
                 <div className="flex items-center justify-between gap-3 rounded-xl border border-[#E4DBFF] bg-white px-4 py-3">
