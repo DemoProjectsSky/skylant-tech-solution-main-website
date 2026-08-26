@@ -713,13 +713,21 @@ function HeroIllustration() {
         </text>
       </g>
 
-      <g transform="translate(390 165)">
+                    <g transform="translate(390 165)">
         <motion.g animate={{ y: [0, -8, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}>
           <circle r="38" fill="#FFFFFF" stroke="#E4DBFF" strokeWidth="1.5" />
-          <path d="M-14 6 a8 8 0 0 1 1 -15.9 a10 10 0 0 1 19.4 -1.9 a7 7 0 0 1 -1.4 13.8 z" fill="#4b2eee" opacity="0.85" />
+          {/* megaphone body: narrow mouthpiece (left) flaring into wide bell (right) */}
+          <path d="M-15 -4 L7 -12 L7 12 L-15 4 Z" fill="#4b2eee" />
+          {/* pistol grip handle, hanging below the mouthpiece */}
+          <path d="M-13 3 L-9 3 L-8 12 L-14 12 Z" fill="#4b2eee" />
+          {/* trigger button accent */}
+          <circle cx="-11" cy="-1" r="1.6" fill="#FFFFFF" opacity="0.85" />
+          {/* sound waves emanating from the bell */}
+          <path d="M11 -6 q7 6 0 12" fill="none" stroke="#4b2eee" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M16 -11 q11 11 0 22" fill="none" stroke="#9B8AFB" strokeWidth="2" strokeLinecap="round" />
         </motion.g>
         <text x="0" y="60" textAnchor="middle" fontSize="11" fontWeight="600" fill="#4B3F91">
-          Cloud Development
+          Digital Marketing
         </text>
       </g>
 
