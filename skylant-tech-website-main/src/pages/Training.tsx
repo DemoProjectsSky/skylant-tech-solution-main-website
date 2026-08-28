@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Star, GraduationCap, Database, LineChart, Cpu } from 'lucide-react';
+import { ArrowRight, Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Star, GraduationCap, Database, LineChart, Cpu, Lightbulb } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import TrainingIllustration from '../components/TrainingIllustration';
+import FAQAccordion from '../components/FAQAccordion';
 import courses from '../data/courses.json';
+import trainingFaqs from '../data/trainingFaqs.json';
 
 
 const iconMap: Record<string, any> = {
@@ -164,6 +166,28 @@ export default function Training() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E4DBFF] bg-white/80 backdrop-blur-sm text-[#6D5BD0] text-sm font-medium mb-5">
+              <Lightbulb className="w-4 h-4" /> FAQ
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] text-balance">
+              Questions about our <span style={{ color: '#6D5BD0' }}>training programs</span>
+            </h2>
+          </motion.div>
+
+          <FAQAccordion items={trainingFaqs} />
         </div>
       </section>
 

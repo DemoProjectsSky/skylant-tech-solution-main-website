@@ -37,7 +37,7 @@ const contactInfo = [
     icon: MapPin,
     label: 'Visit Us',
     value:
-      'First Floor, 101, Sivalik Apartment, Lumbini Nagar, near Vasudeo nagar metro station, Higana Road, Nagpur-440036',
+      'First Floor, 101, Sivalik Apartment, Lumbini Nagar, near Vasudeo nagar metro station, Hingana Road, Nagpur-440036',
     sub: 'Nagpur, Maharashtra',
   },
   {

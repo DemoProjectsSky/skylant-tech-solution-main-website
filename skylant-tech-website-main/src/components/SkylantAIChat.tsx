@@ -20,19 +20,199 @@ const quickPrompts = [
   'How do I start a project?',
 ];
 
-async function getAiReply(input: string) {
+/* -------------------------------------------------------------------------
+   KEYWORD-MATCHED KNOWLEDGE BASE
+   Each entry has a set of keywords (from all FAQs built so far — General,
+   Pricing, Process, Support, Security, Technical, Legal, Digital Marketing,
+   Training, and Internship) and a canned answer. Checked top to bottom;
+   the first entry whose keywords appear in the user's message wins.
+   Falls back to the Groq API only if nothing matches.
+------------------------------------------------------------------------- */
+type KnowledgeEntry = {
+  keywords: string[];
+  answer: string;
+};
+
+const knowledgeBase: KnowledgeEntry[] = [
+  // ---- General / Services ----
+  {
+    keywords: ['what services', 'services do you offer', 'services you offer', 'what do you do', 'what do you offer'],
+    answer:
+      'We offer end-to-end web and software development, mobile app development, AI solutions, ERP systems, cloud services, and complete digital marketing services including SEO, social media marketing, paid ads, and branding — all under one roof.',
+  },
+  {
+    keywords: ['small business', 'startup', 'good fit'],
+    answer:
+      'Yes! We work with startups and small businesses just as much as larger companies. Our solutions are scoped to your budget and goals, so you only pay for what you actually need to grow.',
+  },
+
+  // ---- Pricing ----
+  {
+    keywords: ['price', 'pricing', 'cost', 'budget', 'how much', 'charges', 'fees'],
+    answer:
+      'Cost depends on the features, complexity, and timeline you need. A basic business website starts lower, while a custom app or platform costs more. We give you a clear, itemized quote after understanding your requirements — no hidden charges.',
+  },
+
+  // ---- Process / Timeline ----
+  {
+    keywords: ['how long', 'timeline', 'duration', 'time will it take', 'time does it take', 'how much time'],
+    answer:
+      "A simple website usually takes 2-4 weeks, a custom web or mobile app takes 6-12 weeks, and larger platforms can take longer depending on scope. For digital marketing, initial setup takes 1-2 weeks and ongoing results build over 2-3 months.",
+  },
+  {
+    keywords: ['track progress', 'progress', 'updates', 'project management', 'communication process'],
+    answer:
+      "Yes. We share regular updates, milestone demos, and a clear project timeline so you always know what's happening and what's coming next — no surprises.",
+  },
+
+  // ---- Support ----
+  {
+    keywords: ['support', 'maintenance', 'after launch', 'post launch', 'bug fix'],
+    answer:
+      'Yes, we offer post-launch support for bug fixes, updates, and maintenance so your website or app keeps running smoothly. Support plans can be monthly or as-needed based on your requirement.',
+  },
+
+  // ---- Security ----
+  {
+    keywords: ['secure', 'security', 'data safe', 'data protection', 'encryption'],
+    answer:
+      'Yes. We follow standard security practices — secure login systems, encrypted data, and regular checks — so your customer data and business information stay protected.',
+  },
+
+  // ---- Technical ----
+  {
+    keywords: ['existing website', 'redesign', 'revamp', 'upgrade website', 'old website'],
+    answer:
+      "Absolutely. We can audit your current website, fix performance and design issues, and upgrade it with modern features without starting from scratch, saving you both time and cost.",
+  },
+  {
+    keywords: ['tech stack', 'technology', 'framework', 'programming language'],
+    answer:
+      "We have experience working with diverse technology stacks and can integrate with your existing systems, whether it's legacy software, modern cloud services, or third-party APIs.",
+  },
+
+  // ---- Legal ----
+  {
+    keywords: ['own the code', 'ownership', 'nda', 'intellectual property', 'ip rights', 'confidential'],
+    answer:
+      "Yes. Once the project is complete and paid for, full ownership of the code, design, and content belongs entirely to you. We also sign NDAs to keep your business idea confidential.",
+  },
+
+  // ---- Digital Marketing ----
+  {
+    keywords: ['digital marketing', 'difference between website and marketing'],
+    answer:
+      'A website is your online presence, but digital marketing (SEO, ads, social media) is what actually brings customers to it. We recommend combining both so your investment in a website turns into real leads and sales.',
+  },
+  {
+    keywords: ['seo', 'search engine optimization', 'google ranking', 'rank on google'],
+    answer:
+      'Paid ads (Google/Facebook) can bring visible traffic and leads within the first 1-2 weeks. SEO is a long-term strategy and typically shows meaningful ranking improvements within 3-6 months of consistent work.',
+  },
+  {
+    keywords: ['social media', 'instagram', 'facebook marketing', 'linkedin marketing'],
+    answer:
+      "Yes, we handle content planning, post creation, and posting schedules across Instagram, Facebook, and LinkedIn, along with performance tracking so you can see what's actually working.",
+  },
+  {
+    keywords: ['ads', 'ppc', 'paid advertising', 'google ads', 'facebook ads'],
+    answer:
+      'We run high-intent Google Ads and social media ad campaigns engineered to lower your cost-per-lead and maximize return on ad spend.',
+  },
+
+  // ---- Training ----
+  {
+    keywords: ['training', 'course', 'courses', 'learn coding', 'upskill'],
+    answer:
+      'We offer professional training courses in web development, AI, cloud, and more — with Beginner, Intermediate, and Advanced tracks. No prior experience is needed for the Beginner track. Check out our Training page for full details!',
+  },
+  {
+    keywords: ['certificate', 'certification'],
+    answer:
+      'Yes, you receive a completion certificate from Skylant Tech Solutions after finishing a training course or internship, which you can add to your resume and LinkedIn profile.',
+  },
+  {
+    keywords: ['corporate training', 'team training', 'company training'],
+    answer:
+      "Absolutely. We offer customized corporate training programs to upskill teams in specific technologies or tools — get in touch with your team's goals and we'll tailor a plan.",
+  },
+
+  // ---- Internship ----
+  {
+    keywords: ['internship', 'intern', 'apply for internship'],
+    answer:
+      'We offer internships across technical and non-technical domains where you work on real client projects with senior mentorship. Check our Internship page to see open roles and apply directly.',
+  },
+  {
+    keywords: ['paid internship', 'stipend', 'unpaid'],
+    answer:
+      'Compensation for internships depends on the role, duration, and your performance during selection. Exact details are shared during the interview process before you accept an offer.',
+  },
+  {
+    keywords: ['remote internship', 'work from home', 'hybrid'],
+    answer:
+      'We offer a mix of remote, hybrid, and in-office internships depending on the role and domain. The mode for each opening is discussed during the application process.',
+  },
+  {
+    keywords: ['mentor', 'mentorship', 'guidance'],
+    answer:
+      'Yes, every intern is paired with a senior engineer or domain expert for 1-on-1 mentorship and regular feedback throughout the internship.',
+  },
+  {
+    keywords: ['full time job', 'ppo', 'job offer', 'placement', 'hire after internship'],
+    answer:
+      'Yes! Strong-performing interns are considered for full-time roles or extended opportunities with Skylant based on availability and performance during the internship.',
+  },
+  {
+    keywords: ['spots', 'seats', 'how many selected', 'openings'],
+    answer:
+      'Spot availability varies by role and is shown on each opening. Roles with limited spots are on a first-come, first-selected basis, so applying early helps.',
+  },
+  {
+    keywords: ['eligible', 'eligibility', 'who can apply'],
+    answer:
+      'Students currently pursuing a degree, or recent graduates, in a relevant technical or non-technical field can apply. No prior professional experience is required — just a strong foundation in the relevant skills and willingness to learn.',
+  },
+
+  // ---- Getting started / Contact ----
+  {
+    keywords: ['get started', 'how do i start', 'start a project', 'begin', 'consultation'],
+    answer:
+      "Just book a free consultation call. We'll understand your goals, share a clear proposal with cost and timeline, and once you approve, we get your project started right away.",
+  },
+  {
+    keywords: ['contact', 'phone number', 'email', 'reach you', 'whatsapp'],
+    answer:
+      'You can reach us anytime through our Contact page, or tap the WhatsApp button right next to this chat for a quick reply.',
+  },
+
+  // ---- Broader fallback matches (kept last so more specific matches above win) ----
+  {
+    keywords: ['service', 'services'],
+    answer:
+      'We build web apps, mobile apps, AI solutions, ERP systems, and cloud platforms tailored to your business goals.',
+  },
+  {
+    keywords: ['app', 'website'],
+    answer:
+      'Absolutely. We can turn your idea into a polished product with design, development, deployment, and ongoing support.',
+  },
+];
+
+function matchKnowledgeBase(input: string): string | null {
   const normalized = input.toLowerCase();
-
-  if (normalized.includes('service') || normalized.includes('services')) {
-    return 'We build web apps, mobile apps, AI solutions, ERP systems, and cloud platforms tailored to your business goals.';
+  for (const entry of knowledgeBase) {
+    if (entry.keywords.some((keyword) => normalized.includes(keyword))) {
+      return entry.answer;
+    }
   }
+  return null;
+}
 
-  if (normalized.includes('price') || normalized.includes('cost') || normalized.includes('budget')) {
-    return 'We tailor the scope to your budget and timeline, so we can suggest the right approach for your startup or enterprise team.';
-  }
-
-  if (normalized.includes('app') || normalized.includes('website')) {
-    return 'Absolutely. We can turn your idea into a polished product with design, development, deployment, and ongoing support.';
+async function getAiReply(input: string) {
+  const matchedAnswer = matchKnowledgeBase(input);
+  if (matchedAnswer) {
+    return matchedAnswer;
   }
 
   if (!GROQ_API_KEY) {
@@ -52,7 +232,7 @@ async function getAiReply(input: string) {
           {
             role: 'system',
             content:
-              'You are Skylant AI, a helpful assistant for Skylant Technologies. Answer briefly, professionally, and in a friendly tone. Focus on software development, websites, mobile apps, AI solutions, cloud, ERP, and how to start projects.',
+              'You are Skylant AI, a helpful assistant for Skylant Technologies. Answer briefly, professionally, and in a friendly tone. Focus on software development, websites, mobile apps, AI solutions, cloud, ERP, digital marketing, training courses, internships, and how to start projects.',
           },
           { role: 'user', content: input },
         ],

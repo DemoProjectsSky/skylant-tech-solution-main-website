@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "question": "Who is eligible to apply for an internship?",
+    "answer": "Students currently pursuing a degree, or recent graduates, in a relevant technical or non-technical field can apply. Specific eligibility for each role is listed under \"Who can apply\" in that role's details.",
+    "category": "Eligibility"
+  },
+  {
+    "id": 2,
+    "question": "Is the internship paid or unpaid?",
+    "answer": "Compensation depends on the role, duration, and your performance during selection. Exact details are shared during the interview process before you accept an offer.",
+    "category": "Compensation"
+  },
+  {
+    "id": 3,
+    "question": "Are internships remote, in-office, or hybrid?",
+    "answer": "We offer a mix of remote, hybrid, and in-office internships depending on the role and domain. The mode for each opening is discussed during the application process.",
+    "category": "Format"
+  },
+  {
+    "id": 4,
+    "question": "Do I need prior work experience to apply?",
+    "answer": "No prior professional experience is required. We look for a strong foundation in the relevant skills, willingness to learn, and problem-solving ability — academic projects and personal projects count.",
+    "category": "Eligibility"
+  },
+  {
+    "id": 5,
+    "question": "Will I work on real client projects or just practice tasks?",
+    "answer": "You'll work on live client projects alongside our team, not toy exercises. This is the core of our internship program so you graduate with genuine, portfolio-ready experience.",
+    "category": "Experience"
+  },
+  {
+    "id": 6,
+    "question": "Will I get a mentor during the internship?",
+    "answer": "Yes, every intern is paired with a senior engineer or domain expert for 1-on-1 mentorship and regular feedback throughout the internship.",
+    "category": "Mentorship"
+  },
+  {
+    "id": 7,
+    "question": "How long does an internship last?",
+    "answer": "Duration varies by role, typically ranging from a few weeks to a few months. The exact duration and type (full-time/part-time) is listed on each role's card.",
+    "category": "Duration"
+  },
+  {
+    "id": 8,
+    "question": "Do I receive a certificate at the end of the internship?",
+    "answer": "Yes, all interns who complete the program receive an industry-recognized certificate from Skylant Tech Solutions, which you can use for your resume and LinkedIn profile.",
+    "category": "Certification"
+  },
+  {
+    "id": 9,
+    "question": "Can an internship lead to a full-time job offer?",
+    "answer": "Yes. Strong-performing interns are considered for full-time roles or extended opportunities with Skylant based on availability and performance during the internship.",
+    "category": "Career"
+  },
+  {
+    "id": 10,
+    "question": "How many people are usually selected per role?",
+    "answer": "Spot availability varies by role and is shown as \"X spots\" on each opening. Roles with limited spots are on a first-come, first-selected basis, so applying early helps.",
+    "category": "Selection"
+  },
+  {
+    "id": 11,
+    "question": "How do I apply for an internship?",
+    "answer": "Browse open roles, click \"Details\" to check eligibility and focus areas, then click \"Apply\" to submit your application through our contact page.",
+    "category": "General"
+  }
+]

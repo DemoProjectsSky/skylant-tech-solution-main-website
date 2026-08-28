@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Who can join Skylant's training programs?",
+    "answer": "Our courses are open to students, freshers, and working professionals who want to build practical, job-ready skills. Beginner, Intermediate, and Advanced tracks are available, so you can start wherever you are.",
+    "category": "General"
+  },
+  {
+    "id": 2,
+    "question": "Do I need prior coding experience to enroll?",
+    "answer": "No. Our Beginner track starts from foundational concepts assuming zero prior experience. If you already have some background, you can start directly at the Intermediate or Advanced level after a quick skill check.",
+    "category": "General"
+  },
+  {
+    "id": 3,
+    "question": "Are the courses online, offline, or both?",
+    "answer": "We offer both live online sessions and in-person batches depending on the course and location. You'll get the exact mode and schedule details after enrollment.",
+    "category": "Format"
+  },
+  {
+    "id": 4,
+    "question": "Will I work on real projects during the course?",
+    "answer": "Yes. Every course is built around hands-on, practical work rather than just theory, so you finish with real project experience and a portfolio you can show employers.",
+    "category": "Curriculum"
+  },
+  {
+    "id": 5,
+    "question": "Do I get a certificate after completing a course?",
+    "answer": "Yes, you receive a completion certificate from Skylant Tech Solutions that you can add to your resume and LinkedIn profile to showcase your skills.",
+    "category": "Certification"
+  },
+  {
+    "id": 6,
+    "question": "How long does each course take to complete?",
+    "answer": "It depends on the learning path — Beginner tracks run 0-3 months, Intermediate 3-6 months, and Advanced 6+ months. Exact duration for each course is listed on its course card.",
+    "category": "Duration"
+  },
+  {
+    "id": 7,
+    "question": "Who teaches the courses?",
+    "answer": "Our courses are taught by senior engineers and domain experts who work on real client projects at Skylant, so you learn practices that are actually used in the industry.",
+    "category": "General"
+  },
+  {
+    "id": 8,
+    "question": "Does the training help with job placement?",
+    "answer": "Yes. Along with course completion, we offer guidance on resume building, interview preparation, and can connect strong performers with our internship and hiring pipeline.",
+    "category": "Career"
+  },
+  {
+    "id": 9,
+    "question": "Can companies enroll their teams for corporate training?",
+    "answer": "Absolutely. We offer customized corporate training programs to upskill teams in specific technologies or tools — get in touch with your team's goals and we'll tailor a plan.",
+    "category": "Corporate"
+  },
+  {
+    "id": 10,
+    "question": "How do I enroll in a course?",
+    "answer": "Click \"Enroll Now\" on any course card, or reach out through our contact page. Our team will guide you on the right course, batch timing, and next steps.",
+    "category": "General"
+  }
+]

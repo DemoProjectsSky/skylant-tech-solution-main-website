@@ -5,13 +5,15 @@ import {
   ArrowRight, Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Award, Rocket, Users,
   Search, BarChart3, Briefcase, Settings, LineChart, Wallet, Calculator, Megaphone, Handshake,
   Target, Terminal, GitBranch, Bug, Link2, Gamepad2, Network, Bot, Wifi, Shield, Database,
-  X, Clock, Layers, Info,
+  X, Clock, Layers, Info, Lightbulb,
 } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import InternshipIllustration from '../components/InternshipIllustration';
+import FAQAccordion from '../components/FAQAccordion';
 import internships from '../data/internships.json';
 import testimonials from '../data/testimonials.json';
+import internshipFaqs from '../data/internshipFaqs.json';
 
 const iconMap: Record<string, any> = {
   Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Users, BarChart3, Briefcase, Settings,
@@ -383,7 +385,29 @@ export default function Internship() {
         </div>
       </section>
 
-      <CTASection title="Launch your tech career with us" description="Apply for an internship today and start working on real projects with real impact. Limited spots available." primaryLabel="Apply Now" secondaryLabel="View Training" secondaryPath="/training" />
+      {/* FAQ */}
+      <section className="relative py-20 sm:py-24 overflow-hidden">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E4DBFF] bg-white/80 backdrop-blur-sm text-[#6D5BD0] text-sm font-medium mb-5">
+              <Lightbulb className="w-4 h-4" /> FAQ
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] text-balance">
+              Questions about our <span style={{ color: '#6D5BD0' }}>internship program</span>
+            </h2>
+          </motion.div>
+
+          <FAQAccordion items={internshipFaqs} />
+        </div>
+      </section>
+
+      <CTASection title="Launch your tech career with us" description="Apply for an internship today and start working on real projects with real impact. Limited spots available." primaryLabel="Apply Now" secondaryLabel="View Training" secondaryPath="/internship" />
     </>
   );
 }

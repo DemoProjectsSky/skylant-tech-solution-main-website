@@ -23,10 +23,18 @@ import {
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import ServicesIllustration from '../components/ServicesIllustration';
-import services from '../data/services.json';
-import caseStudies from '../data/caseStudies.json';
+import servicesData from '../data/services.json';
+import caseStudiesData from '../data/caseStudies.json';
 import faqs from '../data/faqs.json';
 import FAQAccordion from '../components/FAQAccordion';
+
+// Cast JSON imports to `any[]` — the entries in services.json and
+// caseStudies.json have slightly different optional shapes (e.g. only
+// digital-marketing defines `whatWeHelpWith`), which makes TypeScript
+// infer a strict union type and error on property access. Casting here
+// keeps property access permissive without changing any runtime data.
+const services = servicesData as any[];
+const caseStudies = caseStudiesData as any[];
 
 const iconMap: Record<string, any> = {
   Code2,
@@ -718,7 +726,7 @@ export default function Services() {
                         {Array.isArray(service.technologies) &&
                           service.technologies
                             .slice(0, 4)
-                            .map((technology) => (
+                            .map((technology: string) => (
                               <span
                                 key={technology}
                                 className="px-2.5 py-1 rounded-full bg-[#FFF1E0] text-[#8A5A2B] text-xs"
@@ -1082,8 +1090,8 @@ export default function Services() {
                         .slice(0, 2)
                         .map(
                           (
-                            metric,
-                            metricIndex
+                            metric: any,
+                            metricIndex: number
                           ) => (
                             <div
                               key={

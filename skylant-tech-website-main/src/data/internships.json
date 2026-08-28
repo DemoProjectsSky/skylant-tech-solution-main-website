@@ -79,19 +79,6 @@
   },
   {
     "id": 7,
-    "title": "Finance Associate",
-    "domain": "Finance",
-    "category": "non-technical",
-    "duration": "2-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Assist with bookkeeping, account reconciliation, and audits while ensuring financial compliance across client accounts.",
-    "skills": ["Bookkeeping", "Account Reconciliation", "Financial Compliance", "Assist Audits"],
-    "icon": "Wallet",
-    "color": "#14B8A6"
-  },
-  {
-    "id": 8,
     "title": "Accountant",
     "domain": "Accounting",
     "category": "non-technical",
@@ -104,7 +91,7 @@
     "color": "#22C55E"
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Digital Marketing",
     "domain": "Digital Marketing",
     "category": "non-technical",
@@ -117,20 +104,7 @@
     "color": "#EF4444"
   },
   {
-    "id": 10,
-    "title": "Digital Marketing Executive",
-    "domain": "Digital Marketing",
-    "category": "non-technical",
-    "duration": "2-3 Months",
-    "type": "Paid/Unpaid",
-    "spots": 5,
-    "description": "Execute marketing campaigns, manage social media, and optimize ad spend while reporting on analytics.",
-    "skills": ["Campaign Execution", "Social Media Mgmt", "Analytics Reporting", "Ad Optimization"],
-    "icon": "Megaphone",
-    "color": "#F97316"
-  },
-  {
-    "id": 11,
+    "id": 9,
     "title": "Sales Role",
     "domain": "Sales",
     "category": "non-technical",
@@ -143,20 +117,7 @@
     "color": "#DB2777"
   },
   {
-    "id": 12,
-    "title": "Sales Manager",
-    "domain": "Sales",
-    "category": "non-technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Lead sales strategy and pipeline management, coaching outreach efforts and owning targets across accounts.",
-    "skills": ["Sales strategy", "Pipeline management", "Team coordination", "Target ownership"],
-    "icon": "Target",
-    "color": "#BE185D"
-  },
-  {
-    "id": 13,
+    "id": 10,
     "title": "UI/UX Developer",
     "domain": "Frontend Development",
     "category": "technical",
@@ -169,7 +130,7 @@
     "color": "#2563EB"
   },
   {
-    "id": 14,
+    "id": 11,
     "title": "Full Stack Developer Python",
     "domain": "Software Development",
     "category": "technical",
@@ -182,33 +143,7 @@
     "color": "#3B82F6"
   },
   {
-    "id": 15,
-    "title": "Full Stack Developer Java",
-    "domain": "Software Development",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Design and build microservices with Spring Boot while owning the full development lifecycle of real features.",
-    "skills": ["Spring Boot Backend", "Java Architecture", "Microservices", "Full Lifecycle Dev"],
-    "icon": "Code2",
-    "color": "#1D4ED8"
-  },
-  {
-    "id": 16,
-    "title": "Full Stack Developer .NET",
-    "domain": "Software Development",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Develop enterprise-grade solutions with C# and ASP.NET Core backed by SQL Server and MVC architecture.",
-    "skills": ["C# & ASP.NET Core", "SQL Server", "MVC Architecture", "Enterprise Solutions"],
-    "icon": "Code2",
-    "color": "#4F46E5"
-  },
-  {
-    "id": 17,
+    "id": 12,
     "title": "MERN Stack Developer",
     "domain": "Software Development",
     "category": "technical",
@@ -221,20 +156,7 @@
     "color": "#0891B2"
   },
   {
-    "id": 18,
-    "title": "Full Stack PHP Developer",
-    "domain": "Software Development",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Build dynamic, database-driven web pages using PHP and MySQL, including CMS integrations.",
-    "skills": ["PHP Server Logic", "MySQL Databases", "Dynamic Web Pages", "CMS Integration"],
-    "icon": "Code2",
-    "color": "#7C3AED"
-  },
-  {
-    "id": 19,
+    "id": 13,
     "title": "PHP Laravel Developer",
     "domain": "Software Development",
     "category": "technical",
@@ -247,7 +169,7 @@
     "color": "#9333EA"
   },
   {
-    "id": 20,
+    "id": 14,
     "title": "Mobile App Developer",
     "domain": "Mobile Development",
     "category": "technical",
@@ -260,46 +182,7 @@
     "color": "#8B5CF6"
   },
   {
-    "id": 21,
-    "title": "Mobile App Developer iOS",
-    "domain": "Mobile Development",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Build native iOS applications with Swift and Xcode, following Apple's design and performance guidelines.",
-    "skills": ["Swift & Xcode", "iOS SDK", "Apple Guidelines", "Native Performance"],
-    "icon": "Smartphone",
-    "color": "#A855F7"
-  },
-  {
-    "id": 22,
-    "title": "Mobile App Developer Android",
-    "domain": "Mobile Development",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Build native Android applications with Kotlin and Java, following Material Design and Play Store deployment practices.",
-    "skills": ["Kotlin & Java", "Android Studio", "Material Design", "Play Store Deploy"],
-    "icon": "Smartphone",
-    "color": "#7E22CE"
-  },
-  {
-    "id": 23,
-    "title": "Mobile App Developer Cross Platform",
-    "domain": "Mobile Development",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Ship hybrid apps from a single codebase using Flutter or React Native for rapid, multi-platform deployment.",
-    "skills": ["Flutter/React Native", "Single Codebase", "Hybrid Apps", "Rapid Deployment"],
-    "icon": "Smartphone",
-    "color": "#6D28D9"
-  },
-  {
-    "id": 24,
+    "id": 15,
     "title": "Python Developer",
     "domain": "Software Development",
     "category": "technical",
@@ -312,7 +195,7 @@
     "color": "#2563EB"
   },
   {
-    "id": 25,
+    "id": 16,
     "title": "DevOps Engineer",
     "domain": "DevOps",
     "category": "technical",
@@ -325,7 +208,7 @@
     "color": "#059669"
   },
   {
-    "id": 26,
+    "id": 17,
     "title": "Software Testing",
     "domain": "Quality Assurance",
     "category": "technical",
@@ -338,7 +221,7 @@
     "color": "#16A34A"
   },
   {
-    "id": 27,
+    "id": 18,
     "title": "Blockchain Developer",
     "domain": "Blockchain",
     "category": "technical",
@@ -351,7 +234,7 @@
     "color": "#0D9488"
   },
   {
-    "id": 28,
+    "id": 19,
     "title": "Game Developer",
     "domain": "Game Development",
     "category": "technical",
@@ -364,7 +247,7 @@
     "color": "#DC2626"
   },
   {
-    "id": 29,
+    "id": 20,
     "title": "Network Engineer",
     "domain": "Networking",
     "category": "technical",
@@ -377,7 +260,7 @@
     "color": "#0284C7"
   },
   {
-    "id": 30,
+    "id": 21,
     "title": "Robotics Engineer",
     "domain": "Robotics",
     "category": "technical",
@@ -390,7 +273,7 @@
     "color": "#EA580C"
   },
   {
-    "id": 31,
+    "id": 22,
     "title": "IoT Engineer",
     "domain": "Internet of Things",
     "category": "technical",
@@ -403,7 +286,7 @@
     "color": "#0EA5E9"
   },
   {
-    "id": 32,
+    "id": 23,
     "title": "Cyber Security Engineer",
     "domain": "Cyber Security",
     "category": "technical",
@@ -416,7 +299,7 @@
     "color": "#B91C1C"
   },
   {
-    "id": 33,
+    "id": 24,
     "title": "Cloud Computing",
     "domain": "Cloud Engineering",
     "category": "technical",
@@ -429,59 +312,7 @@
     "color": "#10B981"
   },
   {
-    "id": 34,
-    "title": "Cloud Engineer AWS",
-    "domain": "Cloud Engineering",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Work hands-on with EC2, S3, and Lambda to build secure, scalable infrastructure as code on AWS.",
-    "skills": ["EC2 & S3", "AWS Lambda", "Cloud Security", "Infrastructure as Code"],
-    "icon": "Cloud",
-    "color": "#F59E0B"
-  },
-  {
-    "id": 35,
-    "title": "Cloud Engineer (GCP)",
-    "domain": "Cloud Engineering",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Deploy and manage workloads on Google Cloud Platform using GKE, BigQuery, and Cloud Storage.",
-    "skills": ["Google Cloud Platform", "Kubernetes (GKE)", "BigQuery", "Cloud Storage"],
-    "icon": "Cloud",
-    "color": "#EA4335"
-  },
-  {
-    "id": 36,
-    "title": "Cloud Engineer (Azure)",
-    "domain": "Cloud Engineering",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Manage enterprise cloud environments using Azure DevOps, Virtual Machines, and Azure Active Directory.",
-    "skills": ["Azure DevOps", "Virtual Machines", "Azure AD", "Enterprise Cloud"],
-    "icon": "Cloud",
-    "color": "#0078D4"
-  },
-  {
-    "id": 37,
-    "title": "Cloud Engineer Multi Cloud",
-    "domain": "Cloud Engineering",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 2,
-    "description": "Design vendor-agnostic hybrid cloud strategies that ensure interoperability across complex, multi-cloud architectures.",
-    "skills": ["Hybrid Cloud Strategy", "Vendor Agnostic", "Interoperability", "Complex Architecture"],
-    "icon": "Cloud",
-    "color": "#0D9488"
-  },
-  {
-    "id": 38,
+    "id": 25,
     "title": "Data Scientist",
     "domain": "Data Science",
     "category": "technical",
@@ -494,7 +325,7 @@
     "color": "#06B6D4"
   },
   {
-    "id": 39,
+    "id": 26,
     "title": "Data Analyst",
     "domain": "Data Analytics",
     "category": "technical",
@@ -507,7 +338,7 @@
     "color": "#0891B2"
   },
   {
-    "id": 40,
+    "id": 27,
     "title": "AI / ML Engineer",
     "domain": "Artificial Intelligence",
     "category": "technical",
@@ -520,33 +351,7 @@
     "color": "#7C3AED"
   },
   {
-    "id": 41,
-    "title": "Machine Learning",
-    "domain": "Machine Learning",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Build and tune predictive models and neural networks using Python or R on real-world datasets.",
-    "skills": ["Predictive Models", "Algorithm Tuning", "Python/R", "Neural Networks"],
-    "icon": "Brain",
-    "color": "#9333EA"
-  },
-  {
-    "id": 42,
-    "title": "Deep Learning & AI Engineer",
-    "domain": "Artificial Intelligence",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Build neural networks for NLP and computer vision applications using TensorFlow and PyTorch.",
-    "skills": ["Neural Networks", "NLP & Vision", "TensorFlow/PyTorch", "Cognitive Computing"],
-    "icon": "Brain",
-    "color": "#4F46E5"
-  },
-  {
-    "id": 43,
+    "id": 28,
     "title": "Database Administrator",
     "domain": "Database Management",
     "category": "technical",

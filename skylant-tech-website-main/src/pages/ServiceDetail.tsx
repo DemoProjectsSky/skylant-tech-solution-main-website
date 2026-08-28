@@ -11,9 +11,15 @@ import CTASection from '../components/CTASection';
 import ServiceIllustration from '../components/ServiceIllustration';
 import TechLogo from '../components/techlogo';
 import OfferingDetailModal from '../components/Offeringdetailmodal';
-import services from '../data/services.json';
-import faqs from '../data/faqs.json';
+import servicesData from '../data/services.json';
+import serviceFaqs from '../data/serviceFaqs.json';
 import FAQAccordion from '../components/FAQAccordion';
+
+// Cast to `any[]` — entries in services.json have different optional
+// shapes (e.g. only digital-marketing defines `whatWeHelpWith`), which
+// makes TypeScript infer a strict union type and error on property
+// access like `service.offerings` or `service.whatWeHelpWith`.
+const services = servicesData as any[];
 
 const iconMap: Record<string, any> = { Code2, Globe, Smartphone, Brain, Cloud, Zap, Palette, TrendingUp, Layers };
 
@@ -44,30 +50,18 @@ const TECH_COLORS: Record<string, string> = {
   'Mailchimp': '#FFE01B', 'Meta Ads': '#0866FF', 'Google Ads': '#4285F4',
 };
 
-// Shape of the optional "What We Help With" block a service can define in services.json.
-// Currently only digital-marketing sets this; the section below only renders when present.
-interface WhatWeHelpWithItem {
-  number: string;
-  title: string;
-  description: string;
-}
-
-interface WhatWeHelpWith {
-  eyebrow: string;
-  title: string;
-  description: string;
-  items: WhatWeHelpWithItem[];
-}
-
 export default function ServiceDetail() {
   const { slug } = useParams();
   const service = services.find((s) => s.slug === slug);
-  const [activeOffering, setActiveOffering] = useState<(typeof service extends undefined ? never : NonNullable<typeof service>['offerings'][number]) | null>(null);
+  const [activeOffering, setActiveOffering] = useState<any>(null);
 
   if (!service) return <Navigate to="/services" replace />;
 
   const Icon = iconMap[service.icon] || Code2;
-  const whatWeHelpWith = (service as any).whatWeHelpWith as WhatWeHelpWith | undefined;
+
+  // Look up this service's own FAQs by slug; fall back to an empty array
+  // so the section simply renders nothing if a service has no FAQs defined yet.
+  const currentFaqs = (serviceFaqs as Record<string, { id: number; question: string; answer: string }[]>)[service.slug] ?? [];
 
   return (
     <>
@@ -119,7 +113,7 @@ export default function ServiceDetail() {
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h3 className="text-[#2C2A4A] font-bold text-xl mb-5">Key Features</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              {service.features.map((f, i) => {
+              {service.features.map((f: string, i: number) => {
                 const FeatureIcon = featureIcons[i % featureIcons.length];
                 return (
                   <motion.div
@@ -161,7 +155,7 @@ export default function ServiceDetail() {
             <p className="text-center text-[#9691B5] text-sm mb-10">Tap a card to see what's included and the typical timeline.</p>
           )}
           <div className="grid md:grid-cols-2 gap-6">
-            {(service.offerings ?? []).map((o: any, i) => {
+            {(service.offerings ?? []).map((o: any, i: number) => {
               const hasDetails = Boolean(o.details);
               return (
                 <motion.div
@@ -214,7 +208,7 @@ export default function ServiceDetail() {
       />
 
      {/* WHAT WE HELP WITH — only renders when a service defines it (currently digital-marketing) */}
-{(service as any).whatWeHelpWith && (
+{service.whatWeHelpWith && (
   <section className="relative py-20 sm:py-24 overflow-hidden">
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -225,20 +219,20 @@ export default function ServiceDetail() {
         className="max-w-3xl"
       >
         <span className="inline-block text-[#F97316] text-xs font-bold tracking-wider uppercase mb-4">
-          {(service as any).whatWeHelpWith.eyebrow}
+          {service.whatWeHelpWith.eyebrow}
         </span>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1E2A4A] mb-5 leading-[1.15] text-balance">
-          {(service as any).whatWeHelpWith.title}
+          {service.whatWeHelpWith.title}
         </h2>
 
         <p className="text-[#6B7280] text-base leading-relaxed">
-          {(service as any).whatWeHelpWith.description}
+          {service.whatWeHelpWith.description}
         </p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-        {(service as any).whatWeHelpWith.items.map(
+        {service.whatWeHelpWith.items.map(
           (item: any, i: number) => {
             const cardStyles = [
               {
@@ -307,7 +301,7 @@ export default function ServiceDetail() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">Tools we use</h2>
           </motion.div>
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-            {(service.technologies ?? []).map((t, i) => {
+            {(service.technologies ?? []).map((t: string, i: number) => {
               const color = TECH_COLORS[t] || service.color;
               return (
                 <motion.div
@@ -333,15 +327,17 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">Frequently asked questions</h2>
-          </motion.div>
-          <FAQAccordion items={faqs.slice(0, 5)} />
-        </div>
-      </section>
+      {/* FAQ — each service shows its own domain-specific questions, looked up by slug */}
+      {currentFaqs.length > 0 && (
+        <section className="relative py-20 sm:py-24 bg-[#EDE9FE]/40 backdrop-blur-sm overflow-hidden">
+          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#2C2A4A] mb-4 text-balance">Frequently asked questions</h2>
+            </motion.div>
+            <FAQAccordion items={currentFaqs} />
+          </div>
+        </section>
+      )}
 
       <CTASection title={`Ready to start your ${service.shortTitle.toLowerCase()} project?`} description="Let's discuss your requirements and build a solution that drives real business results. Book a free consultation today." primaryLabel="Get Free Quote" secondaryLabel="View All Services" secondaryPath="/services" />
     </>

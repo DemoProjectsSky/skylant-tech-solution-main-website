@@ -1,50 +1,80 @@
 [
   {
     "id": 1,
-    "question": "What types of businesses do you work with?",
-    "answer": "We work with startups, SMEs, and large enterprises across diverse industries including healthcare, fintech, retail, logistics, education, and more. Our solutions are designed to scale with your business regardless of size.",
+    "question": "What services does Skylant Tech Solutions offer?",
+    "answer": "We offer end-to-end web and software development, mobile app development, AI solutions, ERP systems, cloud services, and complete digital marketing services including SEO, social media marketing, paid ads, and branding — all under one roof.",
     "category": "General"
   },
   {
     "id": 2,
-    "question": "How long does a typical software project take?",
-    "answer": "Project timelines depend on scope and complexity. A simple web application typically takes 4-8 weeks, while a complex enterprise platform can take 6-12 months. We provide detailed project timelines during discovery and maintain transparency throughout development.",
-    "category": "Process"
+    "question": "Are you a good fit for a small business or startup?",
+    "answer": "Yes. We work with startups and small businesses just as much as larger companies. Our solutions are scoped to your budget and goals, so you only pay for what you actually need to grow.",
+    "category": "General"
   },
   {
     "id": 3,
-    "question": "Do you offer post-launch support and maintenance?",
-    "answer": "Yes, we offer comprehensive post-launch support packages including bug fixes, security updates, performance monitoring, and feature enhancements. Our support team is available 24/7 for critical issues.",
-    "category": "Support"
+    "question": "How much does a website or app cost?",
+    "answer": "Cost depends on the features, complexity, and timeline you need. A basic business website starts lower, while a custom app or platform costs more. We give you a clear, itemized quote after understanding your requirements — no hidden charges.",
+    "category": "Pricing"
   },
   {
     "id": 4,
-    "question": "What is your development methodology?",
-    "answer": "We follow Agile/Scrum methodology with bi-weekly sprints, regular client demos, and continuous integration/deployment. This ensures transparency, flexibility, and consistent delivery of value throughout the project.",
+    "question": "How long will my project take to complete?",
+    "answer": "A simple website usually takes 2-4 weeks, a custom web or mobile app takes 6-12 weeks, and larger platforms can take longer depending on scope. For digital marketing, initial setup takes 1-2 weeks and ongoing results build over 2-3 months.",
     "category": "Process"
   },
   {
     "id": 5,
-    "question": "How do you ensure the security of our application?",
-    "answer": "Security is built into every layer of our development process. We follow OWASP guidelines, conduct regular security audits, implement proper authentication and authorization, encrypt sensitive data, and perform penetration testing before launch.",
-    "category": "Security"
+    "question": "Will I be able to track the project's progress?",
+    "answer": "Yes. We share regular updates, milestone demos, and a clear project timeline so you always know what's happening and what's coming next — no surprises.",
+    "category": "Process"
   },
   {
     "id": 6,
-    "question": "Can you work with our existing technology stack?",
-    "answer": "Absolutely. We have experience working with diverse technology stacks and can integrate with your existing systems, whether it's legacy software, modern cloud services, or third-party APIs. We'll assess your current infrastructure and recommend the best approach.",
-    "category": "Technical"
+    "question": "Do you provide support after the website or app is delivered?",
+    "answer": "Yes, we offer post-launch support for bug fixes, updates, and maintenance so your website or app keeps running smoothly. Support plans can be monthly or as-needed based on your requirement.",
+    "category": "Support"
   },
   {
     "id": 7,
-    "question": "Do you sign NDAs and protect our intellectual property?",
-    "answer": "Yes, we sign NDAs before any project discussions and have strict IP protection policies. All code, designs, and intellectual property created for your project belong exclusively to you upon project completion and payment.",
-    "category": "Legal"
+    "question": "Will my website or app actually be secure?",
+    "answer": "Yes. We follow standard security practices — secure login systems, encrypted data, and regular checks — so your customer data and business information stay protected.",
+    "category": "Technical"
   },
   {
     "id": 8,
+    "question": "Can you redesign or improve my existing website instead of building a new one?",
+    "answer": "Absolutely. We can audit your current website, fix performance and design issues, and upgrade it with modern features without starting from scratch, saving you both time and cost.",
+    "category": "Technical"
+  },
+  {
+    "id": 9,
+    "question": "Will I own the website, app, or code once it's done?",
+    "answer": "Yes. Once the project is complete and paid for, full ownership of the code, design, and content belongs entirely to you. We also sign NDAs to keep your business idea confidential.",
+    "category": "Legal"
+  },
+  {
+    "id": 10,
+    "question": "How is digital marketing different from just building a website?",
+    "answer": "A website is your online presence, but digital marketing (SEO, ads, social media) is what actually brings customers to it. We recommend combining both so your investment in a website turns into real leads and sales.",
+    "category": "Digital Marketing"
+  },
+  {
+    "id": 11,
+    "question": "How soon will I see results from SEO or ads?",
+    "answer": "Paid ads (Google/Facebook) can bring visible traffic and leads within the first 1-2 weeks. SEO is a long-term strategy and typically shows meaningful ranking improvements within 3-6 months of consistent work.",
+    "category": "Digital Marketing"
+  },
+  {
+    "id": 12,
+    "question": "Do you manage our social media accounts too?",
+    "answer": "Yes, we handle content planning, post creation, and posting schedules across Instagram, Facebook, and LinkedIn, along with performance tracking so you can see what's actually working.",
+    "category": "Digital Marketing"
+  },
+  {
+    "id": 13,
     "question": "How do I get started with Skylant?",
-    "answer": "Getting started is simple. Book a free consultation call, and our team will assess your requirements, provide a detailed proposal with timeline and investment estimate, and guide you through our onboarding process. We'll have your project kicked off within days.",
+    "answer": "Just book a free consultation call. We'll understand your goals, share a clear proposal with cost and timeline, and once you approve, we get your project started right away.",
     "category": "General"
   }
 ]

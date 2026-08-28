@@ -3,13 +3,14 @@ import { useState } from 'react';
 import {
   Calendar, Clock, Share2, Check, Search, FileText, Share as ShareIcon,
   Mail, Megaphone, MapPin, Smartphone, BarChart3, ShieldCheck,
-  Settings, ArrowUpRight,
+  Settings, ArrowUpRight, ArrowRight, BookOpen,
 } from 'lucide-react';
 import PageBanner from '../components/PageBanner';
 import CTASection from '../components/CTASection';
 import BlogIllustration from '../components/BlogIllustration';
 import AnimatedBackground from '../components/AnimatedBackground';
 import blogs from '../data/blogs.json';
+import externalArticles from '../data/externalArticles.json';
 
 const post = blogs[0];
 
@@ -25,6 +26,69 @@ const tips = [
   { icon: ShieldCheck, title: 'Brand Consistency', desc: 'The same voice, colors, and message across every channel builds trust and recognition over time.', color: '#1E3A8A' },
   { icon: Settings, title: 'Marketing Automation', desc: 'Automate follow-ups, lead nurturing, and social scheduling to save time and scale effort-free.', color: '#16A34A' },
 ];
+
+function ExternalArticleCard({ article }: { article: any }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.45 }}
+      className="group relative h-full overflow-hidden rounded-2xl border shadow-sm transition-shadow duration-300 hover:shadow-md"
+      style={{
+        borderColor: `${article.color}40`,
+        background: `linear-gradient(160deg, ${article.color}14 0%, rgba(255,255,255,0.92) 55%)`,
+      }}
+      whileHover={{ y: -6, transition: { duration: 0.3, ease: 'easeOut' } }}
+    >
+      <div
+        className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-25 blur-3xl transition-opacity duration-300 group-hover:opacity-40"
+        style={{ background: article.color }}
+      />
+      <a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-10 flex h-full flex-col"
+      >
+        {article.image && (
+          <div className="relative h-40 w-full overflow-hidden">
+            <img
+              src={article.image}
+              alt={article.title}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: `linear-gradient(180deg, transparent 45%, ${article.color}26 100%)` }}
+            />
+          </div>
+        )}
+        <div className="flex flex-1 flex-col p-6">
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: article.color }}>
+            {article.tag}
+          </div>
+          <h3 className="mb-3 text-lg font-bold leading-snug text-[#2C2A4A] line-clamp-2">{article.title}</h3>
+          <p className="mb-4 flex-1 text-sm leading-relaxed text-[#5B5580] line-clamp-4">{article.description}</p>
+          <div className="mb-4 flex flex-wrap items-center gap-2 text-xs text-[#8B85A8]">
+            <span className="font-medium text-[#5B5580]">{article.author}</span>
+            <span>·</span>
+            <span>{article.readTime}</span>
+            <span>·</span>
+            <span>{article.date}</span>
+          </div>
+          <span
+            className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium transition-all group-hover:gap-2.5"
+            style={{ color: article.color }}
+          >
+            Learn more <ArrowRight className="h-3.5 w-3.5" />
+          </span>
+        </div>
+      </a>
+    </motion.div>
+  );
+}
 
 export default function Blog() {
   const [copied, setCopied] = useState(false);
@@ -229,6 +293,34 @@ export default function Blog() {
               </a>
             </div>
           </aside>
+        </div>
+      </section>
+
+      {/* MORE ARTICLES — external reads, unique colored cards, opens in new tab */}
+      <section className="relative py-20 sm:py-24 bg-[#FAF9F7]/70 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto mb-12 max-w-2xl text-center"
+          >
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E4DBFF] bg-[#F3F0FF] px-4 py-1.5 text-sm font-medium text-[#6D5BD0]">
+              <BookOpen className="h-4 w-4" />
+              More Reads
+            </div>
+            <h2 className="text-3xl font-bold sm:text-4xl">
+              <span className="text-[#0F172A]">Handpicked articles </span>
+              <span className="text-[#2563EB]">worth your time</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {externalArticles.map((article: any) => (
+              <ExternalArticleCard key={article.id} article={article} />
+            ))}
+          </div>
         </div>
       </section>
 

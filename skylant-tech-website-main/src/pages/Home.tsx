@@ -330,7 +330,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s: any, i: number) => {
               const Icon = iconMap[s.icon] || Code2;
               return (
@@ -345,7 +345,7 @@ export default function Home() {
                 >
                   <Link
                     to={`/services/${s.slug}`}
-                    className="group relative block h-full overflow-hidden rounded-[2.5rem] border p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+                    className="group relative block h-full overflow-hidden rounded-[2.5rem] border p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
                     style={{
                       borderColor: `${s.color}40`,
                       background: `linear-gradient(160deg, ${s.color}12 0%, rgba(255,255,255,0.55) 55%)`,
@@ -476,8 +476,8 @@ export default function Home() {
                 >
                   <item.icon className="h-5 w-5" />
                 </div>
-                <h3 className="relative z-10 mb-2 font-semibold text-[#2C2A4A]">{item.title}</h3>
-                <p className="relative z-10 text-sm leading-relaxed text-[#5B5580]">{item.description}</p>
+                <h3 className="relative z-10 mb-2 text-lg font-semibold text-[#2C2A4A]">{item.title}</h3>
+                <p className="relative z-10 text-base leading-relaxed text-[#5B5580]">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -544,8 +544,8 @@ export default function Home() {
                     </motion.div>
                   </motion.div>
 
-                  <h3 className="mb-1 text-sm font-semibold text-[#2C2A4A]">{step.title}</h3>
-                  <p className="text-xs leading-relaxed text-[#8783A6]">{step.description}</p>
+                  <h3 className="mb-1 text-base font-semibold text-[#2C2A4A]">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#8783A6]">{step.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -893,43 +893,65 @@ function CaseStudyCard({ cs, variant }: { cs: any; variant: 'staged' | 'settled'
     <motion.div
       className={
         variant === 'staged'
-          ? 'group relative w-[220px] overflow-hidden rounded-[24px] border border-[#C7D2FE] bg-white shadow-[0_20px_45px_rgba(79,70,229,0.28)] sm:w-[260px]'
-          : 'group relative overflow-hidden rounded-[24px] border border-[#C7D2FE] bg-white shadow-sm transition-shadow duration-300 hover:border-[#3B82F6] hover:shadow-[0_20px_45px_rgba(79,70,229,0.24)]'
+          ? 'group relative w-[220px] overflow-hidden rounded-[24px] border shadow-[0_20px_45px_rgba(79,70,229,0.28)] sm:w-[260px]'
+          : 'group relative h-full overflow-hidden rounded-[24px] border shadow-sm transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(79,70,229,0.18)]'
       }
-      style={{ willChange: 'transform, opacity' }}
+      style={{
+        willChange: 'transform, opacity',
+        borderColor: `${cs.color}40`,
+        background: `linear-gradient(160deg, ${cs.color}14 0%, rgba(255,255,255,0.9) 55%)`,
+      }}
       whileHover={
         variant === 'settled'
           ? { y: -10, scale: 1.02, transition: { duration: 0.3, ease: 'easeOut' } }
           : undefined
       }
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <img
-          src={cs.image}
-          alt={cs.title}
-          loading="lazy"
-          className="h-full w-full scale-100 object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
-        />
-        <span className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-xs font-medium text-[#2C2A4A] shadow-sm">
-          {cs.industry}
-        </span>
-      </div>
-      <div className="p-6">
+      <div
+        className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-25 blur-3xl transition-opacity duration-300 group-hover:opacity-40"
+        style={{ background: cs.color }}
+      />
+      <a
+        href={cs.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-10 flex h-full flex-col"
+      >
+        {cs.image && (
+          <div className="relative h-44 w-full overflow-hidden">
+            <img
+              src={cs.image}
+              alt={cs.title}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: `linear-gradient(180deg, transparent 45%, ${cs.color}26 100%)` }}
+            />
+          </div>
+        )}
+        <div className="flex flex-1 flex-col p-6">
         <div className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: cs.color }}>
-          {cs.service}
+          {cs.tag}
         </div>
-        <h3 className="mb-2 text-lg font-semibold text-[#2C2A4A]">{cs.title}</h3>
-        <p className="mb-3 text-sm leading-relaxed text-[#5B5580]">{cs.description}</p>
-        <p className="mb-4 text-sm font-medium text-[#2C2A4A]">{cs.result}</p>
-        <div className="grid grid-cols-2 gap-3 border-t border-[#E4DBFF] pt-4">
-          {cs.metrics.slice(0, 4).map((m: any, j: number) => (
-            <div key={j}>
-              <div className="text-xl font-bold" style={{ color: cs.color }}>{m.value}</div>
-              <div className="text-xs text-[#8783A6]">{m.label}</div>
-            </div>
-          ))}
+        <h3 className="mb-3 text-lg font-semibold leading-snug text-[#2C2A4A] line-clamp-2">{cs.title}</h3>
+        <p className="mb-4 flex-1 text-sm leading-relaxed text-[#5B5580] line-clamp-5">{cs.description}</p>
+        <div className="mb-4 flex items-center gap-2 text-xs text-[#8783A6]">
+          <span className="font-medium text-[#5B5580]">{cs.author}</span>
+          <span>·</span>
+          <span>{cs.readTime}</span>
+          <span>·</span>
+          <span>{cs.date}</span>
         </div>
-      </div>
+        <span
+          className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium transition-all group-hover:gap-2.5"
+          style={{ color: cs.color }}
+        >
+          Learn more <ArrowRight className="h-3.5 w-3.5" />
+        </span>
+        </div>
+      </a>
     </motion.div>
   );
 }
