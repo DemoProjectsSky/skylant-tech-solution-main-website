@@ -308,7 +308,7 @@ export default function Careers() {
             </h2>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {jobs.map((job, i) => {
               const Icon = iconMap[job.icon] || Code2;
               const color =
@@ -324,11 +324,11 @@ export default function Careers() {
                     duration: 0.4,
                     delay: i * 0.05,
                   }}
-                  className="group relative rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition-all backdrop-blur-sm"
+                  className="group relative flex flex-col h-full rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition-all bacckdrop-blur-sm"
                   style={{
                     borderColor: `${color}40`,
                     background: `linear-gradient(160deg, ${color}12 0%, rgba(255,255,255,0.85) 55%)`,
-                  }}
+                  }} gap-
                 >
                   <div
                     className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-35"
@@ -406,7 +406,7 @@ export default function Careers() {
                   </div>
 
                   <div
-                    className="relative z-10 px-5 pb-5 pt-2 border-t"
+                    className="relative z-10 mt-auto px-5 pb-5 pt-2 border-t"
                     style={{
                       borderColor: `${color}30`,
                     }}
