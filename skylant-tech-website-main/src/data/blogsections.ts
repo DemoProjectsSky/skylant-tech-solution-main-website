@@ -14,6 +14,8 @@ import {
   MousePointerClick,
   Hourglass,
   Globe2,
+  Users,
+  TrendingUp,
   LucideIcon,
 } from 'lucide-react';
 
@@ -151,5 +153,44 @@ export const blogContents: BlogContent[] = [
 
     finalThoughts:
       "Low leads don't always mean digital marketing has failed — they usually point to a gap somewhere in the strategy, targeting, content, website, or follow-up process. At Skylant Tech Solutions, we help businesses fix these gaps with the right audience research, conversion-focused websites, and data-driven campaigns that turn traffic into real leads.",
+  },
+
+  {
+    slug: 'website-vs-social-media-why-your-business-needs-both',
+
+    intro:
+      "In today's world, every business needs an online presence. The real question isn't Website vs Social Media — it's how to make them work together. A strong business uses both to build trust, reach, and revenue.",
+
+    sections: [
+      {
+        icon: Globe2,
+        title: 'Why Your Business Needs a Website',
+        desc: 'Your website is the home of your business — it builds credibility, converts visitors into leads through forms and landing pages, and helps you rank on Google through SEO.',
+        color: '#2563EB',
+      },
+      {
+        icon: ShareIcon,
+        title: 'Why Social Media Is Important',
+        desc: 'Social media puts your name out there, shows your personality, and builds daily engagement through likes, comments, and shares — driving visibility and community.',
+        color: '#8B5CF6',
+      },
+      {
+        icon: Users,
+        title: 'The Power of Using Both',
+        desc: "Use social media to grab attention and your website to provide depth. One brings people in, the other helps them stay and buy — they're a team, not rivals.",
+        color: '#EC4899',
+      },
+      {
+        icon: TrendingUp,
+        title: 'Long-Term Growth',
+        desc: "Your website is the foundation for search visibility, while social media spreads your message and drives traffic back to it — together they compound over time.",
+        color: '#22C55E',
+      },
+    ],
+
+    finalThoughtsTitle: 'Final Thoughts',
+
+    finalThoughts:
+      "Website vs Social Media isn't about which one is better. Your website builds trust and supports SEO; social media builds attention and community. Use both, and you reach the people who actually need what you offer. At Skylant Tech Solutions, we help businesses build both a powerful website and a consistent social media presence that work together.",
   },
 ];
