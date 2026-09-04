@@ -128,7 +128,7 @@ export default function Navbar() {
                     >
                       <Link
                         to={link.path}
-                        className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
+                        className={`px-3.5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-1 ${
                           location.pathname.startsWith('/services')
                             ? 'text-black'
                             : 'text-black hover:text-black'
@@ -142,7 +142,7 @@ export default function Navbar() {
                     <Link
                       key={link.name}
                       to={link.path}
-                      className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                      className={`px-3.5 py-2 rounded-lg text-sm font-bold transition-all ${
                         location.pathname === link.path
                           ? 'text-black'
                           : 'text-black hover:text-black'
@@ -232,7 +232,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`px-4 py-3 rounded-xl text-base font-medium text-black transition-all ${
+                    className={`px-4 py-3 rounded-xl text-base font-bold text-black transition-all ${
                       location.pathname === link.path
                         ? 'bg-sky-500/20 text-black'
                         : 'text-black hover:bg-white/5 hover:text-black'

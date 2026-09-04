@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import AnimatedBackground from './components/AnimatedBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
 import SkylantAIChat from './components/SkylantAIChat';
 
 import Home from './pages/Home';
@@ -93,8 +92,6 @@ export default function App() {
       {/* AI Chat */}
       <SkylantAIChat />
 
-      {/* Scroll to top button */}
-      <ScrollToTop />
     </BrowserRouter>
   );
 }

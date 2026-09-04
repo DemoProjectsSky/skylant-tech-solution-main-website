@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Bot, MessageCircle, Send, Sparkles, X } from 'lucide-react';
 import { useState } from 'react';
+import ScrollToTop from './ScrollToTop';
 
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || '';
 const GROQ_MODEL = import.meta.env.VITE_GROQ_MODEL || 'llama-3.1-8b-instant';
@@ -928,6 +929,8 @@ export default function SkylantAIChat() {
 
       {/* Launcher row: WhatsApp button sits to the LEFT of the Skylant AI button */}
       <div className="flex items-center justify-end gap-3">
+        <ScrollToTop />
+
         <WhatsAppButton />
 
         <motion.button

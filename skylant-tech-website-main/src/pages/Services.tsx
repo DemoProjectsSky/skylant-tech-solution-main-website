@@ -1084,35 +1084,31 @@ export default function Services() {
                         caseStudy.description
                       }
                     </p>
+<div className="grid grid-cols-2 gap-3 pt-4 border-t border-[#E4DBFF]">
+  {(Array.isArray(caseStudy.metrics)
+    ? caseStudy.metrics
+    : []
+  )
+    .slice(0, 2)
+    .map(
+      (
+        metric: any,
+        metricIndex: number
+      ) => (
+        <div key={metricIndex}>
+          <div className="text-xl font-bold text-[#6D5BD0]">
+            {metric?.value ?? ""}
+          </div>
 
-                    <div className="grid grid-cols-2 gap-3 pt-4 border-t border-[#E4DBFF]">
-                      {caseStudy.metrics
-                        .slice(0, 2)
-                        .map(
-                          (
-                            metric: any,
-                            metricIndex: number
-                          ) => (
-                            <div
-                              key={
-                                metricIndex
-                              }
-                            >
-                              <div className="text-xl font-bold text-[#6D5BD0]">
-                                {
-                                  metric.value
-                                }
-                              </div>
-
-                              <div className="text-xs text-[#8783A6]">
-                                {
-                                  metric.label
-                                }
-                              </div>
-                            </div>
-                          )
-                        )}
-                    </div>
+          <div className="text-xs text-[#8783A6]">
+            {metric?.label ?? ""}
+          </div>
+        </div>
+      )
+    )}
+</div>
+                    
+                    
                   </div>
                 </motion.div>
               )
