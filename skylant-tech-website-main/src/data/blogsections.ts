@@ -16,6 +16,7 @@ import {
   Globe2,
   Users,
   TrendingUp,
+  Bell,
   LucideIcon,
 } from 'lucide-react';
 
@@ -193,4 +194,49 @@ export const blogContents: BlogContent[] = [
     finalThoughts:
       "Website vs Social Media isn't about which one is better. Your website builds trust and supports SEO; social media builds attention and community. Use both, and you reach the people who actually need what you offer. At Skylant Tech Solutions, we help businesses build both a powerful website and a consistent social media presence that work together.",
   },
+  
+{
+  slug: 'when-should-a-business-invest-in-a-mobile-app',
+
+  intro:
+    "Today, customers expect businesses to be available at their fingertips — from ordering food to booking services and managing finances. A mobile app isn't just another tech expense; planned right, it can boost engagement, sales, and brand loyalty. Here's how to know when it's time to invest.",
+
+  sections: [
+    {
+      icon: Smartphone,
+      title: 'Customers Use Mobile Devices Frequently',
+      desc: 'If customers regularly browse products, book, order, or contact you from their phones, a dedicated app can make that experience faster and more personalized than a website alone.',
+      color: '#2563EB',
+    },
+    {
+      icon: Bell,
+      title: 'You Want Better Customer Engagement',
+      desc: 'Push notifications, personalized offers, reminders, and loyalty programs give you a direct line to customers — turning occasional buyers into loyal, repeat ones.',
+      color: '#F97316',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Your Business Is Ready to Scale',
+      desc: 'An app automates bookings, orders, payments, support, tracking, and loyalty programs — replacing manual handling with a smoother, scalable customer journey.',
+      color: '#22C55E',
+    },
+    {
+      icon: Globe2,
+      title: 'Your Website Is No Longer Enough',
+      desc: 'Websites are great for attracting new visitors via search, but an app suits customers who interact with your business regularly — logging in, ordering, or tracking repeatedly.',
+      color: '#8B5CF6',
+    },
+    {
+      icon: Target,
+      title: 'You Have a Clear Business Objective',
+      desc: "Before building, define what problem the app solves — more sales, better retention, simpler bookings. A clear goal keeps costs controlled and every feature purposeful.",
+      color: '#EC4899',
+    },
+  ],
+
+  finalThoughtsTitle: 'Final Thoughts',
+
+  finalThoughts:
+    "There's no universal timeline for building an app — but if your customers are mobile-first, your business is growing, and your website can't keep up, it's likely time. At Skylant Tech Solutions, we help businesses start with the customer's problem, not the technology, to build apps that deliver real, lasting value.",
+},
 ];
