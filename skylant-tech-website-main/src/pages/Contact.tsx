@@ -164,10 +164,7 @@ export default function Contact() {
             </h2>
 
             <p className="text-[#5B5580] leading-relaxed mb-8">
-              Whether you have a clear vision or just an idea,
-              we're here to help. Reach out through any channel
-              below and let's discuss how we can bring your
-              project to life.
+             Do you have an idea, for your digital project? Connect with our expert software development team. They can provide web development, mobile app development and custom IT solutions to help your business grow.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
