@@ -1,5 +1,10 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import AnimatedBackground from './components/AnimatedBackground';
 import Navbar from './components/Navbar';
@@ -16,6 +21,9 @@ import Blog from './pages/Blog';
 import BlogPostDetail from './pages/BlogPostDetail';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import LeadForm from './pages/LeadForm';
+
+const DISMISS_KEY = 'skylantLeadFormDismissed';
 
 function ScrollToTopOnRoute() {
   const { pathname } = useLocation();
@@ -30,68 +38,74 @@ function ScrollToTopOnRoute() {
   return null;
 }
 
+function HomeWithLeadPopup() {
+  const [showLeadForm, setShowLeadForm] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem(DISMISS_KEY) === 'true') {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      if (sessionStorage.getItem(DISMISS_KEY) !== 'true') {
+        setShowLeadForm(true);
+      }
+    }, 3000);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const closeLeadForm = () => {
+    sessionStorage.setItem(DISMISS_KEY, 'true');
+    setShowLeadForm(false);
+  };
+
+  return (
+    <>
+      <Home />
+
+      {showLeadForm && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/60 px-4 py-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Skylant lead information form"
+        >
+          <div className="relative my-auto w-full max-w-xl">
+            <LeadForm onClose={closeLeadForm} />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
-      {/* Background animation */}
       <AnimatedBackground />
-
-      {/* Scroll to top on route change */}
       <ScrollToTopOnRoute />
 
-      {/* Navbar */}
       <Navbar />
 
-      {/* Main Content */}
       <main className="relative min-h-screen pt-9">
         <Routes>
-          {/* Home */}
-          <Route path="/" element={<Home />} />
-
-          {/* About */}
+          <Route path="/" element={<HomeWithLeadPopup />} />
           <Route path="/about" element={<About />} />
-
-          {/* Services */}
           <Route path="/services" element={<Services />} />
-
-          {/* Service Detail */}
-          <Route
-            path="/services/:slug"
-            element={<ServiceDetail />}
-          />
-
-          {/* Training */}
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/training" element={<Training />} />
-
-          {/* Internship */}
           <Route path="/internship" element={<Internship />} />
-
-          {/* Blog */}
           <Route path="/blog" element={<Blog />} />
-
-          {/* Blog Detail */}
-          <Route
-            path="/blog/:slug"
-            element={<BlogPostDetail />}
-          />
-
-          {/* Careers */}
+          <Route path="/blog/:slug" element={<BlogPostDetail />} />
           <Route path="/careers" element={<Careers />} />
-
-          {/* Contact */}
           <Route path="/contact" element={<Contact />} />
-
-          {/* 404 */}
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
 
-      {/* Footer */}
       <Footer />
-
-      {/* AI Chat */}
       <SkylantAIChat />
-
     </BrowserRouter>
   );
 }
