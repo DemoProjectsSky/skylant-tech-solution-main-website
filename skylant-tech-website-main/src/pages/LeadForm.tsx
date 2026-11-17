@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 
 type LeadFormProps = {
@@ -18,7 +19,6 @@ export default function LeadForm({ onClose }: LeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [submitError, setSubmitError] = useState(false);
-  // CHANGED: hidden anti-spam field. Real users never see or fill it.
   const [honeypot, setHoneypot] = useState('');
 
   const [form, setForm] = useState<LeadFormData>({
@@ -66,20 +66,23 @@ export default function LeadForm({ onClose }: LeadFormProps) {
     setSubmitError(false);
 
     try {
-      // CHANGED: never fall back to localhost in a production build.
-      const configuredUrl = import.meta.env.VITE_API_URL as string | undefined;
-      if (!configuredUrl && import.meta.env.PROD) {
+      // Production backend URL.
+      // VITE_API_URL can override this value in Render.
+      const configuredUrl = import.meta.env.VITE_API_URL as
+        | string
+        | undefined;
+
+      const apiUrl = (
+        configuredUrl || 'https://skylant-crm-api.onrender.com'
+      ).trim().replace(/\/+$/, '');
+
+      if (!apiUrl) {
         throw new Error(
           'The form is temporarily unavailable. Please try again later.'
         );
       }
-      const apiUrl = (configuredUrl || 'http://localhost:5000').replace(
-        /\/+$/,
-        ''
-      );
 
-      // CHANGED: public intake endpoint (no login required).
-      // source / status / assignment are decided by the server, not the browser.
+      // Public endpoint; authentication is not required.
       const response = await fetch(`${apiUrl}/api/public/leads`, {
         method: 'POST',
         headers: {
@@ -98,7 +101,6 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
       const result = await response.json().catch(() => null);
 
-      // CHANGED: success is shown only if the backend confirms it saved the lead.
       if (!response.ok || !result?.success) {
         throw new Error(
           result?.message ||
@@ -120,14 +122,16 @@ export default function LeadForm({ onClose }: LeadFormProps) {
         year: '',
         program: '',
       });
+
+      setHoneypot('');
     } catch (error) {
       console.error('Lead submission error:', error);
 
-      // Form values are intentionally NOT cleared here, so the user can retry.
       setSubmitError(true);
+
       setSubmitMessage(
         error instanceof TypeError
-          ? 'Network error. Please check your connection and try again.'
+          ? 'Unable to connect to the server. Please check your connection and try again.'
           : error instanceof Error
             ? error.message
             : 'Unable to submit your information. Please try again.'
@@ -251,10 +255,16 @@ export default function LeadForm({ onClose }: LeadFormProps) {
           <option value="Other">Other</option>
         </select>
 
-        {/* CHANGED: honeypot field, invisible to humans and screen readers */}
+        {/* Honeypot field: hidden from real users */}
         <div
           aria-hidden="true"
-          style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}
+          style={{
+            position: 'absolute',
+            left: '-10000px',
+            width: 1,
+            height: 1,
+            overflow: 'hidden',
+          }}
         >
           <label>
             Leave this field empty
