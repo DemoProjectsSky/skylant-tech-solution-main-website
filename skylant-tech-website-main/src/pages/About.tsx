@@ -57,7 +57,7 @@ export default function About() {
             Engineering the <span style={{ color: '#2F6EFF' }}>future of business</span>
           </>
         }
-        description="Skylant Tech Solutions is a premium software development company building scalable, secure, and innovative digital products for businesses worldwide."
+        description="Skylant Tech Solution Pvt Ltd is a premium software development company building scalable, secure, and innovative digital products for businesses worldwide."
         breadcrumb={[{ name: 'Home', path: '/' }, { name: 'About' }]}
         illustration={<AboutIllustration />}
        
@@ -82,7 +82,7 @@ export default function About() {
               From a small team to a global technology partner
             </h2>
             <p className="text-[#5B5580] leading-relaxed mb-4">
-              Skylant Tech Solutions is a software development and digital marketing company focused on helping startups, small businesses, and growing brands build their digital presence. We create websites, business software, mobile applications, ERP systems, AI solutions, and digital marketing strategies tailored to business goals.
+              Skylant Tech Solution Pvt Ltd is a software development and digital marketing company focused on helping startups, small businesses, and growing brands build their digital presence. We create websites, business software, mobile applications, ERP systems, AI solutions, and digital marketing strategies tailored to business goals.
             </p>
           </motion.div>
           <motion.div

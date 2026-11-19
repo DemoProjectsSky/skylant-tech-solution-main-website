@@ -37,7 +37,7 @@ const contactInfo = [
     icon: MapPin,
     label: 'Visit Us',
     value:
-      'First Floor, 101, Sivalik Apartment, Lumbini Nagar, near Vasudeo nagar metro station, Hingana Road, Nagpur-440036',
+      'First Floor, 101, Shivalik Apartment, Lumbini Nagar, near Vasudeo nagar metro station, Hingana Road, Nagpur-440036',
     sub: 'Nagpur, Maharashtra',
   },
   {
@@ -430,7 +430,7 @@ export default function Contact() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
-                title="Skylant Tech Solutions Location"
+                title="Skylant Tech Solution Pvt Ltd Location"
               />
             </div>
           </motion.div>

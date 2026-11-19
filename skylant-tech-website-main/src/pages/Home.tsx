@@ -440,49 +440,7 @@ export default function Home() {
       {/* DIGITAL MARKETING SHOWCASE — premium hanging-cards content preview */}
       <DigitalMarketingShowcase />
 
-      {/* WHY SKYLANT — each card now carries its own accent color instead
-          of repeating the same violet, tied to a soft tinted wash so the
-          card itself (not just the icon) feels colorful against the
-          lavender section background. */}
-      <section className="py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="mx-auto mb-14 max-w-2xl text-center">
-            <Eyebrow icon={Award} label="Why Choose Skylant" color="#9B8AFB" />
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              <span className="text-[#0F172A]">Engineering that earns </span>
-              <span className="text-[#9B8AFB]">your trust</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {whySkylant.map((item, i) => (
-              <motion.div
-                key={item.title}
-                {...fadeUp}
-                transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
-                className="group relative overflow-hidden rounded-2xl border p-6 backdrop-blur-sm transition-all hover:-translate-y-1"
-                style={{
-                  borderColor: `${item.color}40`,
-                  background: `linear-gradient(160deg, ${item.color}12 0%, rgba(255,255,255,0.55) 55%)`,
-                }}
-              >
-                <div
-                  className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-25 blur-2xl transition-opacity duration-300 group-hover:opacity-40"
-                  style={{ background: item.color }}
-                />
-                <div
-                  className="relative z-10 mb-4 flex h-11 w-11 items-center justify-center rounded-xl shadow-sm"
-                  style={{ background: `${item.color}18`, color: item.color }}
-                >
-                  <item.icon className="h-5 w-5" />
-                </div>
-                <h3 className="relative z-10 mb-2 text-lg font-semibold text-[#2C2A4A]">{item.title}</h3>
-                <p className="relative z-10 text-base leading-relaxed text-[#5B5580]">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* DEVELOPMENT PROCESS */}
       <section className="bg-[#EDE9FE]/40 py-20 backdrop-blur-sm sm:py-24">

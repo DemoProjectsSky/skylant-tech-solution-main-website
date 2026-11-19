@@ -103,7 +103,7 @@ export default function Navbar() {
               <Link to="/" className="flex items-center gap-3">
                 <img
                   src="/images/skylant website logo.jpeg"
-                  alt="Skylant Tech Solution"
+                  alt="Skylant Tech Solution Pvt Ltd"
                   className="w-14 h-14 object-contain"
                 />
 
@@ -113,7 +113,7 @@ export default function Navbar() {
                   </span>
 
                   <span className="mt-1 text-m font-semibold tracking-widest uppercase text-[#0F172A]">
-                    TECH SOLUTION
+                    TECH SOLUTION PVT LTD
                   </span>
                 </div>
               </Link>
