@@ -1,17 +1,5 @@
 [
-  {
-    "id": 1,
-    "title": "UI/UX Designer",
-    "domain": "Product Design",
-    "category": "non-technical",
-    "duration": "2-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 5,
-    "description": "Design intuitive interfaces and user journeys, from wireframes to polished prototypes, in close collaboration with the product team.",
-    "skills": ["Wireframes & Prototypes", "Visual design & journeys", "Figma collaboration", "User research/testing"],
-    "icon": "Palette",
-    "color": "#EC4899"
-  },
+  
   {
     "id": 2,
     "title": "Business Analyst",
@@ -25,32 +13,8 @@
     "icon": "BarChart3",
     "color": "#6366F1"
   },
-  {
-    "id": 3,
-    "title": "Product Manager",
-    "domain": "Product Management",
-    "category": "non-technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Own a piece of the product roadmap, write user stories, and work with engineering and design to ship features that matter.",
-    "skills": ["Product Roadmap", "Agile/Scrum", "User Stories", "Market Research"],
-    "icon": "Briefcase",
-    "color": "#8B5CF6"
-  },
-  {
-    "id": 4,
-    "title": "Operation Analyst",
-    "domain": "Operations",
-    "category": "non-technical",
-    "duration": "2-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Optimize workflows and resource planning while tracking performance metrics across live client operations.",
-    "skills": ["Workflow optimization", "Performance metrics", "Resource planning", "Reporting/analysis"],
-    "icon": "Settings",
-    "color": "#0EA5E9"
-  },
+  
+  
   {
     "id": 5,
     "title": "Human Resource",
@@ -64,32 +28,8 @@
     "icon": "Users",
     "color": "#F59E0B"
   },
-  {
-    "id": 6,
-    "title": "Finance Analyst",
-    "domain": "Finance",
-    "category": "non-technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Build financial models, forecast budgets, and analyze market trends to support real business decision-making.",
-    "skills": ["Financial modeling", "Budget forecasting", "Market trend analysis", "Financial reporting"],
-    "icon": "LineChart",
-    "color": "#10B981"
-  },
-  {
-    "id": 7,
-    "title": "Accountant",
-    "domain": "Accounting",
-    "category": "non-technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Manage ledgers, prepare tax filings, and produce financial statements while learning end-to-end accounting workflows.",
-    "skills": ["Ledger Management", "Tax Preparation", "Expense Tracking", "Financial Statements"],
-    "icon": "Calculator",
-    "color": "#22C55E"
-  },
+  
+  
   {
     "id": 8,
     "title": "Digital Marketing",
@@ -116,19 +56,7 @@
     "icon": "Handshake",
     "color": "#DB2777"
   },
-  {
-    "id": 10,
-    "title": "UI/UX Developer",
-    "domain": "Frontend Development",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 5,
-    "description": "Turn design files into responsive, production-ready interfaces using modern frontend frameworks.",
-    "skills": ["HTML/CSS/JS Implementation", "Responsive Layouts", "Frontend Frameworks", "Design to Code"],
-    "icon": "Code2",
-    "color": "#2563EB"
-  },
+  
   {
     "id": 11,
     "title": "Full Stack Developer Python",
@@ -155,19 +83,7 @@
     "icon": "Code2",
     "color": "#0891B2"
   },
-  {
-    "id": 13,
-    "title": "PHP Laravel Developer",
-    "domain": "Software Development",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Build robust backends using the Laravel framework and MVC patterns, powered by Artisan CLI tooling.",
-    "skills": ["Laravel Framework", "MVC Pattern", "Artisan CLI", "Robust Backend"],
-    "icon": "Code2",
-    "color": "#9333EA"
-  },
+  
   {
     "id": 14,
     "title": "Mobile App Developer",
@@ -194,45 +110,9 @@
     "icon": "Terminal",
     "color": "#2563EB"
   },
-  {
-    "id": 16,
-    "title": "DevOps Engineer",
-    "domain": "DevOps",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Build CI/CD pipelines, write automation scripts, and manage containerized deployments with Docker and Kubernetes.",
-    "skills": ["CI/CD Pipelines", "Automation Scripts", "Docker/Kubernetes", "System Monitoring"],
-    "icon": "GitBranch",
-    "color": "#059669"
-  },
-  {
-    "id": 17,
-    "title": "Software Testing",
-    "domain": "Quality Assurance",
-    "category": "technical",
-    "duration": "2-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 5,
-    "description": "Write manual and automated test cases, track bugs, and run security checks across real client applications.",
-    "skills": ["Automated/Manual testing", "Bug tracking", "Security checks", "Test case scripts"],
-    "icon": "Bug",
-    "color": "#16A34A"
-  },
-  {
-    "id": 18,
-    "title": "Blockchain Developer",
-    "domain": "Blockchain",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 2,
-    "description": "Design and deploy smart contracts and decentralized applications using Ethereum and Solidity.",
-    "skills": ["Smart Contracts", "Cryptography", "Ethereum/Solidity", "DApp Architecture"],
-    "icon": "Link2",
-    "color": "#0D9488"
-  },
+  
+  
+  
   {
     "id": 19,
     "title": "Game Developer",
@@ -246,84 +126,8 @@
     "icon": "Gamepad2",
     "color": "#DC2626"
   },
-  {
-    "id": 20,
-    "title": "Network Engineer",
-    "domain": "Networking",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Set up and troubleshoot LAN/WAN infrastructure using Cisco/Juniper equipment with a focus on network security.",
-    "skills": ["LAN/WAN Setup", "Cisco/Juniper", "Network Security", "Troubleshooting"],
-    "icon": "Network",
-    "color": "#0284C7"
-  },
-  {
-    "id": 21,
-    "title": "Robotics Engineer",
-    "domain": "Robotics",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 2,
-    "description": "Develop control systems, integrate sensors, and write embedded C++ logic for automation projects.",
-    "skills": ["Control Systems", "Sensor Integration", "Embedded C++", "Automation Logic"],
-    "icon": "Bot",
-    "color": "#EA580C"
-  },
-  {
-    "id": 22,
-    "title": "IoT Engineer",
-    "domain": "Internet of Things",
-    "category": "technical",
-    "duration": "3-5 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Work with sensor data and hardware integrations to build real-time monitoring systems using MQTT and related protocols.",
-    "skills": ["Sensor Data", "Hardware Integration", "MQTT/Protocols", "Real-time Monitoring"],
-    "icon": "Wifi",
-    "color": "#0EA5E9"
-  },
-  {
-    "id": 23,
-    "title": "Cyber Security Engineer",
-    "domain": "Cyber Security",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Analyze threats, defend networks, and run penetration tests while implementing modern security protocols.",
-    "skills": ["Threat Analysis", "Network Defense", "Penetration Testing", "Security Protocols"],
-    "icon": "Shield",
-    "color": "#B91C1C"
-  },
-  {
-    "id": 24,
-    "title": "Cloud Computing",
-    "domain": "Cloud Engineering",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Maintain cloud infrastructure, apply security protocols, and support disaster recovery across AWS and Azure environments.",
-    "skills": ["Infra maintenance", "Security protocols", "AWS/Azure management", "Disaster recovery"],
-    "icon": "Cloud",
-    "color": "#10B981"
-  },
-  {
-    "id": 25,
-    "title": "Data Scientist",
-    "domain": "Data Science",
-    "category": "technical",
-    "duration": "3-6 Months",
-    "type": "Paid/Unpaid",
-    "spots": 4,
-    "description": "Turn raw data into insights through statistical modeling, visualization, and predictive analytics on real datasets.",
-    "skills": ["Data insights", "Statistical modeling", "Info visualization", "Predictive analytics"],
-    "icon": "Brain",
-    "color": "#06B6D4"
-  },
+  
+ 
   {
     "id": 26,
     "title": "Data Analyst",
@@ -349,18 +153,5 @@
     "skills": ["ML systems & algorithms", "Data modeling", "Deep learning implementation", "Big data analysis"],
     "icon": "Brain",
     "color": "#7C3AED"
-  },
-  {
-    "id": 28,
-    "title": "Database Administrator",
-    "domain": "Database Management",
-    "category": "technical",
-    "duration": "3-4 Months",
-    "type": "Paid/Unpaid",
-    "spots": 3,
-    "description": "Optimize SQL performance, manage backups, control security access, and design schemas for production databases.",
-    "skills": ["SQL Optimization", "Data Backup", "Security Access", "Schema Design"],
-    "icon": "Database",
-    "color": "#334155"
   }
 ]

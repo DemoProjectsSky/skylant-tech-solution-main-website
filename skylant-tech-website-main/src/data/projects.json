@@ -28,15 +28,5 @@
     "image": "/images/project-golden-photography.webp",
     "color": "#EC4899",
     "link": "https://golden-photography-baqanjx4l-skylant.vercel.app/"
-  },
-  {
-    "id": 4,
-    "title": "Skylant Portal Dashboard",
-    "category": "Software & Portals",
-    "description": "Role-based internal portal for Manager, Sales Team and other users to sign in and manage their saved workspace.",
-    "tags": ["Dashboard", "Role-based Login", "CRM", "Portal"],
-    "image": "/images/project-skylant-portal.webp",
-    "color": "#2F6EFF",
-    "link": "https://skylant-portal-dashbord-1.onrender.com/"
   }
 ]
