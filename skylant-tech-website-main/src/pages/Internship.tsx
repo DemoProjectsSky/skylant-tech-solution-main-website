@@ -15,6 +15,7 @@ import internships from '../data/internships.json';
 import testimonials from '../data/testimonials.json';
 import internshipFaqs from '../data/internshipFaqs.json';
 
+import { useSEO } from '../hooks/useSEO';
 const iconMap: Record<string, any> = {
   Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Users, BarChart3, Briefcase, Settings,
   LineChart, Wallet, Calculator, Megaphone, Handshake, Target, Terminal, GitBranch, Bug, Link2,
@@ -117,6 +118,13 @@ function InternshipCard({ job, onDetails }: { job: any; onDetails: (job: any) =>
 }
 
 export default function Internship() {
+  useSEO({
+    title: 'Internship Programs for Students & Freshers | Skylant Tech Solution Pvt. Ltd.',
+    description:
+      'Apply for hands-on internships in web development, data science, AI and digital marketing at Skylant Tech Solution Pvt. Ltd., Nagpur.',
+    path: '/internship',
+  });
+
   const [query, setQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<FilterKey>('all');
   const [selectedJob, setSelectedJob] = useState<any>(null);

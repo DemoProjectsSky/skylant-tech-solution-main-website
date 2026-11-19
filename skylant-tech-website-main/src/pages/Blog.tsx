@@ -8,6 +8,7 @@ import AnimatedBackground from '../components/AnimatedBackground';
 import blogs from '../data/blogs.json';
 import externalArticles from '../data/externalArticles.json';
 
+import { useSEO } from '../hooks/useSEO';
 function BlogPostCard({ post }: { post: any }) {
   return (
     <Link to={`/blog/${post.slug}`} className="block group">
@@ -34,7 +35,7 @@ function BlogPostCard({ post }: { post: any }) {
 
           <div className="flex flex-wrap items-center gap-5 text-sm text-[#8B85A8] mb-6">
             <span className="flex items-center gap-2 text-[#2C2A4A] font-medium">
-              <img src="/images/skylant website logo.jpeg" alt={post.author} className="w-7 h-7 rounded-full bg-[#F3F0FF] object-contain p-1" />
+              <img src="/images/skylant-website-logo.webp" alt={post.author} className="w-7 h-7 rounded-full bg-[#F3F0FF] object-contain p-1" />
               {post.author}
             </span>
             <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />
@@ -125,6 +126,13 @@ function ExternalArticleCard({ article }: { article: any }) {
 }
 
 export default function Blog() {
+  useSEO({
+    title: 'Blog: Web, App & Digital Marketing Insights | Skylant Tech Solution Pvt. Ltd.',
+    description:
+      'Practical articles on digital marketing, website development, mobile apps and AI for business owners and learners.',
+    path: '/blog',
+  });
+
   return (
     <>
       <AnimatedBackground />

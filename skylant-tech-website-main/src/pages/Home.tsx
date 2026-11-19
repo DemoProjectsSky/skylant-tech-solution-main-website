@@ -6,13 +6,17 @@ import {
   Shield, Rocket, Users, Award, Star, Briefcase, CheckCircle2,
   Cpu, Layers, GitBranch, LineChart, Target, Lightbulb, Heart, Clock,
   Search, PenTool, TestTube2, UploadCloud, Building2,
-  Megaphone, Instagram, Facebook,
+  Megaphone, Instagram, Facebook, ExternalLink, FolderKanban,
 } from 'lucide-react';
 import services from '../data/services.json';
 import caseStudies from '../data/caseStudies.json';
 import faqs from '../data/faqs.json';
+import projects from '../data/projects.json';
 import FAQAccordion from '../components/FAQAccordion';
 import DigitalMarketingShowcase from '../components/DigitalMarketingShowcase';
+import ReelsSection from '../components/ReelsSection';
+import PartnersSection from '../components/PartnersSection';
+import { useSEO } from '../hooks/useSEO';
 
 /* ---------------------------------------------------------------------
    Token reference (lavender x off-white theme)
@@ -123,45 +127,6 @@ const statistics = [
   { id: 4, value: 100, suffix: '%', label: 'Fast Delivery Commitment' },
 ];
 
-const whySkylant = [
-  {
-    icon: Users,
-    title: 'Dedicated Development Team',
-    description: 'A passionate team of developers, designers, and digital experts dedicated to delivering high-quality solutions for your business.',
-    color: '#2563EB',
-  },
-  {
-    icon: Layers,
-    title: 'Transparent Communication',
-    description: 'Stay informed throughout the project with regular updates, clear timelines, and open collaboration.',
-    color: '#06B6D4',
-  },
-  {
-    icon: GitBranch,
-    title: 'Agile Process',
-    description: 'We follow an agile development approach to ensure flexibility, faster delivery, and continuous improvements.',
-    color: '#9B8AFB',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Business-Oriented Solutions',
-    description: 'We build websites, software, and digital strategies focused on increasing efficiency, generating leads, and growing your business.',
-    color: '#F59E0B',
-  },
-  {
-    icon: Award,
-    title: 'Affordable Pricing',
-    description: 'Get premium-quality digital solutions at competitive prices with complete pricing transparency.',
-    color: '#10B981',
-  },
-  {
-    icon: Shield,
-    title: 'Post Launch Support',
-    description: 'Our support continues after deployment with maintenance, updates, bug fixes, and technical assistance whenever you need it.',
-    color: '#F43F5E',
-  },
-];
-
 const processSteps = [
   { title: 'Discovery', description: 'Understanding your goals, users, and constraints.', icon: Search },
   { title: 'Planning', description: 'Scoping the roadmap, architecture, and milestones.', icon: Target },
@@ -244,6 +209,13 @@ const digitalMarketing = [
 export default function Home() {
   const prefersReducedMotion = useReducedMotion();
 
+  useSEO({
+    title: 'Skylant Tech Solution Pvt. Ltd. | Software, Web, Mobile, AI & Digital Marketing in Nagpur',
+    description:
+      'Skylant Tech Solution Pvt. Ltd. is a Nagpur-based IT company building websites, mobile apps, AI solutions, ERP/CRM software, cloud solutions and digital marketing for growing businesses.',
+    path: '/',
+  });
+
   return (
     <>
       {/* HERO */}
@@ -267,7 +239,7 @@ export default function Home() {
               </h1>
 
               <p className="mb-8 max-w-xl text-lg leading-relaxed text-[#5B5580]">
-                Skylant Technologies designs and builds web platforms, mobile apps, AI systems, ERP software,
+                Skylant Tech Solution Pvt. Ltd. designs and builds web platforms, mobile apps, AI systems, ERP software,
                 cloud infrastructure, and digital marketing that help ambitious businesses move faster.
               </p>
 
@@ -437,10 +409,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* DIGITAL MARKETING REELS — 4 reels */}
+      <ReelsSection />
+
       {/* DIGITAL MARKETING SHOWCASE — premium hanging-cards content preview */}
       <DigitalMarketingShowcase />
 
-     
+      {/* PROJECTS */}
+      <section className="py-20 sm:py-24" aria-labelledby="home-projects-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <Eyebrow icon={FolderKanban} label="Selected Projects" color="#2F6EFF" />
+              <h2 id="home-projects-heading" className="text-3xl font-bold sm:text-4xl">
+                <span className="text-[#0F172A]">Projects built to </span>
+                <span className="text-[#2F6EFF]">make an impact</span>
+              </h2>
+            </div>
+            <Link
+              to="/projects"
+              className="inline-flex w-fit items-center gap-2 font-semibold text-[#2F6EFF] transition-colors hover:text-[#1D4ED8]"
+            >
+              View all projects <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <motion.article
+                key={project.id}
+                {...fadeUp}
+                transition={{ duration: 0.45, delay: (index % 3) * 0.08 }}
+                whileHover={{ y: -6 }}
+                className="group flex flex-col overflow-hidden rounded-2xl border bg-white/85 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-xl"
+                style={{ borderColor: `${project.color}40` }}
+              >
+                <div className="relative aspect-[2/1] overflow-hidden" style={{ background: `${project.color}12` }}>
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center" style={{ color: project.color }}>
+                      <FolderKanban className="h-12 w-12 opacity-70" aria-hidden="true" />
+                    </div>
+                  )}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${project.title}`}
+                      className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/25 group-hover:opacity-100 focus-visible:opacity-100"
+                    >
+                      <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#2C2A4A] shadow-lg">
+                        View project <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                    </a>
+                  )}
+                </div>
+
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wider" style={{ color: project.color }}>
+                    {project.category}
+                  </p>
+                  <h3 className="mb-2 text-lg font-semibold text-[#2C2A4A]">{project.title}</h3>
+                  <p className="mb-4 flex-1 text-sm leading-relaxed text-[#5B5580]">{project.description}</p>
+                  <ul className="mb-4 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
+                    {project.tags.map((tag) => (
+                      <li key={tag} className="rounded-full border border-[#E4DBFF] bg-[#F3F0FF] px-2.5 py-1 text-xs text-[#4B3F91]">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* DEVELOPMENT PROCESS */}
       <section className="bg-[#EDE9FE]/40 py-20 backdrop-blur-sm sm:py-24">
@@ -560,6 +611,9 @@ export default function Home() {
       </section>
 
       
+
+      {/* COLLABORATION PARTNERS */}
+      <PartnersSection />
 
       {/* FAQ */}
       <section className="bg-[#EDE9FE]/40 py-20 backdrop-blur-sm sm:py-24">

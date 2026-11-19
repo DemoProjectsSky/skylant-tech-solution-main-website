@@ -9,6 +9,7 @@ import courses from '../data/courses.json';
 import trainingFaqs from '../data/trainingFaqs.json';
 
 
+import { useSEO } from '../hooks/useSEO';
 const iconMap: Record<string, any> = {
   Code2, Smartphone, Brain, Cloud, Palette, TrendingUp, Database, LineChart, Cpu,
 };
@@ -20,6 +21,13 @@ const learningPaths = [
 ];
 
 export default function Training() {
+  useSEO({
+    title: 'Corporate Training & Professional Courses | Skylant Tech Solution Pvt. Ltd.',
+    description:
+      'Industry-focused IT training programs and professional courses taught by experienced engineers, with certification from Skylant Tech Solution Pvt. Ltd.',
+    path: '/training',
+  });
+
   return (
     <>
      <PageBanner

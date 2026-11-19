@@ -20,6 +20,7 @@ import ContactIllustration from '../components/ContactIllustration';
 // FIXED: actual file is emailjs.ts
 import { sendEmail } from '../lib/email';
 
+import { useSEO } from '../hooks/useSEO';
 const contactInfo = [
   {
     icon: Mail,
@@ -37,18 +38,25 @@ const contactInfo = [
     icon: MapPin,
     label: 'Visit Us',
     value:
-      'First Floor, 101, Shivalik Apartment, Lumbini Nagar, near Vasudeo nagar metro station, Hingana Road, Nagpur-440036',
+      'First Floor, 101, Sivalik Apartment, Lumbini Nagar, near Vasudeo Nagar Metro Station, Hingna Road, Nagpur-440036',
     sub: 'Nagpur, Maharashtra',
   },
   {
     icon: Clock,
     label: 'Working Hours',
     value: 'Monday - Friday',
-    sub: '9:00 AM - 6:00 PM PST',
+    sub: '9:00 AM - 6:00 PM IST',
   },
 ];
 
 export default function Contact() {
+  useSEO({
+    title: 'Contact Us | Skylant Tech Solution Pvt. Ltd., Nagpur',
+    description:
+      'Get in touch with Skylant Tech Solution Pvt. Ltd. for a free consultation. Call, email or visit our office in Lumbini Nagar, Hingna Road, Nagpur.',
+    path: '/contact',
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -430,7 +438,7 @@ export default function Contact() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
-                title="Skylant Tech Solution Pvt Ltd Location"
+                title="Skylant Tech Solution Pvt. Ltd. Location"
               />
             </div>
           </motion.div>

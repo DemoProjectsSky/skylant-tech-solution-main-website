@@ -31,6 +31,7 @@ import jobs from '../data/jobs.json';
 // FIXED: actual file is emailjs.ts
 import { sendEmail } from '../lib/email';
 
+import { useSEO } from '../hooks/useSEO';
 const iconMap: Record<string, any> = {
   Code2,
   Brain,
@@ -125,6 +126,13 @@ const MAX_RESUME_SIZE_MB = 5;
 const ACCEPTED_RESUME_TYPES = '.pdf,.doc,.docx';
 
 export default function Careers() {
+  useSEO({
+    title: 'Careers | Skylant Tech Solution Pvt. Ltd.',
+    description:
+      'Explore open roles and apply to join the Skylant Tech Solution Pvt. Ltd. team in Nagpur.',
+    path: '/careers',
+  });
+
   const formRef = useRef<HTMLFormElement>(null);
 
   const [isSending, setIsSending] = useState(false);

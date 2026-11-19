@@ -13,6 +13,7 @@ import CTASection from '../components/CTASection';
 import blogs from '../data/blogs.json';
 import { blogContents } from '../data/blogsections';
 
+import { useSEO } from '../hooks/useSEO';
 function BlogPostDetail() {
   const { slug } = useParams<{ slug: string }>();
 
@@ -27,6 +28,25 @@ function BlogPostDetail() {
   const content = blogContents.find(
     (c: any) => c.slug === slug
   );
+
+  useSEO({
+    title: post ? `${post.title} | Skylant Tech Solution Pvt. Ltd.` : 'Article not found | Skylant Tech Solution Pvt. Ltd.',
+    description: post ? String(post.excerpt).slice(0, 158) : 'This article could not be found.',
+    path: `/blog/${slug ?? ''}`,
+    image: post?.image,
+    type: 'article',
+    noindex: !post || !content,
+    jsonLd: post
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: { '@type': 'Organization', name: 'Skylant Tech Solution Pvt. Ltd.' },
+        }
+      : undefined,
+  });
 
   // ==========================================================
   // POST NOT FOUND
@@ -155,7 +175,7 @@ function BlogPostDetail() {
               <img
                 src={
                   post.authorAvatar ||
-                  '/images/skylant website logo.jpeg'
+                  '/images/skylant-website-logo.webp'
                 }
                 alt={post.author}
                 className="w-8 h-8 rounded-full bg-[#F3F0FF] object-contain p-1"

@@ -161,9 +161,9 @@ export default function LeadForm({ onClose }: LeadFormProps) {
           </button>
         )}
 
-        <h1 className="pr-4 text-2xl font-bold text-gray-900 sm:text-3xl">
+        <h2 className="pr-4 text-2xl font-bold text-gray-900 sm:text-3xl">
           Your Future Starts with Skylant
-        </h1>
+        </h2>
 
         <p className="text-sm leading-6 text-gray-600 sm:text-base">
           Tell us a little about yourself, and let’s help you discover the
@@ -172,6 +172,7 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
         <input
           name="name"
+          aria-label="Full name"
           type="text"
           placeholder="Full Name"
           value={form.name}
@@ -184,6 +185,7 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
         <input
           name="phone"
+          aria-label="Mobile number"
           type="tel"
           placeholder="10-digit Mobile Number"
           value={form.phone}
@@ -199,6 +201,7 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
         <input
           name="email"
+          aria-label="Email address"
           type="email"
           placeholder="Email Address"
           value={form.email}
@@ -211,6 +214,7 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
         <input
           name="college"
+          aria-label="College name"
           type="text"
           placeholder="College Name"
           value={form.college}
@@ -222,6 +226,7 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
         <select
           name="year"
+          aria-label="Year of study"
           value={form.year}
           onChange={handleChange}
           required
@@ -237,6 +242,7 @@ export default function LeadForm({ onClose }: LeadFormProps) {
 
         <select
           name="program"
+          aria-label="Interested program"
           value={form.program}
           onChange={handleChange}
           required

@@ -40,8 +40,7 @@ export default function CareersIllustration() {
           key={i}
           x={s.x}
           width={s.w}
-          y={400}
-          height={0}
+          initial={{ y: 400, height: 0 }}
           rx="8"
           fill={s.shade}
           stroke="#9B8AFB"
@@ -95,26 +94,30 @@ export default function CareersIllustration() {
           <circle r="9" cy="0" fill="#4b2eee" />
           <line x1="0" y1="9" x2="0" y2="26" stroke="#4b2eee" strokeWidth="4" strokeLinecap="round" />
           <motion.line
-            x1="0" y1="14" x2="-9" y2="22"
+            x1="0" y1="14" y2="22"
             stroke="#4b2eee" strokeWidth="3.5" strokeLinecap="round"
+            initial={{ x2: -9 }}
             animate={{ x2: [-9, -5, -9] }}
             transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.line
-            x1="0" y1="14" x2="9" y2="22"
+            x1="0" y1="14" y2="22"
             stroke="#4b2eee" strokeWidth="3.5" strokeLinecap="round"
+            initial={{ x2: 9 }}
             animate={{ x2: [9, 5, 9] }}
             transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.line
-            x1="0" y1="26" x2="-7" y2="38"
+            x1="0" y1="26" y2="38"
             stroke="#4b2eee" strokeWidth="3.5" strokeLinecap="round"
+            initial={{ x2: -7 }}
             animate={{ x2: [-7, -3, -7] }}
             transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.line
-            x1="0" y1="26" x2="7" y2="38"
+            x1="0" y1="26" y2="38"
             stroke="#4b2eee" strokeWidth="3.5" strokeLinecap="round"
+            initial={{ x2: 7 }}
             animate={{ x2: [7, 3, 7] }}
             transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
           />

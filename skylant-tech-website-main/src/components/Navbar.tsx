@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services', hasDropdown: true },
+  { name: 'Projects', path: '/projects' },
   { name: 'Training', path: '/training' },
   { name: 'Internship', path: '/internship' },
   { name: 'Blog', path: '/blog' },
@@ -18,7 +19,7 @@ const navLinks = [
 // Edit these to your real numbers and social links
 const PHONE_NUMBERS = ['+91 75585 31369', '+91 72497 61369'];
 const SOCIAL_LINKS = [
-  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61588489421573&rdid=NXcauZFIxd2VJUMD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LSvDGzdc8%2F#', label: '' },
+  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61588489421573&rdid=NXcauZFIxd2VJUMD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LSvDGzdc8%2F#', label: 'Facebook' },
   { icon: Instagram, href: 'https://www.instagram.com/skylant.tech?igsh=MWE5cjI5eTFhZmlldQ%3D%3D', label: 'Instagram' },
   { icon: Linkedin, href: 'https://www.linkedin.com/company/skylant-tech-solutions/?originalSubdomain=in', label: 'LinkedIn' },
 ];
@@ -26,20 +27,12 @@ const SOCIAL_LINKS = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setMobileOpen(false);
     setServicesDropdown(false);
   }, [location.pathname]);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <>
@@ -103,7 +96,11 @@ export default function Navbar() {
               <Link to="/" className="flex items-center gap-3">
                 <img
                   src="/images/skylant website logo.jpeg"
-                  alt="Skylant Tech Solution Pvt Ltd"
+                  alt="Skylant Tech Solution Pvt. Ltd. logo"
+                  width={56}
+                  height={56}
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-14 h-14 object-contain"
                 />
 
@@ -112,8 +109,8 @@ export default function Navbar() {
                     Skylant
                   </span>
 
-                  <span className="mt-1 text-m font-semibold tracking-widest uppercase text-[#0F172A]">
-                    TECH SOLUTION PVT LTD
+                  <span className="mt-1 text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-[#0F172A]">
+                    TECH SOLUTION PVT. LTD.
                   </span>
                 </div>
               </Link>
@@ -164,6 +161,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(!mobileOpen)}
                   className="lg:hidden flex h-10 w-10 items-center justify-center rounded-xl border border-[#DDD0FF] bg-gradient-to-br from-white via-[#F8F5FF] to-[#EEE6FF] text-[#2C2A4A] shadow-[0_8px_25px_rgba(109,91,208,0.18)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_12px_35px_rgba(196,181,253,0.55)]"
                   aria-label="Toggle menu"
+                  aria-expanded={mobileOpen}
                 >
                   {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </button>

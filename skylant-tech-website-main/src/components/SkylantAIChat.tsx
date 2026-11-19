@@ -8,7 +8,7 @@ const GROQ_MODEL = import.meta.env.VITE_GROQ_MODEL || 'llama-3.1-8b-instant';
 
 // 👉 Replace with your real business WhatsApp number (country code, no + / spaces / dashes)
 const WHATSAPP_PREFILL =
-  "Hi Skylant Tech Solution Pvt Ltd ! I'd like to know more about your services.";
+  "Hi Skylant Tech Solution Pvt. Ltd. ! I'd like to know more about your services.";
 
 type Message = {
   id: number;
@@ -485,7 +485,7 @@ const knowledgeBase: KnowledgeEntry[] = [
       'how do i enroll',
     ],
     answer:
-      'To enroll, visit our Training page and select your preferred course, or contact the Skylant Tech Solution Pvt Ltd training team for enrollment assistance and the next available batch.',
+      'To enroll, visit our Training page and select your preferred course, or contact the Skylant Tech Solution Pvt. Ltd. training team for enrollment assistance and the next available batch.',
   },
 
   // ---- Certificate ----
@@ -496,7 +496,7 @@ const knowledgeBase: KnowledgeEntry[] = [
       'completion certificate',
     ],
     answer:
-      'Yes, you receive a completion certificate from Skylant Tech Solution Pvt Ltd after finishing a training course or internship, which you can add to your resume and LinkedIn profile.',
+      'Yes, you receive a completion certificate from Skylant Tech Solution Pvt. Ltd. after finishing a training course or internship, which you can add to your resume and LinkedIn profile.',
   },
 
   // ---- Corporate Training ----
@@ -591,7 +591,7 @@ const knowledgeBase: KnowledgeEntry[] = [
   {
     keywords: ['about skylant', 'tell me about skylant', 'what is skylant', 'who are you', 'about your company'],
     answer:
-      'Skylant Tech Solution Pvt Ltd is an IT company offering web and mobile development, AI solutions, ERP systems, cloud services, digital marketing, training, and internships — all designed to help businesses and learners grow.',
+      'Skylant Tech Solution Pvt. Ltd. is an IT company offering web and mobile development, AI solutions, ERP systems, cloud services, digital marketing, training, and internships — all designed to help businesses and learners grow.',
   },
   {
     keywords: ['why choose skylant', 'why skylant', 'what makes skylant different', 'different from others', 'why should i choose you'],
@@ -713,7 +713,7 @@ async function getAiReply(input: string) {
             {
               role: 'system',
               content:
-                'You are Skylant AI, a helpful assistant for Skylant Technologies. Answer briefly, professionally, and in a friendly tone. Focus on software development, websites, mobile apps, AI solutions, cloud, ERP, digital marketing, training courses, internships, and how to start projects.',
+                'You are Skylant AI, a helpful assistant for Skylant Tech Solution Pvt. Ltd. Answer briefly, professionally, and in a friendly tone. Focus on software development, websites, mobile apps, AI solutions, cloud, ERP, digital marketing, training courses, internships, and how to start projects.',
             },
             {
               role: 'user',

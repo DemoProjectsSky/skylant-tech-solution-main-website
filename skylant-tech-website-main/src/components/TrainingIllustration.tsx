@@ -76,10 +76,9 @@ export default function TrainingIllustration() {
             key={i}
             x={s.x}
             width="16"
-            y="150"
-            height="0"
             rx="4"
             fill="#9B8AFB"
+            initial={{ y: 150, height: 0 }}
             animate={{ y: 150 - s.h, height: s.h }}
             transition={{ duration: 0.7, delay: i * 0.15, ease: 'easeOut' }}
           />

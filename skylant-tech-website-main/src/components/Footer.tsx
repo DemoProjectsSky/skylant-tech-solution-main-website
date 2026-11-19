@@ -13,6 +13,7 @@ const footerLinks = {
   ],
   Company: [
     { name: 'About Us', path: '/about' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Careers', path: '/careers' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
@@ -83,14 +84,18 @@ export default function Footer() {
             <Link to="/" className="flex items-center gap-2.5 mb-5">
               <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-lg shadow-[#6D5BD0]/30">
                 <img
-                  src="/images/skylant footer logo.jpeg"
-                  alt="Skylant Tech Solution Pvt Ltd logo"
+                  src="/images/skylant-footer-logo.webp"
+                  alt="Skylant Tech Solution Pvt. Ltd. logo"
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-bold text-white text-xl tracking-tight">Skylant</span>
-                <span className="text-[10px] text-[#9B8AFB] font-medium tracking-widest uppercase">Tech Solution Pvt Ltd</span>
+                <span className="text-[10px] text-[#9B8AFB] font-medium tracking-widest uppercase">Tech Solution Pvt. Ltd.</span>
               </div>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-6">
@@ -150,7 +155,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2.5 text-slate-400 text-sm">
                 <MapPin className="w-4 h-4 text-[#9B8AFB] mt-0.5 shrink-0" />
-                <span>First Floor, 101, shivalik Apartment, Lumbini Nagar,near Vasudeo Nagar Metro station,Hingna Road, Nagpur-440036 </span>
+                <span>First Floor, 101, Sivalik Apartment, Lumbini Nagar, near Vasudeo Nagar Metro Station, Hingna Road, Nagpur-440036</span>
               </li>
             </ul>
           </div>
@@ -158,12 +163,11 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-[#6D5BD0]/15 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Skylant Tech Solution Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} Skylant Tech Solution Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-slate-500">
-            <a href="#" className="hover:text-[#9B8AFB] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#9B8AFB] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#9B8AFB] transition-colors">Cookie Policy</a>
+            <Link to="/contact" className="hover:text-[#9B8AFB] transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-[#9B8AFB] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

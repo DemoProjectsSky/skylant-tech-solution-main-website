@@ -9,6 +9,7 @@ import FAQAccordion from '../components/FAQAccordion';
 
 
 
+import { useSEO } from '../hooks/useSEO';
 /* ---------------------------------------------------------------------
    Colorful, non-uniform card structures for Vision/Mission, Values,
    and Achievements — each item now carries its own accent color
@@ -49,6 +50,13 @@ function Eyebrow({ icon: Icon, label, color = '#6D5BD0' }: { icon: any; label: s
 }
 
 export default function About() {
+  useSEO({
+    title: 'About Us | Skylant Tech Solution Pvt. Ltd.',
+    description:
+      'Learn about Skylant Tech Solution Pvt. Ltd., a Nagpur-based software development and digital marketing company building scalable, secure digital products.',
+    path: '/about',
+  });
+
   return (
     <>
       <PageBanner
@@ -57,7 +65,7 @@ export default function About() {
             Engineering the <span style={{ color: '#2F6EFF' }}>future of business</span>
           </>
         }
-        description="Skylant Tech Solution Pvt Ltd is a premium software development company building scalable, secure, and innovative digital products for businesses worldwide."
+        description="Skylant Tech Solution Pvt. Ltd. is a premium software development company building scalable, secure, and innovative digital products for businesses worldwide."
         breadcrumb={[{ name: 'Home', path: '/' }, { name: 'About' }]}
         illustration={<AboutIllustration />}
        
@@ -82,7 +90,7 @@ export default function About() {
               From a small team to a global technology partner
             </h2>
             <p className="text-[#5B5580] leading-relaxed mb-4">
-              Skylant Tech Solution Pvt Ltd is a software development and digital marketing company focused on helping startups, small businesses, and growing brands build their digital presence. We create websites, business software, mobile applications, ERP systems, AI solutions, and digital marketing strategies tailored to business goals.
+              Skylant Tech Solution Pvt. Ltd. is a software development and digital marketing company focused on helping startups, small businesses, and growing brands build their digital presence. We create websites, business software, mobile applications, ERP systems, AI solutions, and digital marketing strategies tailored to business goals.
             </p>
           </motion.div>
           <motion.div
@@ -226,7 +234,7 @@ export default function About() {
         </div>
       </section>
       {/* CAT INDIA — New Initiatives */}
-<section className="py-20 relative">
+<section className="py-20 relative overflow-x-clip">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -304,7 +312,7 @@ export default function About() {
     >
       <div className="rounded-3xl overflow-hidden border border-red-200 shadow-xl">
        <img
-  src="/images/CAT12.png"
+  src="/images/cat12.webp"
   alt="CAT India students — 25 years of IT education experience"
   className="w-full h-auto object-cover"
   loading="lazy"
@@ -385,7 +393,7 @@ export default function About() {
       <div className="flex flex-col items-center text-center min-w-[240px]">
         <div className="w-40 h-40 rounded-full overflow-hidden ring-4 ring-red-500/20 shadow-lg">
       <img
-  src="/images/leader.png"
+  src="/images/leader.webp"
   alt="Mr. Avinash Wadkar"
   className="w-full h-full object-cover"
 />

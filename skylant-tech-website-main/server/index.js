@@ -13,7 +13,21 @@ const upload = multer({
   limits: { fileSize: 5 * 1024 * 1024 },
 });
 
-app.use(cors());
+// Only allow the configured website origin(s). Set ALLOWED_ORIGINS="https://yourdomain.com,https://www.yourdomain.com"
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173')
+  .split(',')
+  .map((o) => o.trim())
+  .filter(Boolean);
+app.use(cors({ origin: allowedOrigins }));
+
+const escapeHtml = (value) =>
+  String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/\r?\n/g, '<br/>');
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -27,9 +41,6 @@ const transporter = nodemailer.createTransport({
 
 app.post('/api/send-email', upload.single('resume'), async (req, res) => {
   try {
-    console.log('--- New request received ---');
-    console.log('req.file:', req.file);
-    console.log('req.body:', req.body);
 
     const { type, name, email, phone, message, role, company, service } = req.body;
 
@@ -40,48 +51,44 @@ app.post('/api/send-email', upload.single('resume'), async (req, res) => {
         content: req.file.buffer,
         contentType: req.file.mimetype,
       });
-      console.log('Attachment prepared:', req.file.originalname, req.file.mimetype, req.file.size, 'bytes');
-    } else {
-      console.log('No file received in this request.');
     }
 
     const subject =
       type === 'career'
-        ? `New Job Application: ${role}`
-        : `New Contact Form: ${name}`;
+        ? `New Job Application: ${String(role).replace(/[\r\n]/g, ' ')}`
+        : `New Contact Form: ${String(name).replace(/[\r\n]/g, ' ')}`;
 
     const html =
       type === 'career'
         ? `<h2>New Job Application</h2>
-           <p><b>Name:</b> ${name}</p>
-           <p><b>Email:</b> ${email}</p>
-           <p><b>Phone:</b> ${phone}</p>
-           <p><b>Role:</b> ${role}</p>
-           <p><b>Message:</b><br/>${message}</p>`
+           <p><b>Name:</b> ${escapeHtml(name)}</p>
+           <p><b>Email:</b> ${escapeHtml(email)}</p>
+           <p><b>Phone:</b> ${escapeHtml(phone)}</p>
+           <p><b>Role:</b> ${escapeHtml(role)}</p>
+           <p><b>Message:</b><br/>${escapeHtml(message)}</p>`
         : `<h2>New Contact Form Submission</h2>
-           <p><b>Name:</b> ${name}</p>
-           <p><b>Email:</b> ${email}</p>
-           <p><b>Company:</b> ${company}</p>
-           <p><b>Phone:</b> ${phone}</p>
-           <p><b>Service:</b> ${service}</p>
-           <p><b>Message:</b><br/>${message}</p>`;
+           <p><b>Name:</b> ${escapeHtml(name)}</p>
+           <p><b>Email:</b> ${escapeHtml(email)}</p>
+           <p><b>Company:</b> ${escapeHtml(company)}</p>
+           <p><b>Phone:</b> ${escapeHtml(phone)}</p>
+           <p><b>Service:</b> ${escapeHtml(service)}</p>
+           <p><b>Message:</b><br/>${escapeHtml(message)}</p>`;
 
-    const info = await transporter.sendMail({
+    await transporter.sendMail({
       from: `"Skylant Website" <${process.env.SMTP_USER}>`,
       to: 'hr.skylant@gmail.com',
-      replyTo: email,
+      replyTo: String(email || '').replace(/[\r\n]/g, ''),
       subject,
       html,
       attachments,
     });
 
-    console.log('Email sent:', info.messageId);
-    res.status(200).json({ success: true });
+        res.status(200).json({ success: true });
   } catch (err) {
     console.error('send-email error:', err);
     res.status(500).json({ error: 'Failed to send email. Please try again.' });
   }
 });
 
-const PORT = 5000;
+const PORT = Number(process.env.PORT) || 5000;
 app.listen(PORT, () => console.log(`✅ Local email server running on http://localhost:${PORT}`));

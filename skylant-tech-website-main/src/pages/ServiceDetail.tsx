@@ -15,6 +15,7 @@ import servicesData from '../data/services.json';
 import serviceFaqs from '../data/serviceFaqs.json';
 import FAQAccordion from '../components/FAQAccordion';
 
+import { useSEO } from '../hooks/useSEO';
 // Cast to `any[]` — entries in services.json have different optional
 // shapes (e.g. only digital-marketing defines `whatWeHelpWith`), which
 // makes TypeScript infer a strict union type and error on property
@@ -54,6 +55,17 @@ export default function ServiceDetail() {
   const { slug } = useParams();
   const service = services.find((s) => s.slug === slug);
   const [activeOffering, setActiveOffering] = useState<any>(null);
+
+  useSEO({
+    title: service
+      ? `${service.title} | Skylant Tech Solution Pvt. Ltd.`
+      : 'Services | Skylant Tech Solution Pvt. Ltd.',
+    description: service
+      ? String(service.longDescription || service.description).slice(0, 158)
+      : 'IT services from Skylant Tech Solution Pvt. Ltd.',
+    path: `/services/${slug ?? ''}`,
+    noindex: !service,
+  });
 
   if (!service) return <Navigate to="/services" replace />;
 

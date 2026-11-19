@@ -28,6 +28,7 @@ import caseStudiesData from '../data/caseStudies.json';
 import faqs from '../data/faqs.json';
 import FAQAccordion from '../components/FAQAccordion';
 
+import { useSEO } from '../hooks/useSEO';
 // Cast JSON imports to `any[]` — the entries in services.json and
 // caseStudies.json have slightly different optional shapes (e.g. only
 // digital-marketing defines `whatWeHelpWith`), which makes TypeScript
@@ -556,6 +557,13 @@ const CALL_NUMBERS = [
 ========================================================= */
 
 export default function Services() {
+  useSEO({
+    title: 'IT Services: Web, Mobile, AI, ERP & Digital Marketing | Skylant Tech Solution Pvt. Ltd.',
+    description:
+      'Software development, website and mobile app development, AI solutions, ERP & CRM, cloud, IT consulting and digital marketing services from Skylant Tech Solution Pvt. Ltd.',
+    path: '/services',
+  });
+
   const [
     openCallCardId,
     setOpenCallCardId,

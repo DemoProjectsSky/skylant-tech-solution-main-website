@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code2, Users, Award, Rocket, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { Code2, Users, Rocket, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 /* ---------------------------------------------------------------------
    InternshipIllustration — v2

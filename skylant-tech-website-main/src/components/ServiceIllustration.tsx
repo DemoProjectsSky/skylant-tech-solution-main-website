@@ -86,8 +86,7 @@ export default function ServiceIllustration({ service, Icon }: { service: Servic
             <path d={d} fill="none" stroke={`${color}30`} strokeWidth="2" />
             {/* pulse dot travelling along the trace — animates cx/cy, not x/y */}
             <motion.circle
-              cx={CENTER_X}
-              cy={CENTER_Y}
+              initial={{ cx: CENTER_X, cy: CENTER_Y }}
               r="4"
               fill={color}
               animate={{
