@@ -1,0 +1,34 @@
+[
+  {
+    "id": "reel-1",
+    "title": "Zia Silver Jewellery — Necklace & Earrings",
+    "caption": "Product-led reels that make jewellery shine on social.",
+    "poster": "/images/reel-zia-silver-jewellery-1.webp",
+    "video": "/reels/zia-silver-jewellery-1.mp4",
+    "url": "https://www.instagram.com/skylant.tech?igsh=MWE5cjI5eTFhZmlldQ=="
+  },
+  {
+    "id": "reel-2",
+    "title": "Zia Silver Jewellery — Statement Look",
+    "caption": "Close-up storytelling that drives store visits.",
+    "poster": "/images/ruvi.png",
+    "video": "/reels/ruvi .mp4",
+    "url": "https://www.instagram.com/skylant.tech?igsh=MWE5cjI5eTFhZmlldQ=="
+  },
+  {
+    "id": "reel-3",
+    "title": "Wakkati — Wardrobe Walkthrough",
+    "caption": "Fashion reels that build brand personality and reach.",
+    "poster": "/images/reel-wakkati-boutique.webp",
+    "video": "/reels/wakkati-boutique.mp4",
+    "url": "https://www.instagram.com/skylant.tech?igsh=MWE5cjI5eTFhZmlldQ=="
+  },
+  {
+    "id": "reel-4",
+    "title": "Aishwarayam Restaurant — Starters Worth It",
+    "caption": "Food reels that turn views into table bookings.",
+    "poster": "/images/reel-aishwarayam-restaurant.webp",
+    "video": "/reels/aishwarayam-restaurant.mp4",
+    "url": "https://www.instagram.com/skylant.tech?igsh=MWE5cjI5eTFhZmlldQ=="
+  }
+]

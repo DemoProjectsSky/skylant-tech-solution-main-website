@@ -1,0 +1,254 @@
+{
+  "software-development": [
+    {
+      "id": 1,
+      "question": "What is custom software development?",
+      "answer": "Custom software development means building software specifically according to your business requirements, workflows, and goals instead of using a generic solution."
+    },
+    {
+      "id": 2,
+      "question": "Why should I choose custom software instead of ready-made software?",
+      "answer": "Custom software gives you greater flexibility, better control, and features designed specifically for your business. It can also be modified as your business grows."
+    },
+    {
+      "id": 3,
+      "question": "What types of software can you develop?",
+      "answer": "We develop business management systems, dashboards, portals, automation platforms, ERP solutions, CRM systems, internal tools, and other web-based or software solutions."
+    },
+    {
+      "id": 4,
+      "question": "How long does custom software development take?",
+      "answer": "The timeline depends on the project's features, complexity, integrations, and design requirements. After understanding your requirements, we provide an estimated development timeline."
+    },
+    {
+      "id": 5,
+      "question": "Can you develop software for a small business?",
+      "answer": "Yes. We can build solutions for startups, small businesses, and enterprises, with the scope and features tailored to your budget and business requirements."
+    },
+    {
+      "id": 6,
+      "question": "Can existing software be upgraded or modified?",
+      "answer": "Yes. We can analyze your existing application and add new features, improve performance, modernize the technology, or integrate it with other systems."
+    },
+    {
+      "id": 7,
+      "question": "Will my software be scalable?",
+      "answer": "Yes. We design applications with scalability in mind so that additional users, features, data, and integrations can be added as your business grows."
+    },
+    {
+      "id": 8,
+      "question": "Do you provide maintenance after development?",
+      "answer": "Yes. We can provide ongoing maintenance, bug fixing, performance improvements, security updates, and feature enhancements after deployment."
+    }
+  ],
+  "digital-marketing": [
+    {
+      "id": 1,
+      "question": "What digital marketing services do you provide?",
+      "answer": "Our digital marketing services can include SEO, social media marketing, content marketing, paid advertising, campaign management, analytics, and online brand promotion."
+    },
+    {
+      "id": 2,
+      "question": "How can digital marketing help my business?",
+      "answer": "Digital marketing can help increase online visibility, reach potential customers, generate leads, improve brand awareness, and support business growth."
+    },
+    {
+      "id": 3,
+      "question": "Do you provide SEO services?",
+      "answer": "Yes. We can optimize your website and content to improve search visibility, target relevant keywords, and attract more organic traffic."
+    },
+    {
+      "id": 4,
+      "question": "How long does SEO take to show results?",
+      "answer": "SEO is a long-term strategy. Results depend on competition, website condition, industry, keywords, content quality, and other factors. Consistent optimization generally produces better results over time."
+    },
+    {
+      "id": 5,
+      "question": "Can you manage our social media accounts?",
+      "answer": "Yes. We can help with social media strategy, content planning, creative posts, publishing, audience engagement, and performance analysis."
+    },
+    {
+      "id": 6,
+      "question": "Do you run paid advertising campaigns?",
+      "answer": "Yes. We can help plan, launch, monitor, and optimize online advertising campaigns based on your business objectives and target audience."
+    },
+    {
+      "id": 7,
+      "question": "Can you help a new business build its online presence?",
+      "answer": "Yes. We can create a digital marketing strategy covering branding, website presence, social media, SEO, content, and advertising based on your business goals."
+    },
+    {
+      "id": 8,
+      "question": "How do you measure digital marketing performance?",
+      "answer": "We can track metrics such as website traffic, leads, engagement, conversions, campaign performance, search visibility, and other relevant KPIs."
+    }
+  ],
+  "erp-crm-solutions": [
+    {
+      "id": 1,
+      "question": "What is an ERP system?",
+      "answer": "ERP (Enterprise Resource Planning) is software that helps businesses manage multiple operations such as finance, inventory, sales, employees, purchasing, and reporting from a centralized system."
+    },
+    {
+      "id": 2,
+      "question": "What is a CRM system?",
+      "answer": "CRM (Customer Relationship Management) software helps businesses manage customer information, leads, sales activities, communication, and customer relationships."
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between ERP and CRM?",
+      "answer": "ERP mainly focuses on managing internal business operations, while CRM focuses on customers, leads, sales, and relationships. They can also work together as an integrated business solution."
+    },
+    {
+      "id": 4,
+      "question": "Can you customize ERP or CRM according to our business?",
+      "answer": "Yes. We can customize workflows, modules, dashboards, user roles, reports, and integrations according to your specific business requirements."
+    },
+    {
+      "id": 5,
+      "question": "Can ERP and CRM be integrated with existing software?",
+      "answer": "Yes. We can integrate ERP/CRM systems with websites, payment systems, accounting software, APIs, databases, email services, and other business tools where technically feasible."
+    },
+    {
+      "id": 6,
+      "question": "Is ERP/CRM suitable for small businesses?",
+      "answer": "Yes. ERP and CRM solutions can be designed according to the size and requirements of your business. Small businesses can start with essential modules and expand later."
+    },
+    {
+      "id": 7,
+      "question": "Can multiple employees use the system?",
+      "answer": "Yes. We can implement user accounts, role-based permissions, access controls, and different dashboards for different employees or departments."
+    },
+    {
+      "id": 8,
+      "question": "Can the system grow with our business?",
+      "answer": "Yes. We can design the architecture so that additional modules, users, workflows, reports, and integrations can be added as your business expands."
+    }
+  ],
+  "it-consulting": [
+    {
+      "id": 1,
+      "question": "What is IT consulting?",
+      "answer": "IT consulting helps businesses identify technology requirements, solve technical challenges, improve existing systems, and choose suitable technology strategies."
+    },
+    {
+      "id": 2,
+      "question": "Do you help businesses choose the right technology?",
+      "answer": "Yes. We analyze your requirements, budget, scalability needs, and business objectives to recommend suitable technologies and solutions."
+    },
+    {
+      "id": 3,
+      "question": "Can you review our existing IT infrastructure?",
+      "answer": "Yes. We can assess your existing applications, systems, technology stack, workflows, and technical challenges and suggest areas for improvement."
+    },
+    {
+      "id": 4,
+      "question": "Can you help reduce technology costs?",
+      "answer": "Yes. We can identify unnecessary tools, inefficient processes, infrastructure issues, and opportunities for automation or optimization that may help reduce technology-related costs."
+    },
+    {
+      "id": 5,
+      "question": "Do you provide technology recommendations for startups?",
+      "answer": "Yes. We can help startups choose an appropriate technology stack, development approach, cloud infrastructure, database, and software architecture."
+    },
+    {
+      "id": 6,
+      "question": "Can you help with digital transformation?",
+      "answer": "Yes. We can help businesses move from manual or outdated processes toward modern digital systems, automation, cloud solutions, analytics, and integrated applications."
+    },
+    {
+      "id": 7,
+      "question": "Do you provide cybersecurity-related guidance?",
+      "answer": "We can help identify common application and infrastructure security considerations and recommend appropriate security practices or solutions based on your requirements."
+    },
+    {
+      "id": 8,
+      "question": "Can you provide ongoing IT consulting?",
+      "answer": "Yes. Consulting can be provided as a one-time assessment or as ongoing technical guidance depending on your business requirements."
+    }
+  ],
+  "website-development": [
+    {
+      "id": 1,
+      "question": "What type of websites do you develop?",
+      "answer": "We develop business websites, corporate websites, landing pages, portfolio websites, service websites, web portals, and custom web applications."
+    },
+    {
+      "id": 2,
+      "question": "Will my website work on mobile devices?",
+      "answer": "Yes. We build responsive websites designed to provide a good experience across desktops, tablets, and mobile devices."
+    },
+    {
+      "id": 3,
+      "question": "Can you create a website according to our brand?",
+      "answer": "Yes. We can customize the website's design, colors, typography, content structure, images, and overall experience according to your brand identity."
+    },
+    {
+      "id": 4,
+      "question": "Can you add contact forms and other integrations?",
+      "answer": "Yes. Websites can be integrated with contact forms, email services, analytics, APIs, payment gateways, databases, CRM systems, and other required services."
+    },
+    {
+      "id": 5,
+      "question": "Will my website be SEO-friendly?",
+      "answer": "We can follow SEO-friendly development practices such as appropriate page structure, metadata, responsive design, performance optimization, and search-engine-friendly content implementation."
+    },
+    {
+      "id": 6,
+      "question": "Can you redesign our existing website?",
+      "answer": "Yes. We can redesign an existing website to improve its appearance, user experience, responsiveness, performance, and functionality."
+    },
+    {
+      "id": 7,
+      "question": "How long does website development take?",
+      "answer": "The timeline depends on the number of pages, design complexity, functionality, integrations, and content requirements. A project estimate can be provided after understanding your requirements."
+    },
+    {
+      "id": 8,
+      "question": "Do you provide website maintenance after launch?",
+      "answer": "Yes. We can provide ongoing updates, bug fixes, content changes, performance improvements, security updates, and feature enhancements."
+    }
+  ],
+  "mobile-app-development": [
+    {
+      "id": 1,
+      "question": "What types of mobile apps do you develop?",
+      "answer": "We can develop business apps, customer apps, service apps, booking applications, e-commerce apps, internal business applications, and other custom mobile solutions."
+    },
+    {
+      "id": 2,
+      "question": "Can you develop apps for both Android and iOS?",
+      "answer": "Yes. Depending on the project requirements, we can use cross-platform technologies to build applications for both Android and iOS."
+    },
+    {
+      "id": 3,
+      "question": "Should I build a native or cross-platform app?",
+      "answer": "It depends on your requirements, budget, performance expectations, and features. We can recommend the appropriate approach after analyzing your project."
+    },
+    {
+      "id": 4,
+      "question": "Can the mobile app connect to our website or backend?",
+      "answer": "Yes. Mobile applications can communicate with backend APIs, databases, websites, authentication systems, payment gateways, and other services."
+    },
+    {
+      "id": 5,
+      "question": "Can you integrate payment gateways into the app?",
+      "answer": "Yes. Payment functionality can be integrated based on the required payment provider, region, business model, and platform requirements."
+    },
+    {
+      "id": 6,
+      "question": "Can you add push notifications?",
+      "answer": "Yes. Push notifications can be implemented for updates, reminders, promotions, order notifications, messages, and other use cases."
+    },
+    {
+      "id": 7,
+      "question": "How long does mobile app development take?",
+      "answer": "The timeline depends on the number of screens, features, backend requirements, integrations, testing, and platform requirements."
+    },
+    {
+      "id": 8,
+      "question": "Do you provide app maintenance and updates?",
+      "answer": "Yes. We can provide post-launch maintenance, bug fixes, performance improvements, compatibility updates, and new feature development."
+    }
+  ]
+}

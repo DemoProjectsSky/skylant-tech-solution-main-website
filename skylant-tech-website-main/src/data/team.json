@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Arjun Mehta",
+    "role": "Founder & CEO",
+    "bio": "15+ years in enterprise software. Previously led engineering at Fortune 500 companies. Passionate about building technology that makes a real impact.",
+    "avatar": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2",
+    "linkedin": "#",
+    "twitter": "#"
+  },
+  {
+    "id": 2,
+    "name": "Neha Kapoor",
+    "role": "Chief Technology Officer",
+    "bio": "Full-stack architect with deep expertise in cloud-native systems, AI/ML pipelines, and distributed computing. Ex-Google, ex-Amazon.",
+    "avatar": "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2",
+    "linkedin": "#",
+    "twitter": "#"
+  },
+  {
+    "id": 3,
+    "name": "Rajesh Kumar",
+    "role": "Head of Product",
+    "bio": "Product strategist with 10+ years building B2B SaaS products. Focuses on user-centered design and metrics-driven product development.",
+    "avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2",
+    "linkedin": "#",
+    "twitter": "#"
+  },
+  {
+    "id": 4,
+    "name": "Priya Desai",
+    "role": "Head of Design",
+    "bio": "Award-winning UX designer with a passion for crafting pixel-perfect digital experiences. Led design for 100+ enterprise products.",
+    "avatar": "https://images.pexels.com/photos/3770254/pexels-photo-3770254.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2",
+    "linkedin": "#",
+    "twitter": "#"
+  }
+]
