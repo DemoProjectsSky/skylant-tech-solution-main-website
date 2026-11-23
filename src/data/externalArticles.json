@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "title": "The Power of AI in Digital Marketing: How Artificial Intelligence is Transforming Businesses in 2026",
+    "tag": "AI • Digital Marketing",
+    "description": "Artificial Intelligence (AI) is no longer a futuristic concept — it has become an essential part of modern digital marketing. In 2026, businesses of all sizes are using AI-powered tools to improve customer engagement, automate repetitive tasks, and achieve better marketing results.",
+    "url": "https://medium.com/@jpagarwar5/the-power-of-ai-in-digital-marketing-how-artificial-intelligence-is-transforming-businesses-in-a4fb629e5a89",
+    "author": "Jitendra Pagarwar",
+    "readTime": "3 min read",
+    "date": "Jun 11, 2026",
+    "color": "#10B981",
+    "image": "/images/digital%20marketing.webp"
+  },
+  {
+    "id": 2,
+    "title": "Why Artificial Intelligence Demand Is Exploding in 2026 — And What It Means for Your Career",
+    "tag": "AI • Career",
+    "description": "Priya was in the middle of a job interview when a question suddenly surprised her: \"Have you ever used any AI tools?\" Although she had thought that her five years' experience in content writing should be sufficient, it wasn't the first time this question had been asked, and this time she couldn't give a sure answer. That night she sat down with her laptop, typed \"why is AI demand increasing so fast\" into a search bar and didn't stop reading for the following two hours.",
+    "url": "https://medium.com/@chetannandurkar71/why-artificial-intelligence-demand-is-exploding-in-2026-and-what-it-means-for-your-career-aa517df96380",
+    "author": "Chetannandurkar",
+    "readTime": "4 min read",
+    "date": "Aug 2026",
+    "color": "#2563EB",
+    "image": "/images/ai.webp"
+  },
+  {
+    "id": 3,
+    "title": "MERN Stack vs Full Stack Alternatives: What Should Freshers Learn in 2026?",
+    "tag": "MERN • Career",
+    "description": "Rohan had three tabs open on his laptop — one YouTube video comparing MERN and MEAN, one Reddit thread arguing that \"no one hires MERN developers anymore,\" and one job portal showing a hundred listings, each asking for a different combination of technologies. He was three months from graduating, and instead of feeling ready, he felt more confused than ever.",
+    "url": "https://medium.com/@chetannandurkar71/mern-stack-vs-full-stack-alternatives-what-should-freshers-learn-in-2026-9ba0fce8147a",
+    "author": "Chetannandurkar",
+    "readTime": "4 min read",
+    "date": "Aug 2026",
+    "color": "#F59E0B",
+   "image": "/images/mern-vs-full-stack.webp"
+
+  }
+]

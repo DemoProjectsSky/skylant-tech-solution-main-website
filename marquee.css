@@ -1,0 +1,17 @@
+/* Add this to your index.css / globals.css so the TopBar marquee works */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
