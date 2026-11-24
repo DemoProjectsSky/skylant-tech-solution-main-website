@@ -120,7 +120,7 @@ function Eyebrow({ icon: Icon, label, color = '#6D5BD0' }: { icon: LucideIcon; l
 const featureChips = ['AI Solutions', 'ERP Development', 'Web Applications', 'Mobile Apps', 'Digital Marketing'];
 
 const statistics = [
-  { id: 1, value: 20, suffix: '+', label: 'Websites Delivered' },
+  { id: 1, value: 10, suffix: '+', label: 'Websites Delivered' },
   { id: 2, value: 10, suffix: '+', label: 'Business Clients' },
   { id: 3, value: 100, suffix: '%', label: 'Client-Focused Approach' },
   { id: 4, value: 100, suffix: '%', label: 'Fast Delivery Commitment' },
