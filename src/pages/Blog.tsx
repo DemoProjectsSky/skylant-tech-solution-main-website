@@ -179,33 +179,6 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* NEWSLETTER */}
-      <section className="relative py-20 sm:py-24 bg-[#FAF9F7]/70 backdrop-blur-sm overflow-hidden">
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="rounded-3xl border border-[#E4DBFF] bg-white/90 backdrop-blur-sm shadow-sm p-8 lg:p-12 text-center"
-          >
-            <h2 className="text-2xl lg:text-3xl font-bold text-[#2C2A4A] mb-3">Subscribe to our newsletter</h2>
-            <p className="text-[#5B5580] mb-6">Get the latest insights on software, AI, and technology delivered to your inbox.</p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-xl border border-[#E4DBFF] bg-white text-[#2C2A4A] text-sm placeholder:text-[#8B85A8] focus:outline-none focus:border-[#6D5BD0]/60"
-              />
-              <button type="submit" className="rounded-xl bg-[#1D4ED8] px-6 py-3 font-medium text-white transition-colors hover:bg-[#1E40AF]">
-                Subscribe
-              </button>
-            </form>
-          </motion.div>
-        </div>
-      </section>
-
       <CTASection />
     </>
   );
