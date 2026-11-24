@@ -39,7 +39,7 @@ export default function Header() {
             >
               <img
                 src="/images/skylant-logo.jpg"
-                alt="Skylant Tech Solution"
+                alt="Skylant Tech Solution Pvt. Ltd."
                 className="w-14 h-14 object-contain"
               />
 

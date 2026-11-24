@@ -109,7 +109,7 @@ export const blogContents: BlogContent[] = [
     finalThoughtsTitle: 'Final Thoughts',
 
     finalThoughts:
-      'Successful digital marketing requires the right strategy, tools, and execution. At Skylant Tech Solutions, we help businesses improve online visibility, generate quality leads, and accelerate growth through SEO, social media marketing, paid advertising, website development, and business automation solutions.',
+      'Successful digital marketing requires the right strategy, tools, and execution. At Skylant Tech Solution Pvt. Ltd., we help businesses improve online visibility, generate quality leads, and accelerate growth through SEO, social media marketing, paid advertising, website development, and business automation solutions.',
   },
 
   {
@@ -154,7 +154,7 @@ export const blogContents: BlogContent[] = [
     finalThoughtsTitle: 'Final Thoughts',
 
     finalThoughts:
-      "Low leads don't always mean digital marketing has failed — they usually point to a gap somewhere in the strategy, targeting, content, website, or follow-up process. At Skylant Tech Solutions, we help businesses fix these gaps with the right audience research, conversion-focused websites, and data-driven campaigns that turn traffic into real leads.",
+      "Low leads don't always mean digital marketing has failed — they usually point to a gap somewhere in the strategy, targeting, content, website, or follow-up process. At Skylant Tech Solution Pvt. Ltd., we help businesses fix these gaps with the right audience research, conversion-focused websites, and data-driven campaigns that turn traffic into real leads.",
   },
 
   {
@@ -193,7 +193,7 @@ export const blogContents: BlogContent[] = [
     finalThoughtsTitle: 'Final Thoughts',
 
     finalThoughts:
-      "Website vs Social Media isn't about which one is better. Your website builds trust and supports SEO; social media builds attention and community. Use both, and you reach the people who actually need what you offer. At Skylant Tech Solutions, we help businesses build both a powerful website and a consistent social media presence that work together.",
+      "Website vs Social Media isn't about which one is better. Your website builds trust and supports SEO; social media builds attention and community. Use both, and you reach the people who actually need what you offer. At Skylant Tech Solution Pvt. Ltd., we help businesses build both a powerful website and a consistent social media presence that work together.",
   },
 
   {
@@ -238,7 +238,7 @@ export const blogContents: BlogContent[] = [
     finalThoughtsTitle: 'Final Thoughts',
 
     finalThoughts:
-      "There's no universal timeline for building an app — but if your customers are mobile-first, your business is growing, and your website can't keep up, it's likely time. At Skylant Tech Solutions, we help businesses start with the customer's problem, not the technology, to build apps that deliver real, lasting value.",
+      "There's no universal timeline for building an app — but if your customers are mobile-first, your business is growing, and your website can't keep up, it's likely time. At Skylant Tech Solution Pvt. Ltd., we help businesses start with the customer's problem, not the technology, to build apps that deliver real, lasting value.",
   },
 
   {
@@ -277,6 +277,6 @@ export const blogContents: BlogContent[] = [
     finalThoughtsTitle: 'Final Thoughts',
 
     finalThoughts:
-      "Your website represents your brand — make sure it creates the right first impression. At Skylant Tech Solutions, we build corporate sites, startup sites, e-commerce stores, and custom web solutions that turn ideas into real digital experiences.",
+      "Your website represents your brand — make sure it creates the right first impression. At Skylant Tech Solution Pvt. Ltd., we build corporate sites, startup sites, e-commerce stores, and custom web solutions that turn ideas into real digital experiences.",
   },
 ];
