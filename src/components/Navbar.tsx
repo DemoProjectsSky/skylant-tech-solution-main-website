@@ -27,12 +27,20 @@ const SOCIAL_LINKS = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setMobileOpen(false);
     setServicesDropdown(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const updateScrollState = () => setScrolled(window.scrollY > 20);
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
 
   return (
     <>
@@ -86,9 +94,9 @@ export default function Navbar() {
             the moment the user scrolled past 20px. That's what caused the header
             section to "scroll away". Now it stays fixed and visible at all times. */}
         <nav
-  className="w-full bg-transparent"
-  onMouseLeave={() => setServicesDropdown(false)}
->
+          className={`w-full transition-colors duration-300 ${scrolled ? 'bg-[#E8EEFF] shadow-md' : 'bg-transparent'}`}
+          onMouseLeave={() => setServicesDropdown(false)}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
 
